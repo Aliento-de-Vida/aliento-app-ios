@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreen" customModule="Aliento_App" customModuleProvider="target">
+            <connections>
+                <outlet property="logoImageView" destination="auF-hC-XS1" id="bNV-B2-YV7"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5n1-7E-upP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="auF-hC-XS1">
+                    <rect key="frame" x="87" y="328" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="auF-hC-XS1" secondAttribute="height" multiplier="1:1" id="5kd-2O-DfZ"/>
+                        <constraint firstAttribute="width" constant="240" id="fF6-gY-W2h"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="auF-hC-XS1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="anF-iw-OoD"/>
+                <constraint firstItem="auF-hC-XS1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vsE-P4-ymB"/>
+            </constraints>
+            <point key="canvasLocation" x="33" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="214" height="154"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
