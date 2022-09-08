@@ -3,31 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76C7DF1A28CA854500492177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7DF1928CA854500492177 /* AppDelegate.swift */; };
-		76C7DF1C28CA854500492177 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7DF1B28CA854500492177 /* SceneDelegate.swift */; };
-		76C7DF1E28CA854500492177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7DF1D28CA854500492177 /* ViewController.swift */; };
-		76C7DF2128CA854500492177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C7DF1F28CA854500492177 /* Main.storyboard */; };
-		76C7DF2328CA854600492177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C7DF2228CA854600492177 /* Assets.xcassets */; };
-		76C7DF2628CA854600492177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C7DF2428CA854600492177 /* LaunchScreen.storyboard */; };
+		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
+		B824BD6328CA966700B27C8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6228CA966700B27C8C /* SceneDelegate.swift */; };
+		B824BD6528CA966700B27C8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6428CA966700B27C8C /* ViewController.swift */; };
+		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
+		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
+		B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		76C7DF1628CA854500492177 /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C7DF1928CA854500492177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76C7DF1B28CA854500492177 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76C7DF1D28CA854500492177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76C7DF2028CA854500492177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76C7DF2228CA854600492177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76C7DF2528CA854600492177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76C7DF2728CA854600492177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B824BD6028CA966700B27C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B824BD6228CA966700B27C8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B824BD6428CA966700B27C8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B824BD6728CA966700B27C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B824BD6928CA966F00B27C8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B824BD6C28CA966F00B27C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B824BD6E28CA966F00B27C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		76C7DF1328CA854500492177 /* Frameworks */ = {
+		B824BD5A28CA966700B27C8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		76C7DF0D28CA854500492177 = {
+		B824BD5428CA966700B27C8C = {
 			isa = PBXGroup;
 			children = (
-				76C7DF1828CA854500492177 /* Aliento App */,
-				76C7DF1728CA854500492177 /* Products */,
+				B824BD5F28CA966700B27C8C /* Aliento App */,
+				B824BD5E28CA966700B27C8C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		76C7DF1728CA854500492177 /* Products */ = {
+		B824BD5E28CA966700B27C8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76C7DF1628CA854500492177 /* Aliento App.app */,
+				B824BD5D28CA966700B27C8C /* Aliento App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76C7DF1828CA854500492177 /* Aliento App */ = {
+		B824BD5F28CA966700B27C8C /* Aliento App */ = {
 			isa = PBXGroup;
 			children = (
-				76C7DF1928CA854500492177 /* AppDelegate.swift */,
-				76C7DF1B28CA854500492177 /* SceneDelegate.swift */,
-				76C7DF1D28CA854500492177 /* ViewController.swift */,
-				76C7DF1F28CA854500492177 /* Main.storyboard */,
-				76C7DF2228CA854600492177 /* Assets.xcassets */,
-				76C7DF2428CA854600492177 /* LaunchScreen.storyboard */,
-				76C7DF2728CA854600492177 /* Info.plist */,
+				B824BD6028CA966700B27C8C /* AppDelegate.swift */,
+				B824BD6228CA966700B27C8C /* SceneDelegate.swift */,
+				B824BD6428CA966700B27C8C /* ViewController.swift */,
+				B824BD6628CA966700B27C8C /* Main.storyboard */,
+				B824BD6928CA966F00B27C8C /* Assets.xcassets */,
+				B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */,
+				B824BD6E28CA966F00B27C8C /* Info.plist */,
 			);
 			path = "Aliento App";
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		76C7DF1528CA854500492177 /* Aliento App */ = {
+		B824BD5C28CA966700B27C8C /* Aliento App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76C7DF2A28CA854600492177 /* Build configuration list for PBXNativeTarget "Aliento App" */;
+			buildConfigurationList = B824BD7128CA966F00B27C8C /* Build configuration list for PBXNativeTarget "Aliento App" */;
 			buildPhases = (
-				76C7DF1228CA854500492177 /* Sources */,
-				76C7DF1328CA854500492177 /* Frameworks */,
-				76C7DF1428CA854500492177 /* Resources */,
+				B824BD5928CA966700B27C8C /* Sources */,
+				B824BD5A28CA966700B27C8C /* Frameworks */,
+				B824BD5B28CA966700B27C8C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,81 +84,80 @@
 			);
 			name = "Aliento App";
 			productName = "Aliento App";
-			productReference = 76C7DF1628CA854500492177 /* Aliento App.app */;
+			productReference = B824BD5D28CA966700B27C8C /* Aliento App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		76C7DF0E28CA854500492177 /* Project object */ = {
+		B824BD5528CA966700B27C8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					76C7DF1528CA854500492177 = {
-						CreatedOnToolsVersion = 13.4.1;
+					B824BD5C28CA966700B27C8C = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 76C7DF1128CA854500492177 /* Build configuration list for PBXProject "Aliento App" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = B824BD5828CA966700B27C8C /* Build configuration list for PBXProject "Aliento App" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 76C7DF0D28CA854500492177;
-			productRefGroup = 76C7DF1728CA854500492177 /* Products */;
+			mainGroup = B824BD5428CA966700B27C8C;
+			productRefGroup = B824BD5E28CA966700B27C8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76C7DF1528CA854500492177 /* Aliento App */,
+				B824BD5C28CA966700B27C8C /* Aliento App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		76C7DF1428CA854500492177 /* Resources */ = {
+		B824BD5B28CA966700B27C8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C7DF2628CA854600492177 /* LaunchScreen.storyboard in Resources */,
-				76C7DF2328CA854600492177 /* Assets.xcassets in Resources */,
-				76C7DF2128CA854500492177 /* Main.storyboard in Resources */,
+				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
+				B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */,
+				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		76C7DF1228CA854500492177 /* Sources */ = {
+		B824BD5928CA966700B27C8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C7DF1E28CA854500492177 /* ViewController.swift in Sources */,
-				76C7DF1A28CA854500492177 /* AppDelegate.swift in Sources */,
-				76C7DF1C28CA854500492177 /* SceneDelegate.swift in Sources */,
+				B824BD6528CA966700B27C8C /* ViewController.swift in Sources */,
+				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
+				B824BD6328CA966700B27C8C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		76C7DF1F28CA854500492177 /* Main.storyboard */ = {
+		B824BD6628CA966700B27C8C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76C7DF2028CA854500492177 /* Base */,
+				B824BD6728CA966700B27C8C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		76C7DF2428CA854600492177 /* LaunchScreen.storyboard */ = {
+		B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76C7DF2528CA854600492177 /* Base */,
+				B824BD6C28CA966F00B27C8C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,13 +165,14 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		76C7DF2828CA854600492177 /* Debug */ = {
+		B824BD6F28CA966F00B27C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -226,13 +226,14 @@
 			};
 			name = Debug;
 		};
-		76C7DF2928CA854600492177 /* Release */ = {
+		B824BD7028CA966F00B27C8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -280,57 +281,39 @@
 			};
 			name = Release;
 		};
-		76C7DF2B28CA854600492177 /* Debug */ = {
+		B824BD7228CA966F00B27C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJSRV9HAGZ;
-				GENERATE_INFOPLIST_FILE = YES;
+				DEVELOPMENT_TEAM = 8S9257SG3Q;
 				INFOPLIST_FILE = "Aliento App/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.armando.alientoapp.Aliento-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alientodevida.app.Aliento-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		76C7DF2C28CA854600492177 /* Release */ = {
+		B824BD7328CA966F00B27C8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJSRV9HAGZ;
-				GENERATE_INFOPLIST_FILE = YES;
+				DEVELOPMENT_TEAM = 8S9257SG3Q;
 				INFOPLIST_FILE = "Aliento App/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.armando.alientoapp.Aliento-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alientodevida.app.Aliento-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76C7DF1128CA854500492177 /* Build configuration list for PBXProject "Aliento App" */ = {
+		B824BD5828CA966700B27C8C /* Build configuration list for PBXProject "Aliento App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76C7DF2828CA854600492177 /* Debug */,
-				76C7DF2928CA854600492177 /* Release */,
+				B824BD6F28CA966F00B27C8C /* Debug */,
+				B824BD7028CA966F00B27C8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76C7DF2A28CA854600492177 /* Build configuration list for PBXNativeTarget "Aliento App" */ = {
+		B824BD7128CA966F00B27C8C /* Build configuration list for PBXNativeTarget "Aliento App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76C7DF2B28CA854600492177 /* Debug */,
-				76C7DF2C28CA854600492177 /* Release */,
+				B824BD7228CA966F00B27C8C /* Debug */,
+				B824BD7328CA966F00B27C8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 76C7DF0E28CA854500492177 /* Project object */;
+	rootObject = B824BD5528CA966700B27C8C /* Project object */;
 }
