@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Aliento App
 //
-//  Created by Juan Armando Frías Ramírez on 08/09/22.
+//  Created by Pedro Antonio Góngora Sepúlveda on 08/09/22.
 //
 
 import UIKit
