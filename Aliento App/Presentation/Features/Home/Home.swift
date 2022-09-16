@@ -12,6 +12,10 @@ class Home: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        HomeRepository.getHome() { (result) in
+            print(result)
+        }
+        
         self.title = "Home"
         
     }
