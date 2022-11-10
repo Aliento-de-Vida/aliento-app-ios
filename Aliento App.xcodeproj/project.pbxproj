@@ -25,6 +25,11 @@
 		B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F5C28D532C500B64709 /* RequestInterceptor.swift */; };
 		B8965F6028D5335100B64709 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F5F28D5335100B64709 /* ApiError.swift */; };
 		B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F6228D5347C00B64709 /* HomeModel.swift */; };
+		BF723F84291C900000F2FAA4 /* SermonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F83291C900000F2FAA4 /* SermonsCollectionView.swift */; };
+		BF723F88291C945D00F2FAA4 /* SermonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F87291C945D00F2FAA4 /* SermonItem.swift */; };
+		BF723F8B291C96F800F2FAA4 /* Sermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* Sermon.swift */; };
+		BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8C291C972600F2FAA4 /* Constants.swift */; };
+		BF723F8E291C9AF500F2FAA4 /* SermonItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF723F85291C936800F2FAA4 /* SermonItem.xib */; };
 		DAA5BC0554963CBFAB25DF98 /* libPods-Aliento App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +56,11 @@
 		B8965F5C28D532C500B64709 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
 		B8965F5F28D5335100B64709 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		B8965F6228D5347C00B64709 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		BF723F83291C900000F2FAA4 /* SermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsCollectionView.swift; sourceTree = "<group>"; };
+		BF723F85291C936800F2FAA4 /* SermonItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SermonItem.xib; sourceTree = "<group>"; };
+		BF723F87291C945D00F2FAA4 /* SermonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonItem.swift; sourceTree = "<group>"; };
+		BF723F8A291C96F800F2FAA4 /* Sermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sermon.swift; sourceTree = "<group>"; };
+		BF723F8C291C972600F2FAA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BFADCF8977C40630EE77FC8A /* Pods-Aliento App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.release.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,10 +125,11 @@
 		B824BD9428CA99A800B27C8C /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B824BDAF28CAA6AA00B27C8C /* Predicas */,
+				B824BDAF28CAA6AA00B27C8C /* Sermons */,
 				B824BDA428CAA0EF00B27C8C /* Home */,
 				B824BD9D28CA9E3800B27C8C /* Login */,
 				B824BD9528CA99BA00B27C8C /* Splashscreen */,
+				BF723F8C291C972600F2FAA4 /* Constants.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -150,13 +161,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B824BDAF28CAA6AA00B27C8C /* Predicas */ = {
+		B824BDAF28CAA6AA00B27C8C /* Sermons */ = {
 			isa = PBXGroup;
 			children = (
+				BF723F83291C900000F2FAA4 /* SermonsCollectionView.swift */,
+				BF723F85291C936800F2FAA4 /* SermonItem.xib */,
+				BF723F87291C945D00F2FAA4 /* SermonItem.swift */,
+				BF723F8A291C96F800F2FAA4 /* Sermon.swift */,
 				B824BDB028CAA6BE00B27C8C /* Predicas.swift */,
 				B824BDB728CAA72400B27C8C /* Predicas.xib */,
 			);
-			path = Predicas;
+			path = Sermons;
 			sourceTree = "<group>";
 		};
 		B8965F4328D52A5000B64709 /* Domain */ = {
@@ -283,6 +298,7 @@
 			files = (
 				B824BD9728CA99DA00B27C8C /* SplashScreen.xib in Resources */,
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
+				BF723F8E291C9AF500F2FAA4 /* SermonItem.xib in Resources */,
 				B824BDB828CAA72400B27C8C /* Predicas.xib in Resources */,
 				B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */,
 				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
@@ -323,15 +339,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF723F84291C900000F2FAA4 /* SermonsCollectionView.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
 				B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */,
 				B824BDAA28CAA12F00B27C8C /* Home.swift in Sources */,
+				BF723F88291C945D00F2FAA4 /* SermonItem.swift in Sources */,
+				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
 				B824BDB128CAA6BE00B27C8C /* Predicas.swift in Sources */,
 				B8965F4C28D52C8100B64709 /* HomeRepository.swift in Sources */,
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
+				BF723F8B291C96F800F2FAA4 /* Sermon.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
 				B8965F4F28D52C9800B64709 /* HomeApi.swift in Sources */,
 			);
