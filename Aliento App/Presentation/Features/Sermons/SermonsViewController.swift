@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Predicas: UIViewController {
+class SermonsViewController: UIViewController {
     
     @IBOutlet weak var sermonsCollectionView: SermonsCollectionView!
     
