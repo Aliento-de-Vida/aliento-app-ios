@@ -21,7 +21,7 @@ class Home: UIViewController {
     }
     
     @IBAction func goToPredicas(_ sender: Any) {
-        navigationController?.pushViewController(Predicas(), animated: true)
+        navigationController?.pushViewController(SermonsViewController(), animated: true)
     }
 }
         
