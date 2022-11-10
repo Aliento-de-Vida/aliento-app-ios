@@ -16,7 +16,7 @@ class Home: UIViewController {
             print(result)
         }
         
-        self.title = "Home"
+        self.title = "Test"
         
     }
     
