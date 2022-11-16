@@ -30,6 +30,7 @@
 		BF723F8B291C96F800F2FAA4 /* Sermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* Sermon.swift */; };
 		BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8C291C972600F2FAA4 /* Constants.swift */; };
 		BF723F8E291C9AF500F2FAA4 /* SermonItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF723F85291C936800F2FAA4 /* SermonItemCell.xib */; };
+		BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C22A42924830E0082C0C5 /* UIImage.swift */; };
 		DAA5BC0554963CBFAB25DF98 /* libPods-Aliento App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		BF723F87291C945D00F2FAA4 /* SermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonItemCell.swift; sourceTree = "<group>"; };
 		BF723F8A291C96F800F2FAA4 /* Sermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sermon.swift; sourceTree = "<group>"; };
 		BF723F8C291C972600F2FAA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF9C22A42924830E0082C0C5 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BFADCF8977C40630EE77FC8A /* Pods-Aliento App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.release.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 		B8965F4528D52A5C00B64709 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BF9C22A3292483010082C0C5 /* Extensions */,
 				B824BD9428CA99A800B27C8C /* Features */,
 				B8965F4928D52C3900B64709 /* Utils */,
 				B824BD6028CA966700B27C8C /* AppDelegate.swift */,
@@ -244,6 +247,14 @@
 				BF723F87291C945D00F2FAA4 /* SermonItemCell.swift */,
 			);
 			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		BF9C22A3292483010082C0C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C22A42924830E0082C0C5 /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
+				BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */,
 				B824BDB128CAA6BE00B27C8C /* SermonsViewController.swift in Sources */,
 				B8965F4C28D52C8100B64709 /* HomeRepository.swift in Sources */,
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
