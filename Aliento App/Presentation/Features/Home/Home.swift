@@ -18,7 +18,7 @@ class Home: UIViewController {
         
         HomeRepository.getHome() { (result) in }
         
-        cardOneImage.load("https://todoserver-peter.herokuapp.com/predicas.jpeg")
+        cardOneImage.load(url: "https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg")
         
         setupNavBar()
     }
