@@ -15,7 +15,12 @@ extension UIImageView {
         })
     }
     
-    func load(url: String?, completion: @escaping () -> () = { }) {
+    func load(
+        url: String?,
+        completion: @escaping () -> () = { },
+        contentMode: ContentMode = UIView.ContentMode.scaleAspectFill
+    ) {
+        self.contentMode = contentMode
         if let url = url, !url.isEmpty {
             self.sd_setImage (with: URL(string:url), placeholderImage: nil, options: [], completed: { (theImage, error, cache, url) in
                 completion()
