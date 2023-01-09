@@ -10,4 +10,5 @@ import Foundation
 struct Sermon {
     let name: String
     let duration: Int
+    let imageUrl: String
 }

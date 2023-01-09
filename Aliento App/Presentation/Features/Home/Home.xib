@@ -15,6 +15,7 @@
                 <outlet property="cardOneImage" destination="LJm-Nw-kAq" id="AVU-DV-IO7"/>
                 <outlet property="cardThreeImage" destination="QBO-V5-TU4" id="vCk-OO-gvP"/>
                 <outlet property="cardTwoImage" destination="D90-lU-jU3" id="ETL-E6-qwa"/>
+                <outlet property="quickAccessOne" destination="J3n-yF-11Z" id="fgA-m8-9XU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="vos-t6-Iit"/>
             </connections>
         </placeholder>
