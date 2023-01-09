@@ -95,6 +95,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		76D85958296C9D080087D935 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E1049291D513700DD9844 /* Collection View */,
+				B824BDB028CAA6BE00B27C8C /* SermonsViewController.swift */,
+				B824BDB728CAA72400B27C8C /* SermonsViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		B824BD5428CA966700B27C8C = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +176,8 @@
 		B824BDAF28CAA6AA00B27C8C /* Sermons */ = {
 			isa = PBXGroup;
 			children = (
-				BF7E1049291D513700DD9844 /* Collection View */,
+				76D85958296C9D080087D935 /* List */,
 				BF723F8A291C96F800F2FAA4 /* Sermon.swift */,
-				B824BDB028CAA6BE00B27C8C /* SermonsViewController.swift */,
-				B824BDB728CAA72400B27C8C /* SermonsViewController.xib */,
 			);
 			path = Sermons;
 			sourceTree = "<group>";
