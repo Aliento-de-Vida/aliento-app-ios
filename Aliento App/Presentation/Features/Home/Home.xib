@@ -15,6 +15,8 @@
                 <outlet property="cardOneImage" destination="LJm-Nw-kAq" id="AVU-DV-IO7"/>
                 <outlet property="cardThreeImage" destination="QBO-V5-TU4" id="vCk-OO-gvP"/>
                 <outlet property="cardTwoImage" destination="D90-lU-jU3" id="ETL-E6-qwa"/>
+                <outlet property="quickAccesThree" destination="BII-Zv-61P" id="W2z-up-UXJ"/>
+                <outlet property="quickAccesTwo" destination="i37-FX-pT1" id="HB8-n2-eQB"/>
                 <outlet property="quickAccessOne" destination="J3n-yF-11Z" id="fgA-m8-9XU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="vos-t6-Iit"/>
             </connections>
@@ -181,6 +183,13 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2av-Ub-DPv">
+                    <rect key="frame" x="40" y="723" width="60" height="30"/>
+                    <state key="normal" title="Predicas"/>
+                    <connections>
+                        <action selector="goToPredicas:" destination="-1" eventType="touchUpInside" id="kCf-xV-cge"/>
+                    </connections>
+                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BII-Zv-61P">
                     <rect key="frame" x="8" y="587" width="398" height="120"/>
                     <color key="backgroundColor" name="AccentColor"/>
@@ -193,13 +202,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2av-Ub-DPv">
-                    <rect key="frame" x="40" y="723" width="60" height="30"/>
-                    <state key="normal" title="Predicas"/>
-                    <connections>
-                        <action selector="goToPredicas:" destination="-1" eventType="touchUpInside" id="kCf-xV-cge"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
