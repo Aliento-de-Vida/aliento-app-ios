@@ -16,14 +16,13 @@ class VideoSermonItemCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var background: UIView!
     
-    var item: Sermon? = nil
+    var item: SermonVideo? = nil
     
-    func configure(item: Sermon) {
+    func configure(item: SermonVideo) {
         self.item = item
         
         nameLabel.text = item.name
-        durationLabel.text = "\(item.duration)"
-        imageView.layer.cornerRadius = imageView.layer.frame.width/2
+        durationLabel.text = "\(item.phrase)"
         imageView.load(url: item.imageUrl)
         
         background.layer.cornerRadius = 16

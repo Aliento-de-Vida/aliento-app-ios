@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8595A296DE4FE0087D935 /* VideoSermon.swift */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
 		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
 		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76D8595A296DE4FE0087D935 /* VideoSermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermon.swift; sourceTree = "<group>"; };
 		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +268,7 @@
 				BF44EF3B296DCAF300F3D028 /* CollectionView */,
 				BF44EF37296DCA3400F3D028 /* VideoSermonsViewController.swift */,
 				BF44EF39296DCA4500F3D028 /* VideoSermonsViewController.xib */,
+				76D8595A296DE4FE0087D935 /* VideoSermon.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				BF723F88291C945D00F2FAA4 /* SermonItemCell.swift in Sources */,
 				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */,
+				76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
 				BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */,
