@@ -17,20 +17,20 @@ class VideoSermonsViewController: UIViewController {
         sermonsCollectionView.register(UINib(nibName: VideoSermonItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: VideoSermonItemCell.identifier)
         sermonsCollectionView.dataSource = sermonsCollectionView
         sermonsCollectionView.delegate = sermonsCollectionView
-        sermonsCollectionView.collection = collection
+        sermonsCollectionView.collectionVideo = collection
         sermonsCollectionView.reloadData()
     }
     
     let collection = [
-        Sermon(name: "predica 1", duration: 3000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        Sermon(name: "predica 2", duration: 5000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        Sermon(name: "predica 3", duration: 8000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        Sermon(name: "predica 4", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        Sermon(name: "predica 5", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        Sermon(name: "predica 6", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        Sermon(name: "predica 7", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        Sermon(name: "predica 8", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        Sermon(name: "predica 9", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
+        SermonVideo(name: "DIOS QUIERE QUE VIVAS", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
+        SermonVideo(name: "FAMILIAS URBANAS", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
+        SermonVideo(name: "DISFRUTA DE LOS PEQUEÑOS DETALLES", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
+        SermonVideo(name: "PEDRO PARA PRESIDENTE PASTORAL", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
+        SermonVideo(name: "predica 5", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
+        SermonVideo(name: "predica 6", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
+        SermonVideo(name: "predica 7", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
+        SermonVideo(name: "predica 8", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
+        SermonVideo(name: "predica 9", phrase: "Se feliz, que al final del camino Dios le dara a cadá uno", imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
     ]
 
     
