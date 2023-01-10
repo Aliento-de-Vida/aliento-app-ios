@@ -44,7 +44,6 @@ class Home: UIViewController {
         
         quickAccessOne.load(url:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d")
         quickAccessOne.layer.cornerRadius = CORNER_RADIUS
-        quickAccessOne.addShadow()
         
         quickAccesTwo.load(url: "https://img.freepik.com/foto-gratis/cantante-actuando-escenario-show-vivo-efecto-exposicion-doble-color_53876-104901.jpg?w=2000&t=st=1673365190~exp=1673365790~hmac=41b23af84513549405fa01261aca1b8cdf817cbc8ab98ba8e5346c772a794854")
         quickAccesTwo.layer.cornerRadius = CORNER_RADIUS
@@ -78,7 +77,7 @@ class Home: UIViewController {
     }
     
     @IBAction func goToPredicas(_ sender: Any) {
-        navigationController?.pushViewController(VideoSermonsViewController(), animated: true)
+        navigationController?.pushViewController(HomeBottomBarVC(), animated: true)
     } 
     
     @objc func goToSettings() {
