@@ -25,8 +25,9 @@ class VideoSermonItemCell: UICollectionViewCell {
         durationLabel.text = "\(item.phrase)"
         imageView.load(url: item.imageUrl)
         
+        background.layer.masksToBounds = true
         background.layer.cornerRadius = 16
-        background.addShadow()
+//        background.addShadow()
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }

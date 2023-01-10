@@ -14,20 +14,29 @@ class SplashScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        #if DEBUG
+            goToNextScreen()
+            return
+        #endif
+        
         logoImageView.alpha = 0.0
         
         UIView.animate(withDuration: 1.5, animations: {
             self.logoImageView.alpha = 1.0
         }) { (finished) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                if AppDelegate.singleton.isLoggedIn {
-                    AppDelegate.singleton.goToHome()
-                } else {
-                    AppDelegate.singleton.goToLogin()
-                }
+                self.goToNextScreen()
             }
         }
 
+    }
+    
+    func goToNextScreen() {
+        if AppDelegate.singleton.isLoggedIn {
+            AppDelegate.singleton.goToHome()
+        } else {
+            AppDelegate.singleton.goToLogin()
+        }
     }
     
 }
