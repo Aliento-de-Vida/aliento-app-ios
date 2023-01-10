@@ -21,11 +21,14 @@ class SermonItemCell: UICollectionViewCell {
     
     func configure(item: Sermon) {
         self.item = item
+        
         nameLabel.text = item.name
         durationLabel.text = "\(item.duration)"
         imageView.layer.cornerRadius = imageView.layer.frame.width/2
         imageView.load(url: item.imageUrl)
+        
         background.layer.cornerRadius = 16
+        background.addShadow()
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }
