@@ -26,6 +26,11 @@
 		B8965F6028D5335100B64709 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F5F28D5335100B64709 /* ApiError.swift */; };
 		B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F6228D5347C00B64709 /* HomeModel.swift */; };
 		BF44EF34296DC27500F3D028 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF33296DC27500F3D028 /* UIView.swift */; };
+		BF44EF38296DCA3400F3D028 /* VideoSermonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF37296DCA3400F3D028 /* VideoSermonsViewController.swift */; };
+		BF44EF3A296DCA4500F3D028 /* VideoSermonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44EF39296DCA4500F3D028 /* VideoSermonsViewController.xib */; };
+		BF44EF3D296DCB0B00F3D028 /* VideoSermonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF3C296DCB0B00F3D028 /* VideoSermonsCollectionView.swift */; };
+		BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF3E296DCBFA00F3D028 /* VideoSermonItemCell.swift */; };
+		BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44EF40296DCC0500F3D028 /* VideoSermonItemCell.xib */; };
 		BF723F84291C900000F2FAA4 /* SermonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F83291C900000F2FAA4 /* SermonsCollectionView.swift */; };
 		BF723F88291C945D00F2FAA4 /* SermonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F87291C945D00F2FAA4 /* SermonItemCell.swift */; };
 		BF723F8B291C96F800F2FAA4 /* Sermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* Sermon.swift */; };
@@ -59,6 +64,11 @@
 		B8965F5F28D5335100B64709 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		B8965F6228D5347C00B64709 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		BF44EF33296DC27500F3D028 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		BF44EF37296DCA3400F3D028 /* VideoSermonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermonsViewController.swift; sourceTree = "<group>"; };
+		BF44EF39296DCA4500F3D028 /* VideoSermonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoSermonsViewController.xib; sourceTree = "<group>"; };
+		BF44EF3C296DCB0B00F3D028 /* VideoSermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermonsCollectionView.swift; sourceTree = "<group>"; };
+		BF44EF3E296DCBFA00F3D028 /* VideoSermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermonItemCell.swift; sourceTree = "<group>"; };
+		BF44EF40296DCC0500F3D028 /* VideoSermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoSermonItemCell.xib; sourceTree = "<group>"; };
 		BF723F83291C900000F2FAA4 /* SermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsCollectionView.swift; sourceTree = "<group>"; };
 		BF723F85291C936800F2FAA4 /* SermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SermonItemCell.xib; sourceTree = "<group>"; };
 		BF723F87291C945D00F2FAA4 /* SermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonItemCell.swift; sourceTree = "<group>"; };
@@ -95,16 +105,6 @@
 				B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		76D85958296C9D080087D935 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				BF7E1049291D513700DD9844 /* Collection View */,
-				B824BDB028CAA6BE00B27C8C /* SermonsViewController.swift */,
-				B824BDB728CAA72400B27C8C /* SermonsViewController.xib */,
-			);
-			path = List;
 			sourceTree = "<group>";
 		};
 		B824BD5428CA966700B27C8C = {
@@ -178,7 +178,8 @@
 		B824BDAF28CAA6AA00B27C8C /* Sermons */ = {
 			isa = PBXGroup;
 			children = (
-				76D85958296C9D080087D935 /* List */,
+				BF44EF36296DC9E600F3D028 /* Video */,
+				BF44EF35296DC9E000F3D028 /* Audio */,
 				BF723F8A291C96F800F2FAA4 /* Sermon.swift */,
 			);
 			path = Sermons;
@@ -247,6 +248,36 @@
 				B8965F4A28D52C6700B64709 /* Home */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		BF44EF35296DC9E000F3D028 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E1049291D513700DD9844 /* Collection View */,
+				B824BDB028CAA6BE00B27C8C /* SermonsViewController.swift */,
+				B824BDB728CAA72400B27C8C /* SermonsViewController.xib */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		BF44EF36296DC9E600F3D028 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				BF44EF3B296DCAF300F3D028 /* CollectionView */,
+				BF44EF37296DCA3400F3D028 /* VideoSermonsViewController.swift */,
+				BF44EF39296DCA4500F3D028 /* VideoSermonsViewController.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		BF44EF3B296DCAF300F3D028 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				BF44EF3C296DCB0B00F3D028 /* VideoSermonsCollectionView.swift */,
+				BF44EF3E296DCBFA00F3D028 /* VideoSermonItemCell.swift */,
+				BF44EF40296DCC0500F3D028 /* VideoSermonItemCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		BF7E1049291D513700DD9844 /* Collection View */ = {
@@ -330,7 +361,9 @@
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* SermonItemCell.xib in Resources */,
 				B824BDB828CAA72400B27C8C /* SermonsViewController.xib in Resources */,
+				BF44EF3A296DCA4500F3D028 /* VideoSermonsViewController.xib in Resources */,
 				B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */,
+				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
 				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
 				B824BDAD28CAA15600B27C8C /* Home.xib in Resources */,
 				B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */,
@@ -369,7 +402,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF44EF38296DCA3400F3D028 /* VideoSermonsViewController.swift in Sources */,
 				BF723F84291C900000F2FAA4 /* SermonsCollectionView.swift in Sources */,
+				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
 				B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */,
 				B824BDAA28CAA12F00B27C8C /* Home.swift in Sources */,
@@ -384,6 +419,7 @@
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
 				BF44EF34296DC27500F3D028 /* UIView.swift in Sources */,
 				BF723F8B291C96F800F2FAA4 /* Sermon.swift in Sources */,
+				BF44EF3D296DCB0B00F3D028 /* VideoSermonsCollectionView.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
 				B8965F4F28D52C9800B64709 /* HomeApi.swift in Sources */,
 			);

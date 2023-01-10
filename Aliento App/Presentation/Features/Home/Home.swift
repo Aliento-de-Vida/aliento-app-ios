@@ -68,7 +68,7 @@ class Home: UIViewController {
     }
     
     @IBAction func goToPredicas(_ sender: Any) {
-        navigationController?.pushViewController(SermonsViewController(), animated: true)
+        navigationController?.pushViewController(VideoSermonsViewController(), animated: true)
     }
     
     @objc func goToSettings() {
