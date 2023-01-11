@@ -11,4 +11,5 @@ struct SermonVideo {
     let name: String
     let phrase: String
     let imageUrl: String
+    let date: String
 }
