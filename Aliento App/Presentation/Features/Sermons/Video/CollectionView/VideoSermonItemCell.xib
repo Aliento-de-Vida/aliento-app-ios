@@ -72,7 +72,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="811" height="491"/>
             <connections>
-                <outlet property="background" destination="ab5-pz-SHZ" id="lNF-4n-SVQ"/>
+                <outlet property="card" destination="ab5-pz-SHZ" id="11k-Br-Gcd"/>
                 <outlet property="dateLabel" destination="GIJ-SW-2R7" id="dSs-7v-Xfz"/>
                 <outlet property="durationLabel" destination="vGe-Sz-wMr" id="lYC-tt-LqR"/>
                 <outlet property="imageView" destination="etQ-WF-Erd" id="cvk-N3-hVE"/>

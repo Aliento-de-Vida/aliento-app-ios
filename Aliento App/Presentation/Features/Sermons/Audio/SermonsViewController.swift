@@ -38,7 +38,7 @@ class SermonsViewController: UIViewController {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("youtube")
+        print("spotify")
     }
 
 }

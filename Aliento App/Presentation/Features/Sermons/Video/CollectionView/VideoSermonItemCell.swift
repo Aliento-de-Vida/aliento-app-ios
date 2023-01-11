@@ -14,7 +14,7 @@ class VideoSermonItemCell: UICollectionViewCell {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var background: UIView!
+    @IBOutlet var card: UIView!
     
     var item: SermonVideo? = nil
     
@@ -24,11 +24,10 @@ class VideoSermonItemCell: UICollectionViewCell {
         nameLabel.text = item.name
         durationLabel.text = "\(item.phrase)"
         imageView.load(url: item.imageUrl)
-        
-        background.layer.masksToBounds = true
-        background.layer.cornerRadius = 16
-//        background.addShadow()
-        
+                
+        card.layer.cornerRadius = 16
+        card.layer.masksToBounds = true
+     
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }
     
