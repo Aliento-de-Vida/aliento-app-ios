@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Sermon {
+struct AudioSermon {
     let name: String
     let duration: Int
     let imageUrl: String
