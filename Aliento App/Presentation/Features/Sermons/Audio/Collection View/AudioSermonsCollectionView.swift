@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class SermonsCollectionView: UICollectionView {
-    var collection: [Sermon] = []
+class AudioSermonsCollectionView: UICollectionView {
+    var collection: [AudioSermon] = []
 }
 
-extension SermonsCollectionView: UICollectionViewDelegateFlowLayout {
+extension AudioSermonsCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
@@ -23,12 +23,12 @@ extension SermonsCollectionView: UICollectionViewDelegateFlowLayout {
         
 }
 
-extension SermonsCollectionView: UICollectionViewDataSource {
+extension AudioSermonsCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { collection.count }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SermonItemCell.identifier, for: indexPath) as! SermonItemCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AudioSermonItemCell.identifier, for: indexPath) as! AudioSermonItemCell
         let index = indexPath.item
         cell.configure(item: collection[index])
         return cell

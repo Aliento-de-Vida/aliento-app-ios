@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class SermonItemCell: UICollectionViewCell {
-    static let identifier = "SermonItemCell"
+class AudioSermonItemCell: UICollectionViewCell {
+    static let identifier = "AudioSermonItemCell"
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
@@ -17,9 +17,9 @@ class SermonItemCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var background: UIView!
     
-    var item: Sermon? = nil
+    var item: AudioSermon? = nil
     
-    func configure(item: Sermon) {
+    func configure(item: AudioSermon) {
         self.item = item
         
         nameLabel.text = item.name

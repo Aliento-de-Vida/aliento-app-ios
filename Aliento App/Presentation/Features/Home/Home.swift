@@ -52,8 +52,6 @@ class Home: UIViewController {
         quickAccesThree.layer.cornerRadius = CORNER_RADIUS
                 
         setupNavBar()
-        
-
     }
     
     func setupNavBar() {
@@ -77,7 +75,7 @@ class Home: UIViewController {
     }
     
     @IBAction func goToPredicas(_ sender: Any) {
-        navigationController?.pushViewController(HomeBottomBarVC(), animated: true)
+        navigationController?.pushViewController(AudioTabBarController(), animated: true)
     } 
     
     @objc func goToSettings() {

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class HomeBottomBarVC: UITabBarController {
+class AudioTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setNeedsStatusBarAppearanceUpdate()
                         
-        let audioVc = SermonsViewController()
+        let audioVc = AudioSermonsVC()
         let audioIcon = UITabBarItem(
             title: "Audio",
             image: UIImage(named: "home.default.black"),
@@ -23,7 +23,7 @@ class HomeBottomBarVC: UITabBarController {
         )
         audioVc.tabBarItem = audioIcon
         
-        let videoVc = VideoSermonsViewController()
+        let videoVc = VideoSermonsVC()
         let videoIcon = UITabBarItem(
             title: "Video",
             image: UIImage(named: "explore.default.black"),
@@ -33,6 +33,8 @@ class HomeBottomBarVC: UITabBarController {
         
         self.viewControllers = [audioVc, videoVc]
         self.selectedIndex = 0
+        
+        setupNavBar()
     }
     
     
@@ -43,5 +45,28 @@ class HomeBottomBarVC: UITabBarController {
         tabBar.frame.origin.y = view.frame.height - customTabBarHeight
     }
     
+    func setupNavBar() {
+        setNavBarLogo()
+        setupNavBarLefItem()
+    }
+    
+    func setNavBarLogo() {
+        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
+        
+        self.navigationItem.titleView = imageView
+    }
+    
+    func setupNavBarLefItem() {
+        let image = UIImage(systemName: "gearshape.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        
+        let leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(goBack))
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+        
+    @objc func goBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
-
