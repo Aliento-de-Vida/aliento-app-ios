@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoSermonsViewController" customModule="Aliento_App" customModuleProvider="target">
             <connections>
-                <outlet property="floatinActionButton2" destination="59t-5h-iwJ" id="ZyN-b2-5gJ"/>
+                <outlet property="floatinActionButton" destination="59t-5h-iwJ" id="ZyN-b2-5gJ"/>
                 <outlet property="sermonsCollectionView" destination="Z2c-52-O7w" id="jhT-wV-6jh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="7at-qY-I0N"/>
             </connections>

@@ -24,6 +24,7 @@ class VideoSermonItemCell: UICollectionViewCell {
         nameLabel.text = item.name
         durationLabel.text = "\(item.phrase)"
         imageView.load(url: item.imageUrl)
+        dateLabel.text = item.date
                 
         card.layer.cornerRadius = 16
         card.layer.masksToBounds = true

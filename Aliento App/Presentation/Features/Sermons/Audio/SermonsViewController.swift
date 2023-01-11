@@ -37,6 +37,7 @@ class SermonsViewController: UIViewController {
         floatinActionButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }
     
+    
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         print("spotify")
     }
