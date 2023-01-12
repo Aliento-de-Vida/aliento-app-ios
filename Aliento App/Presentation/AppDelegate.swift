@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = Login()
     }
     func goToHome() {
-        window?.rootViewController = UINavigationController(rootViewController: Home())
+        window?.rootViewController = UINavigationController(rootViewController: HomeVC())
     }
 }
 

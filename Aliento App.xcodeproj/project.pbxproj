@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8595A296DE4FE0087D935 /* VideoSermon.swift */; };
 		76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8595C296F3E210087D935 /* CarouselCollectionView.swift */; };
-		76D8A5CF296F4A30003A9E4C /* CarouselHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5CE296F4A30003A9E4C /* CarouselHome.swift */; };
+		76D8A5CF296F4A30003A9E4C /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5CE296F4A30003A9E4C /* CarouselItem.swift */; };
 		76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */; };
 		76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
@@ -20,8 +20,8 @@
 		B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD9928CA9A4400B27C8C /* SplashScreen.swift */; };
 		B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BD9E28CA9E4800B27C8C /* Login.xib */; };
 		B824BDA228CA9E7400B27C8C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDA128CA9E7400B27C8C /* Login.swift */; };
-		B824BDAA28CAA12F00B27C8C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDA928CAA12F00B27C8C /* Home.swift */; };
-		B824BDAD28CAA15600B27C8C /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BDAC28CAA15600B27C8C /* Home.xib */; };
+		B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDA928CAA12F00B27C8C /* HomeVC.swift */; };
+		B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BDAC28CAA15600B27C8C /* HomeVC.xib */; };
 		B824BDB128CAA6BE00B27C8C /* AudioSermonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */; };
 		B824BDB828CAA72400B27C8C /* AudioSermonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BDB728CAA72400B27C8C /* AudioSermonsVC.xib */; };
 		B8965F4C28D52C8100B64709 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F4B28D52C8100B64709 /* HomeRepository.swift */; };
@@ -38,7 +38,6 @@
 		BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44EF40296DCC0500F3D028 /* VideoSermonItemCell.xib */; };
 		BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF43296DE97400F3D028 /* TabBarController.swift */; };
 		BF44EF4729708E9B00F3D028 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF4629708E9B00F3D028 /* Gradient.swift */; };
-		BF44EF492970945E00F3D028 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF482970945E00F3D028 /* RoundShadowView.swift */; };
 		BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */; };
 		BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */; };
 		BF723F8B291C96F800F2FAA4 /* AudioSermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* AudioSermon.swift */; };
@@ -51,7 +50,7 @@
 /* Begin PBXFileReference section */
 		76D8595A296DE4FE0087D935 /* VideoSermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermon.swift; sourceTree = "<group>"; };
 		76D8595C296F3E210087D935 /* CarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionView.swift; sourceTree = "<group>"; };
-		76D8A5CE296F4A30003A9E4C /* CarouselHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselHome.swift; sourceTree = "<group>"; };
+		76D8A5CE296F4A30003A9E4C /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemCell.swift; sourceTree = "<group>"; };
 		76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemCell.xib; sourceTree = "<group>"; };
 		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,8 +65,8 @@
 		B824BD9928CA9A4400B27C8C /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		B824BD9E28CA9E4800B27C8C /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		B824BDA128CA9E7400B27C8C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		B824BDA928CAA12F00B27C8C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		B824BDAC28CAA15600B27C8C /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		B824BDA928CAA12F00B27C8C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		B824BDAC28CAA15600B27C8C /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonsVC.swift; sourceTree = "<group>"; };
 		B824BDB728CAA72400B27C8C /* AudioSermonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSermonsVC.xib; sourceTree = "<group>"; };
 		B8965F4B28D52C8100B64709 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
@@ -84,7 +83,6 @@
 		BF44EF40296DCC0500F3D028 /* VideoSermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoSermonItemCell.xib; sourceTree = "<group>"; };
 		BF44EF43296DE97400F3D028 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BF44EF4629708E9B00F3D028 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		BF44EF482970945E00F3D028 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonsCollectionView.swift; sourceTree = "<group>"; };
 		BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSermonItemCell.xib; sourceTree = "<group>"; };
 		BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonItemCell.swift; sourceTree = "<group>"; };
@@ -127,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				76D8595C296F3E210087D935 /* CarouselCollectionView.swift */,
-				76D8A5CE296F4A30003A9E4C /* CarouselHome.swift */,
+				76D8A5CE296F4A30003A9E4C /* CarouselItem.swift */,
 				76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */,
 				76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */,
 			);
@@ -166,7 +164,6 @@
 		B824BD9428CA99A800B27C8C /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				BF44EF4529708E8C00F3D028 /* Views */,
 				B824BDAF28CAA6AA00B27C8C /* Sermons */,
 				B824BDA428CAA0EF00B27C8C /* Home */,
 				B824BD9D28CA9E3800B27C8C /* Login */,
@@ -198,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				76D8A5CD296F49F7003A9E4C /* Carousel */,
-				B824BDA928CAA12F00B27C8C /* Home.swift */,
-				B824BDAC28CAA15600B27C8C /* Home.xib */,
+				B824BDA928CAA12F00B27C8C /* HomeVC.swift */,
+				B824BDAC28CAA15600B27C8C /* HomeVC.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -233,6 +230,7 @@
 		B8965F4528D52A5C00B64709 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BF44EF4529708E8C00F3D028 /* Views */,
 				BF9C22A3292483010082C0C5 /* Extensions */,
 				B824BD9428CA99A800B27C8C /* Features */,
 				B8965F4928D52C3900B64709 /* Utils */,
@@ -282,8 +280,8 @@
 		BF44EF35296DC9E000F3D028 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				BF723F8A291C96F800F2FAA4 /* AudioSermon.swift */,
 				BF7E1049291D513700DD9844 /* Collection View */,
+				BF723F8A291C96F800F2FAA4 /* AudioSermon.swift */,
 				B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */,
 				B824BDB728CAA72400B27C8C /* AudioSermonsVC.xib */,
 			);
@@ -294,9 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				BF44EF3B296DCAF300F3D028 /* CollectionView */,
+				76D8595A296DE4FE0087D935 /* VideoSermon.swift */,
 				BF44EF37296DCA3400F3D028 /* VideoSermonsVC.swift */,
 				BF44EF39296DCA4500F3D028 /* VideoSermonsVC.xib */,
-				76D8595A296DE4FE0087D935 /* VideoSermon.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -315,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				BF44EF4629708E9B00F3D028 /* Gradient.swift */,
-				BF44EF482970945E00F3D028 /* RoundShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,8 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */,
-				BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */,
 				BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */,
+				BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -406,7 +403,7 @@
 				B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */,
 				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
 				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
-				B824BDAD28CAA15600B27C8C /* Home.xib in Resources */,
+				B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */,
 				B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,14 +446,13 @@
 				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
 				B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */,
-				BF44EF492970945E00F3D028 /* RoundShadowView.swift in Sources */,
-				B824BDAA28CAA12F00B27C8C /* Home.swift in Sources */,
+				B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */,
 				BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */,
 				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
 				BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */,
 				BF44EF4729708E9B00F3D028 /* Gradient.swift in Sources */,
-				76D8A5CF296F4A30003A9E4C /* CarouselHome.swift in Sources */,
+				76D8A5CF296F4A30003A9E4C /* CarouselItem.swift in Sources */,
 				76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,

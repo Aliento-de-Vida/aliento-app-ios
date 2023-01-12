@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AudioTabBarController: UITabBarController {
+class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,7 +15,7 @@ class SplashScreen: UIViewController {
         super.viewDidLoad()
         
         #if DEBUG
-            goToNextScreen()
+        AppDelegate.singleton.goToHome()
             return
         #endif
         

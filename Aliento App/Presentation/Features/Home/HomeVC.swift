@@ -7,14 +7,17 @@
 
 import UIKit
 
-class Home: UIViewController {
-    
+class HomeVC: UIViewController {
+        
+    @IBOutlet weak var cardOneShadow: UIView!
     @IBOutlet weak var cardOneImage: UIImageView!
     @IBOutlet weak var cardOne: UIView!
     
+    @IBOutlet weak var cardTwoShadow: UIView!
     @IBOutlet weak var cardTwoImage: UIImageView!
     @IBOutlet weak var cardTwo: UIView!
     
+    @IBOutlet weak var cardThreeShadow: UIView!
     @IBOutlet weak var cardThreeImage: UIImageView!
     @IBOutlet weak var cardThree: UIView!
     
@@ -23,43 +26,41 @@ class Home: UIViewController {
     @IBOutlet var quickAccesThree: UIImageView!
     
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
-    
-    private let CORNER_RADIUS = CGFloat(12)
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        HomeRepository.getHome() { (result) in }
+
         carouselCollectionView.register(UINib(nibName: CarouselItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarouselItemCell.identifier)
         carouselCollectionView.dataSource = carouselCollectionView
         carouselCollectionView.delegate = carouselCollectionView
         carouselCollectionView.collectionCarousel = collectionCarousel
         carouselCollectionView.reloadData()
-        
-        HomeRepository.getHome() { (result) in }
-        
+                
         cardOneImage.load(url: "https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg")
         cardOneImage.isUserInteractionEnabled = true
         cardOneImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardOneClick)))
-        cardOne.layer.cornerRadius = CORNER_RADIUS
-        cardOne.layer.masksToBounds = true
+        
+        cardOneShadow.addShadow()
+        cardOne.roundCorners()
 
         cardTwoImage.load(url: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784")
-        cardTwo.layer.cornerRadius = CORNER_RADIUS
-        cardTwo.layer.masksToBounds = true
-//        cardTwo.addShadow()
+        cardTwoShadow.addShadow()
+        cardTwo.roundCorners()
         
         cardThreeImage.load(url: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf")
-        cardThree.layer.cornerRadius = CORNER_RADIUS
-        cardThree.layer.masksToBounds = true
+        cardThreeShadow.addShadow()
+        cardThree.roundCorners()
         
         quickAccessOne.load(url:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d")
-        quickAccessOne.layer.cornerRadius = CORNER_RADIUS
+        quickAccessOne.roundCorners()
         
         quickAccesTwo.load(url: "https://img.freepik.com/foto-gratis/cantante-actuando-escenario-show-vivo-efecto-exposicion-doble-color_53876-104901.jpg?w=2000&t=st=1673365190~exp=1673365790~hmac=41b23af84513549405fa01261aca1b8cdf817cbc8ab98ba8e5346c772a794854")
-        quickAccesTwo.layer.cornerRadius = CORNER_RADIUS
+        quickAccesTwo.roundCorners()
 
         quickAccesThree.load(url: "https://img.freepik.com/foto-gratis/vista-frontal-familia-sonriente-afuera_23-2149661362.jpg?w=1800&t=st=1673365559~exp=1673366159~hmac=2540a65b7dcb151d1ab0e69b99e44089d6cecb4ef183f912bbc3e9c07835da9c")
-        quickAccesThree.layer.cornerRadius = CORNER_RADIUS
+        quickAccesThree.roundCorners()
                 
         setupNavBar()
     }
@@ -85,7 +86,7 @@ class Home: UIViewController {
     }
     
     @IBAction func goToPredicas(_ sender: Any) {
-        navigationController?.pushViewController(AudioTabBarController(), animated: true)
+        navigationController?.pushViewController(TabBarController(), animated: true)
     } 
     
     @objc func goToSettings() {
@@ -106,4 +107,23 @@ class Home: UIViewController {
     
 }
 
-                                      
+extension UIView {
+    func dropShadow(
+        shadowColor: UIColor = UIColor.black,
+        fillColor: UIColor = UIColor.white,
+        opacity: Float = 0.5,
+        offset: CGSize = CGSize(width: 0.0, height: 1.0),
+        radius: CGFloat = 10
+    ) -> CAShapeLayer {
+        let shadowLayer = CAShapeLayer()
+        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: radius).cgPath
+        shadowLayer.fillColor = fillColor.cgColor
+        shadowLayer.shadowColor = shadowColor.cgColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = offset
+        shadowLayer.shadowOpacity = opacity
+        shadowLayer.shadowRadius = radius
+        layer.insertSublayer(shadowLayer, at: 0)
+        return shadowLayer
+    }
+}
