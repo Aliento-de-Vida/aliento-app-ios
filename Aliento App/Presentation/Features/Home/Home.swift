@@ -22,10 +22,18 @@ class Home: UIViewController {
     @IBOutlet var quickAccesTwo: UIImageView!
     @IBOutlet var quickAccesThree: UIImageView!
     
+    @IBOutlet var carouselCollectionView: CarouselCollectionView!
+    
     private let CORNER_RADIUS = CGFloat(12)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        carouselCollectionView.register(UINib(nibName: CarouselItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarouselItemCell.identifier)
+        carouselCollectionView.dataSource = carouselCollectionView
+        carouselCollectionView.delegate = carouselCollectionView
+        carouselCollectionView.collectionCarousel = collectionCarousel
+        carouselCollectionView.reloadData()
         
         HomeRepository.getHome() { (result) in }
         
@@ -86,6 +94,11 @@ class Home: UIViewController {
         print("Se presiono card one")
         // handling code
     }
+    
+    let collectionCarousel = [
+        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d" , videoUrl: nil, menuName: nil)
+    ]
+    
     
 }
 
