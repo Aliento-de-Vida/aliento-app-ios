@@ -15,6 +15,7 @@ class VideoSermonItemCell: UICollectionViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var card: UIView!
+    @IBOutlet weak var shadow: UIView!
     
     var item: SermonVideo? = nil
     
@@ -26,8 +27,8 @@ class VideoSermonItemCell: UICollectionViewCell {
         imageView.load(url: item.imageUrl)
         dateLabel.text = item.date
                 
-        card.layer.cornerRadius = 16
-        card.layer.masksToBounds = true
+        card.roundCorners()
+        shadow.addShadow()
      
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }

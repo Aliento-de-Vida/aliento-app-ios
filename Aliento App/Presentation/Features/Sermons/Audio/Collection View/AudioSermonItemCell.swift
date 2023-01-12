@@ -27,7 +27,7 @@ class AudioSermonItemCell: UICollectionViewCell {
         imageView.layer.cornerRadius = imageView.layer.frame.width/2
         imageView.load(url: item.imageUrl)
         
-        background.layer.cornerRadius = 16
+        background.roundCorners()
         background.addShadow()
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
