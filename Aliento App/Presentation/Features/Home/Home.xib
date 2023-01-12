@@ -18,6 +18,7 @@
                 <outlet property="cardThreeImage" destination="QBO-V5-TU4" id="vCk-OO-gvP"/>
                 <outlet property="cardTwo" destination="U7X-gc-vWr" id="Uwy-Fp-Pe9"/>
                 <outlet property="cardTwoImage" destination="D90-lU-jU3" id="ETL-E6-qwa"/>
+                <outlet property="carouselCollectionView" destination="4eo-DA-RZk" id="VSQ-TO-QiX"/>
                 <outlet property="quickAccesThree" destination="BII-Zv-61P" id="W2z-up-UXJ"/>
                 <outlet property="quickAccesTwo" destination="i37-FX-pT1" id="HB8-n2-eQB"/>
                 <outlet property="quickAccessOne" destination="J3n-yF-11Z" id="fgA-m8-9XU"/>
@@ -40,7 +41,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                             <rect key="frame" x="0.0" y="0.0" width="428" height="913"/>
                             <subviews>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4eo-DA-RZk">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4eo-DA-RZk" customClass="CarouselCollectionView" customModule="Aliento_App" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
