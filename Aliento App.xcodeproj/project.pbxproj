@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8595A296DE4FE0087D935 /* VideoSermon.swift */; };
-		76D8595D296F3E210087D935 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8595C296F3E210087D935 /* HomeCollectionView.swift */; };
+		76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8595C296F3E210087D935 /* CarouselCollectionView.swift */; };
+		76D8A5CF296F4A30003A9E4C /* CarouselHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5CE296F4A30003A9E4C /* CarouselHome.swift */; };
+		76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */; };
+		76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
 		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
 		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
@@ -45,7 +48,10 @@
 
 /* Begin PBXFileReference section */
 		76D8595A296DE4FE0087D935 /* VideoSermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermon.swift; sourceTree = "<group>"; };
-		76D8595C296F3E210087D935 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
+		76D8595C296F3E210087D935 /* CarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionView.swift; sourceTree = "<group>"; };
+		76D8A5CE296F4A30003A9E4C /* CarouselHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselHome.swift; sourceTree = "<group>"; };
+		76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemCell.swift; sourceTree = "<group>"; };
+		76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemCell.xib; sourceTree = "<group>"; };
 		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +119,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		76D8A5CD296F49F7003A9E4C /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				76D8595C296F3E210087D935 /* CarouselCollectionView.swift */,
+				76D8A5CE296F4A30003A9E4C /* CarouselHome.swift */,
+				76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */,
+				76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		B824BD5428CA966700B27C8C = {
 			isa = PBXGroup;
 			children = (
@@ -175,9 +192,9 @@
 		B824BDA428CAA0EF00B27C8C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				76D8A5CD296F49F7003A9E4C /* Carousel */,
 				B824BDA928CAA12F00B27C8C /* Home.swift */,
 				B824BDAC28CAA15600B27C8C /* Home.xib */,
-				76D8595C296F3E210087D935 /* HomeCollectionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -367,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B824BD9728CA99DA00B27C8C /* SplashScreen.xib in Resources */,
+				76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */,
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */,
 				B824BDB828CAA72400B27C8C /* AudioSermonsVC.xib in Resources */,
@@ -411,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */,
 				BF44EF38296DCA3400F3D028 /* VideoSermonsVC.swift in Sources */,
 				BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */,
 				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
@@ -421,6 +440,7 @@
 				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
 				BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModel.swift in Sources */,
+				76D8A5CF296F4A30003A9E4C /* CarouselHome.swift in Sources */,
 				76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
@@ -432,7 +452,7 @@
 				BF723F8B291C96F800F2FAA4 /* AudioSermon.swift in Sources */,
 				BF44EF3D296DCB0B00F3D028 /* VideoSermonsCollectionView.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
-				76D8595D296F3E210087D935 /* HomeCollectionView.swift in Sources */,
+				76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */,
 				B8965F4F28D52C9800B64709 /* HomeApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

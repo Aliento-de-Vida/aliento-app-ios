@@ -96,7 +96,9 @@ class Home: UIViewController {
     }
     
     let collectionCarousel = [
-        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d" , videoUrl: nil, menuName: nil)
+        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d" , videoUrl: nil, menuName: nil),
+        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/silueta-ave-voladora-cielo-nublado_181624-5431.jpg?w=1800&t=st=1673545881~exp=1673546481~hmac=e66fa03c5c1cb7e24e873ecd79111de7df6e416acb2f0b801e0369d88e8b984e" , videoUrl: nil, menuName: nil),
+        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/mujer-disfruta-leyendo-libros_329181-19648.jpg?w=1800&t=st=1673546117~exp=1673546717~hmac=74d6d615e061bd01f49a0f62985c8d585519cd2487aac02ea88e6b9ea858ef9b" , videoUrl: nil, menuName: nil),
     ]
     
     
