@@ -59,7 +59,7 @@ class AudioTabBarController: UITabBarController {
     }
     
     func setupNavBarLefItem() {
-        let image = UIImage(systemName: "gearshape.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "chevron.backward")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
         
         let leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(goBack))
         self.navigationItem.leftBarButtonItem = leftBarButton

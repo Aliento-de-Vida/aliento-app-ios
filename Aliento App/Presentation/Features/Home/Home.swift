@@ -40,15 +40,17 @@ class Home: UIViewController {
         cardOneImage.load(url: "https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg")
         cardOneImage.isUserInteractionEnabled = true
         cardOneImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardOneClick)))
-        cardOneImage.layer.cornerRadius = CORNER_RADIUS
-        cardOne.addShadow()
+        cardOne.layer.cornerRadius = CORNER_RADIUS
+        cardOne.layer.masksToBounds = true
 
         cardTwoImage.load(url: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784")
-        cardTwoImage.layer.cornerRadius = CORNER_RADIUS
-        cardTwo.addShadow()
+        cardTwo.layer.cornerRadius = CORNER_RADIUS
+        cardTwo.layer.masksToBounds = true
+//        cardTwo.addShadow()
         
         cardThreeImage.load(url: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf")
-        cardThreeImage.layer.cornerRadius = CORNER_RADIUS
+        cardThree.layer.cornerRadius = CORNER_RADIUS
+        cardThree.layer.masksToBounds = true
         
         quickAccessOne.load(url:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d")
         quickAccessOne.layer.cornerRadius = CORNER_RADIUS
