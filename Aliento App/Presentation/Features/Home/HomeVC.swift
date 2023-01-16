@@ -33,6 +33,14 @@ class HomeVC: UIViewController {
     @IBOutlet var shadowQuickAccessThree: UIView!
     @IBOutlet var cardQuickAccessThree: UIView!
     
+    @IBOutlet var shadowSocialMedia: UIView!
+    @IBOutlet var cardSocialMedia: UIStackView!
+    
+    @IBOutlet var instagramIcon: UIImageView!
+    @IBOutlet var youtubeIcon: UIImageView!
+    @IBOutlet var facebookIcon: UIImageView!
+    @IBOutlet var twitterIcon: UIImageView!
+    @IBOutlet var spotifyIcon: UIImageView!
     
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
         
@@ -73,6 +81,19 @@ class HomeVC: UIViewController {
         quickAccesThree.load(url: "https://img.freepik.com/foto-gratis/vista-frontal-familia-sonriente-afuera_23-2149661362.jpg?w=1800&t=st=1673365559~exp=1673366159~hmac=2540a65b7dcb151d1ab0e69b99e44089d6cecb4ef183f912bbc3e9c07835da9c")
         shadowQuickAccessThree.addShadow()
         quickAccesThree.roundCorners()
+        
+        shadowSocialMedia.addShadow()
+        cardSocialMedia.roundCorners()
+        
+        instagramIcon.image = UIImage(named: "ic_instagram")?.withTintColor(UIColor.black)
+        
+        youtubeIcon.image = UIImage(named: "ic_youtube")?.withTintColor(UIColor.black)
+        
+        facebookIcon.image = UIImage(named: "ic_facebook-1")?.withTintColor(UIColor.black)
+        
+        twitterIcon.image = UIImage(named: "ic_twitter")?.withTintColor(UIColor.black)
+        
+        spotifyIcon.image = UIImage(named: "ic_spotify")?.withTintColor(UIColor.black)
                 
         setupNavBar()
     }
