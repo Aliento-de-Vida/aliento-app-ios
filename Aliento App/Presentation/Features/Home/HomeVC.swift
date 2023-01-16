@@ -22,8 +22,17 @@ class HomeVC: UIViewController {
     @IBOutlet weak var cardThree: UIView!
     
     @IBOutlet var quickAccessOne: UIImageView!
+    @IBOutlet var shadowQuickAccessOne: UIView!
+    @IBOutlet var cardQuickAccessOne: UIView!
+    
     @IBOutlet var quickAccesTwo: UIImageView!
+    @IBOutlet var shadowQuickAccessTwo: UIView!
+    @IBOutlet var cardQuickAccessTwo: UIView!
+    
     @IBOutlet var quickAccesThree: UIImageView!
+    @IBOutlet var shadowQuickAccessThree: UIView!
+    @IBOutlet var cardQuickAccessThree: UIView!
+    
     
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
         
@@ -54,12 +63,15 @@ class HomeVC: UIViewController {
         cardThree.roundCorners()
         
         quickAccessOne.load(url:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d")
+        shadowQuickAccessOne.addShadow()
         quickAccessOne.roundCorners()
         
         quickAccesTwo.load(url: "https://img.freepik.com/foto-gratis/cantante-actuando-escenario-show-vivo-efecto-exposicion-doble-color_53876-104901.jpg?w=2000&t=st=1673365190~exp=1673365790~hmac=41b23af84513549405fa01261aca1b8cdf817cbc8ab98ba8e5346c772a794854")
+        shadowQuickAccessTwo.addShadow()
         quickAccesTwo.roundCorners()
 
         quickAccesThree.load(url: "https://img.freepik.com/foto-gratis/vista-frontal-familia-sonriente-afuera_23-2149661362.jpg?w=1800&t=st=1673365559~exp=1673366159~hmac=2540a65b7dcb151d1ab0e69b99e44089d6cecb4ef183f912bbc3e9c07835da9c")
+        shadowQuickAccessThree.addShadow()
         quickAccesThree.roundCorners()
                 
         setupNavBar()
