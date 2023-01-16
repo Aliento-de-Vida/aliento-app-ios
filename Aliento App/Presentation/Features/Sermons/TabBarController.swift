@@ -18,16 +18,16 @@ class TabBarController: UITabBarController {
         let audioVc = AudioSermonsVC()
         let audioIcon = UITabBarItem(
             title: "Audio",
-            image: UIImage(named: "home.default.black"),
-            selectedImage: UIImage(named: "home.default.black")
+            image: UIImage(named: "ic_audio"),
+            selectedImage: UIImage(named: "ic_audio")
         )
         audioVc.tabBarItem = audioIcon
         
         let videoVc = VideoSermonsVC()
         let videoIcon = UITabBarItem(
             title: "Video",
-            image: UIImage(named: "explore.default.black"),
-            selectedImage: UIImage(named: "explore.default.black")
+            image: UIImage(named: "ic_video"),
+            selectedImage: UIImage(named: "ic_video")
         )
         videoVc.tabBarItem = videoIcon
         
