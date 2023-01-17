@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Resolver
 
 class HomeVC: UIViewController {
         
@@ -43,11 +44,13 @@ class HomeVC: UIViewController {
     @IBOutlet var spotifyIcon: UIImageView!
     
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
+    
+    @Injected var homeRepository: HomeRepository
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HomeRepository.getHome() { (result) in }
+        homeRepository.getHome() { (result) in }
 
         carouselCollectionView.register(UINib(nibName: CarouselItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarouselItemCell.identifier)
         carouselCollectionView.dataSource = carouselCollectionView
@@ -203,26 +206,4 @@ class HomeVC: UIViewController {
         CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/mujer-disfruta-leyendo-libros_329181-19648.jpg?w=1800&t=st=1673546117~exp=1673546717~hmac=74d6d615e061bd01f49a0f62985c8d585519cd2487aac02ea88e6b9ea858ef9b" , videoUrl: nil, menuName: nil),
     ]
     
-    
-}
-
-extension UIView {
-    func dropShadow(
-        shadowColor: UIColor = UIColor.black,
-        fillColor: UIColor = UIColor.white,
-        opacity: Float = 0.5,
-        offset: CGSize = CGSize(width: 0.0, height: 1.0),
-        radius: CGFloat = 10
-    ) -> CAShapeLayer {
-        let shadowLayer = CAShapeLayer()
-        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: radius).cgPath
-        shadowLayer.fillColor = fillColor.cgColor
-        shadowLayer.shadowColor = shadowColor.cgColor
-        shadowLayer.shadowPath = shadowLayer.path
-        shadowLayer.shadowOffset = offset
-        shadowLayer.shadowOpacity = opacity
-        shadowLayer.shadowRadius = radius
-        layer.insertSublayer(shadowLayer, at: 0)
-        return shadowLayer
-    }
 }

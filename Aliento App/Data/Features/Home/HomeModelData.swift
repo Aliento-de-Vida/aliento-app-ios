@@ -7,13 +7,25 @@
 
 import Foundation
 
-struct HomeModel: Codable {
+struct HomeModelData: Codable {
     let ebook: String
     let youtubePlaylistId: String
     let youtubeChannelId: String
     let spotifyPlaylistId: String
     let prayerEmail: String
 //    let socialMedia: SocialMedia
+}
+
+extension HomeModelData {
+    func toDomain() -> HomeModel {
+        return HomeModel(
+            ebook: self.ebook,
+            youtubePlaylistId: self.youtubeChannelId,
+            youtubeChannelId: self.youtubeChannelId,
+            spotifyPlaylistId: self.spotifyPlaylistId,
+            prayerEmail: self.prayerEmail
+        )
+    }
 }
 
 //): Parcelable {

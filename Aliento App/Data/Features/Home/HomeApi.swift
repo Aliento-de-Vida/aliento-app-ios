@@ -50,14 +50,15 @@ enum HomeRouter: APIConfiguration {
 }
 
 struct HomeApi {
-    static func getHome(completion: @escaping (Result<HomeModel, ApiError>) -> Void) {
-        APIManager.shared.request(urlRequest: HomeRouter.getHome) { (result: Swift.Result<HomeModel, ApiError>) in
-            switch result {
-            case .success(let response):
-                completion(.success(response))
-            case .failure(let error):
-                completion(.failure(error))
-            }
+    private let apiManager: APIManager
+    
+    init(apiManager: APIManager) {
+        self.apiManager = apiManager
+    }
+    
+    func getHome(completion: @escaping (Result<HomeModelData, ApiError>) -> Void) {
+        apiManager.request(urlRequest: HomeRouter.getHome) { (result: Swift.Result<HomeModelData, ApiError>) in
+            completion(result)
         }
     }
 }
