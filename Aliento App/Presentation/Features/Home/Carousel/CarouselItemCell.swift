@@ -13,6 +13,13 @@ class CarouselItemCell: UICollectionViewCell {
     
     func configure(item: CarouselItem) {
         carouselImage.load(url: item.imageUrl)
+        
+        carouselImage.isUserInteractionEnabled = true
+        carouselImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(carouselImageClick)))
     }
-    
+    @objc func carouselImageClick() {
+        print("Se presiono carousel image")
+        // handling code
+}
+
 }

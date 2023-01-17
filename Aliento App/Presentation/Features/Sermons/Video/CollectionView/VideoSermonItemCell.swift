@@ -30,7 +30,7 @@ class VideoSermonItemCell: UICollectionViewCell {
         card.roundCorners()
         shadow.addShadow()
      
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
