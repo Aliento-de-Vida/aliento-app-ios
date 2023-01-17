@@ -63,22 +63,35 @@ class HomeVC: UIViewController {
         cardOne.roundCorners()
 
         cardTwoImage.load(url: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784")
+        cardTwoImage.isUserInteractionEnabled = true
+        cardTwoImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardTwoClick)))
+        
         cardTwoShadow.addShadow()
         cardTwo.roundCorners()
         
+        
         cardThreeImage.load(url: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf")
+        cardThreeImage.isUserInteractionEnabled = true
+        cardThreeImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardThreeClick)))
+        
         cardThreeShadow.addShadow()
         cardThree.roundCorners()
         
         quickAccessOne.load(url:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d")
+        quickAccessOne.isUserInteractionEnabled = true
+        quickAccessOne.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessOneClick)))
         shadowQuickAccessOne.addShadow()
         quickAccessOne.roundCorners()
         
         quickAccesTwo.load(url: "https://img.freepik.com/foto-gratis/cantante-actuando-escenario-show-vivo-efecto-exposicion-doble-color_53876-104901.jpg?w=2000&t=st=1673365190~exp=1673365790~hmac=41b23af84513549405fa01261aca1b8cdf817cbc8ab98ba8e5346c772a794854")
+        quickAccesTwo.isUserInteractionEnabled = true
+        quickAccesTwo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessTwoClick)))
         shadowQuickAccessTwo.addShadow()
         quickAccesTwo.roundCorners()
 
         quickAccesThree.load(url: "https://img.freepik.com/foto-gratis/vista-frontal-familia-sonriente-afuera_23-2149661362.jpg?w=1800&t=st=1673365559~exp=1673366159~hmac=2540a65b7dcb151d1ab0e69b99e44089d6cecb4ef183f912bbc3e9c07835da9c")
+        quickAccesThree.isUserInteractionEnabled = true
+        quickAccesThree.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessThreeClick)))
         shadowQuickAccessThree.addShadow()
         quickAccesThree.roundCorners()
         
@@ -86,17 +99,29 @@ class HomeVC: UIViewController {
         cardSocialMedia.roundCorners()
         
         instagramIcon.image = UIImage(named: "ic_instagram")?.withTintColor(UIColor.black)
+        instagramIcon.isUserInteractionEnabled = true
+        instagramIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(InstagramClick)))
         
         youtubeIcon.image = UIImage(named: "ic_youtube")?.withTintColor(UIColor.black)
+        youtubeIcon.isUserInteractionEnabled = true
+        youtubeIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(YoutubeClick)))
         
         facebookIcon.image = UIImage(named: "ic_facebook-1")?.withTintColor(UIColor.black)
+        facebookIcon.isUserInteractionEnabled = true
+        facebookIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FacebookClick)))
         
         twitterIcon.image = UIImage(named: "ic_twitter")?.withTintColor(UIColor.black)
+        twitterIcon.isUserInteractionEnabled = true
+        twitterIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TwitterClick)))
         
         spotifyIcon.image = UIImage(named: "ic_spotify")?.withTintColor(UIColor.black)
+        spotifyIcon.isUserInteractionEnabled = true
+        spotifyIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SpotifyClick)))
                 
         setupNavBar()
+        
     }
+    
     
     func setupNavBar() {
         setNavBarLogo()
@@ -129,8 +154,49 @@ class HomeVC: UIViewController {
     @objc func cardOneClick() {
         print("Se presiono card one")
         // handling code
+        
+    }
+    @objc func cardTwoClick() {
+        print("Se presiono card two")
+        // handling code
+    }
+    @objc func cardThreeClick() {
+        print("Se presiono card three")
+        // handling code
     }
     
+    @objc func quickAccessOneClick() {
+        print("Se presiono quick access one")
+        // handling code
+    }
+    @objc func quickAccessTwoClick() {
+        print("Se presiono quick access two")
+        // handling code
+    }
+    @objc func quickAccessThreeClick() {
+        print("Se presiono quick access three")
+        // handling code
+    }
+    @objc func InstagramClick() {
+        print("Se presiono instagram")
+        // handling code
+    }
+    @objc func YoutubeClick() {
+        print("Se presiono Youtube")
+        // handling code
+    }
+    @objc func FacebookClick() {
+        print("Se presiono Facebook")
+        // handling code
+    }
+    @objc func TwitterClick() {
+        print("Se presiono Twitter")
+        // handling code
+    }
+    @objc func SpotifyClick() {
+        print("Se presiono Spotify")
+        // handling code
+    }
     let collectionCarousel = [
         CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d" , videoUrl: nil, menuName: nil),
         CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/silueta-ave-voladora-cielo-nublado_181624-5431.jpg?w=1800&t=st=1673545881~exp=1673546481~hmac=e66fa03c5c1cb7e24e873ecd79111de7df6e416acb2f0b801e0369d88e8b984e" , videoUrl: nil, menuName: nil),

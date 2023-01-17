@@ -185,6 +185,7 @@
 		B824BD9D28CA9E3800B27C8C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B824BD6628CA966700B27C8C /* Main.storyboard */,
 				B824BD9E28CA9E4800B27C8C /* Login.xib */,
 				B824BDA128CA9E7400B27C8C /* Login.swift */,
 			);
@@ -242,7 +243,6 @@
 		B8965F4928D52C3900B64709 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B824BD6628CA966700B27C8C /* Main.storyboard */,
 				B824BD6928CA966F00B27C8C /* Assets.xcassets */,
 				B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */,
 			);
