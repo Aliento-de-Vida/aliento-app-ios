@@ -31,8 +31,11 @@ public enum APIVersion: String {
 }
 
 public class APIManager {
-    
-    static public let shared = APIManager()
+    let sessionManager: Session
+
+    init(sessionManager: Session) {
+        self.sessionManager = sessionManager
+    }
     
     static public let IS_PRODUCTION = true
         
@@ -41,10 +44,6 @@ public class APIManager {
     }
     
     private var isConnected: Bool { return NetworkReachabilityManager()?.isReachable ?? false }
-    
-    public let sessionManager = Session(interceptor: RequestInterceptor())
-    
-    private init() {}
     
     public func request<T: Codable>(urlRequest: APIConfiguration, completion: @escaping (Swift.Result<T, ApiError>) -> Void) {
         if !isConnected {
