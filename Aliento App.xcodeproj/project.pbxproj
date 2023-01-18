@@ -12,6 +12,8 @@
 		76D8A5CF296F4A30003A9E4C /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5CE296F4A30003A9E4C /* CarouselItem.swift */; };
 		76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */; };
 		76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */; };
+		76D8A5D929772087003A9E4C /* ChurchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5D829772087003A9E4C /* ChurchVC.swift */; };
+		76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D8A5DA2977210F003A9E4C /* ChurchVC.xib */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
 		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
 		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		76D8A5CE296F4A30003A9E4C /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemCell.swift; sourceTree = "<group>"; };
 		76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemCell.xib; sourceTree = "<group>"; };
+		76D8A5D829772087003A9E4C /* ChurchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchVC.swift; sourceTree = "<group>"; };
+		76D8A5DA2977210F003A9E4C /* ChurchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChurchVC.xib; sourceTree = "<group>"; };
 		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,15 @@
 			path = Carousel;
 			sourceTree = "<group>";
 		};
+		76D8A5D729772051003A9E4C /* Church */ = {
+			isa = PBXGroup;
+			children = (
+				76D8A5D829772087003A9E4C /* ChurchVC.swift */,
+				76D8A5DA2977210F003A9E4C /* ChurchVC.xib */,
+			);
+			path = Church;
+			sourceTree = "<group>";
+		};
 		B824BD5428CA966700B27C8C = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +183,7 @@
 		B824BD9428CA99A800B27C8C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				76D8A5D729772051003A9E4C /* Church */,
 				B824BDAF28CAA6AA00B27C8C /* Sermons */,
 				B824BDA428CAA0EF00B27C8C /* Home */,
 				B824BD9D28CA9E3800B27C8C /* Login */,
@@ -426,6 +440,7 @@
 				B824BDB828CAA72400B27C8C /* AudioSermonsVC.xib in Resources */,
 				BF44EF3A296DCA4500F3D028 /* VideoSermonsVC.xib in Resources */,
 				B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */,
+				76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */,
 				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
 				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
 				B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */,
@@ -470,6 +485,7 @@
 				BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */,
 				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
+				76D8A5D929772087003A9E4C /* ChurchVC.swift in Sources */,
 				B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */,
 				B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */,
 				BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */,
