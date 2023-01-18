@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "primer-plano-persona-sentada-sobre-roca-biblia-rodilla-rezando_181624-23325-2.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

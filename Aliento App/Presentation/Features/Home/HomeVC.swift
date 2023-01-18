@@ -59,8 +59,8 @@ class HomeVC: UIViewController {
         carouselCollectionView.reloadData()
                 
         cardOneImage.load(url: "https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg")
-        cardOneImage.isUserInteractionEnabled = true
-        cardOneImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardOneClick)))
+        cardOne.isUserInteractionEnabled = true
+        cardOne.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardOneClick)))
         
         cardOneShadow.addShadow()
         cardOne.roundCorners()
@@ -155,6 +155,7 @@ class HomeVC: UIViewController {
     }
     
     @objc func cardOneClick() {
+        navigationController?.pushViewController(ChurchVC(), animated: true)
         print("Se presiono card one")
         // handling code
         
