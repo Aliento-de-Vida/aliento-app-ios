@@ -23,8 +23,6 @@ class ChurchVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        
-        
         title1.text = "ALIENTO DE VIDA "
         
         text1.text = "Aliento de Vida es una congregacion creada en el corazón de Dios, para que las personas y familias en Yucatán, México y el mundo de habla hispana, tengan un lugar donde puedan adorar a Jesucristo con libertad, recibir una palabra que transforme su vida y celebrar con nosotros la presencia de Dios. Nos sentimos honrados con tu visita, la familia de Aliento te da la bienvenida."
@@ -38,11 +36,17 @@ class ChurchVC : UIViewController {
         horariostext.text = "Domingos 10 am y 12 pm"
         text2.text = "¡Mira nuestra transmisión online!"
         
+        setNavBarLogo()
+        
+    }
     
-    
-   /* let collection = [
-        Church(imageUrl: "https://img.freepik.com/foto-gratis/primer-plano-persona-sentada-sobre-roca-biblia-rodilla-rezando_181624-23325.jpg?w=1800&t=st=1673983332~exp=1673983932~hmac=45f5a27cfa95f18abbc6afdec4cc16602a0a2513cc76218283f143b638a3ee49", titulo1: "ALIENTO DE VIDA", texto1: "Aliento de Vida es una congregacion creada en el corazón de Dios, para que las personas y familias en Yucatán, México y el mundo de habla hispana, tengan un lugar donde puedan adorar a Jesucristo con libertad, recibir una palabra que transforme su vida y celebrar con nosotros la presencia de Dios. Nos sentimos honrados con tu visita, la familia de Aliento te da la bienvenida. ")] */
-
+    func setNavBarLogo() {
+        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
+        
+        self.navigationItem.titleView = imageView
+        
     }
     
 }

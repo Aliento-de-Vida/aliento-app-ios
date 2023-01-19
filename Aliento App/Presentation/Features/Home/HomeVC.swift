@@ -125,10 +125,10 @@ class HomeVC: UIViewController {
         
     }
     
-    
     func setupNavBar() {
         setNavBarLogo()
         setupNavBarLefItem()
+        setupNavBarRightItem()
     }
     
     func setNavBarLogo() {
@@ -146,12 +146,27 @@ class HomeVC: UIViewController {
         self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
+    func setupNavBarRightItem() {
+        let image = UIImage(systemName: "bell.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        
+        let rightBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(goToNotifications))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
     @IBAction func goToPredicas(_ sender: Any) {
         navigationController?.pushViewController(TabBarController(), animated: true)
     } 
     
     @objc func goToSettings() {
+        navigationController?.pushViewController(SettingsVC(), animated: true)
+        print("Se presiono Go to Settings")
         
+    }
+    
+    @objc func goToNotifications() {
+        navigationController?.pushViewController(NotificationsVC(), animated: true)
+        print("Se presiono Go to Notifications")
+      
     }
     
     @objc func cardOneClick() {
@@ -161,10 +176,12 @@ class HomeVC: UIViewController {
         
     }
     @objc func cardTwoClick() {
+        navigationController?.pushViewController(CampusVC(), animated: true)
         print("Se presiono card two")
         // handling code
     }
     @objc func cardThreeClick() {
+        navigationController?.pushViewController(GalleryVC(), animated: true)
         print("Se presiono card three")
         // handling code
     }
@@ -201,6 +218,7 @@ class HomeVC: UIViewController {
         print("Se presiono Spotify")
         // handling code
     }
+   
     let collectionCarousel = [
         CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d" , videoUrl: nil, menuName: nil),
         CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/silueta-ave-voladora-cielo-nublado_181624-5431.jpg?w=1800&t=st=1673545881~exp=1673546481~hmac=e66fa03c5c1cb7e24e873ecd79111de7df6e416acb2f0b801e0369d88e8b984e" , videoUrl: nil, menuName: nil),
