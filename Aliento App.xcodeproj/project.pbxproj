@@ -44,6 +44,12 @@
 		B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F5C28D532C500B64709 /* RequestInterceptor.swift */; };
 		B8965F6028D5335100B64709 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F5F28D5335100B64709 /* ApiError.swift */; };
 		B8965F6328D5347C00B64709 /* HomeModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8965F6228D5347C00B64709 /* HomeModelData.swift */; };
+		BF0C546D2979D04000848A0A /* FileRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C546C2979D04000848A0A /* FileRepositoryImpl.swift */; };
+		BF0C54702979D06F00848A0A /* FileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C546F2979D06F00848A0A /* FileRepository.swift */; };
+		BF0C54722979D25800848A0A /* FileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54712979D25800848A0A /* FileApi.swift */; };
+		BF0C54742979DA6100848A0A /* HomeImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54732979DA6100848A0A /* HomeImagesData.swift */; };
+		BF0C54762979F11F00848A0A /* HomaImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54752979F11F00848A0A /* HomaImages.swift */; };
+		BF0C54792979F1D800848A0A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54782979F1D800848A0A /* String.swift */; };
 		BF44EF34296DC27500F3D028 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF33296DC27500F3D028 /* UIView.swift */; };
 		BF44EF38296DCA3400F3D028 /* VideoSermonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF37296DCA3400F3D028 /* VideoSermonsVC.swift */; };
 		BF44EF3A296DCA4500F3D028 /* VideoSermonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44EF39296DCA4500F3D028 /* VideoSermonsVC.xib */; };
@@ -106,6 +112,12 @@
 		B8965F5C28D532C500B64709 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
 		B8965F5F28D5335100B64709 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		B8965F6228D5347C00B64709 /* HomeModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelData.swift; sourceTree = "<group>"; };
+		BF0C546C2979D04000848A0A /* FileRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRepositoryImpl.swift; sourceTree = "<group>"; };
+		BF0C546F2979D06F00848A0A /* FileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRepository.swift; sourceTree = "<group>"; };
+		BF0C54712979D25800848A0A /* FileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileApi.swift; sourceTree = "<group>"; };
+		BF0C54732979DA6100848A0A /* HomeImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImagesData.swift; sourceTree = "<group>"; };
+		BF0C54752979F11F00848A0A /* HomaImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomaImages.swift; sourceTree = "<group>"; };
+		BF0C54782979F1D800848A0A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BF44EF33296DC27500F3D028 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		BF44EF37296DCA3400F3D028 /* VideoSermonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermonsVC.swift; sourceTree = "<group>"; };
 		BF44EF39296DCA4500F3D028 /* VideoSermonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoSermonsVC.xib; sourceTree = "<group>"; };
@@ -311,6 +323,8 @@
 		B8965F4328D52A5000B64709 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BF0C54772979F1D100848A0A /* Extensions */,
+				BF0C546E2979D06200848A0A /* File */,
 				BF54F18B2977082200A1FF45 /* Home */,
 			);
 			path = Domain;
@@ -353,6 +367,7 @@
 				B8965F4B28D52C8100B64709 /* HomeRepositoryImpl.swift */,
 				B8965F4E28D52C9800B64709 /* HomeApi.swift */,
 				B8965F6228D5347C00B64709 /* HomeModelData.swift */,
+				BF0C54732979DA6100848A0A /* HomeImagesData.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -370,9 +385,35 @@
 		B8965F6528D535C000B64709 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BF0C546B2979D02B00848A0A /* File */,
 				B8965F4A28D52C6700B64709 /* Home */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		BF0C546B2979D02B00848A0A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				BF0C546C2979D04000848A0A /* FileRepositoryImpl.swift */,
+				BF0C54712979D25800848A0A /* FileApi.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		BF0C546E2979D06200848A0A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				BF0C546F2979D06F00848A0A /* FileRepository.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		BF0C54772979F1D100848A0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF0C54782979F1D800848A0A /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BF44EF35296DC9E000F3D028 /* Audio */ = {
@@ -420,6 +461,7 @@
 			children = (
 				BF54F189297702F500A1FF45 /* HomeRepository.swift */,
 				BF54F18C2977083700A1FF45 /* HomeModel.swift */,
+				BF0C54752979F11F00848A0A /* HomaImages.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -562,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */,
+				BF0C54722979D25800848A0A /* FileApi.swift in Sources */,
 				BF44EF38296DCA3400F3D028 /* VideoSermonsVC.swift in Sources */,
 				BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */,
 				76BE30462978709A0084157E /* CampusVC.swift in Sources */,
@@ -574,11 +617,13 @@
 				B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */,
 				BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */,
 				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
+				BF0C54762979F11F00848A0A /* HomaImages.swift in Sources */,
 				BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModelData.swift in Sources */,
 				BF44EF4729708E9B00F3D028 /* Gradient.swift in Sources */,
 				76D8A5CF296F4A30003A9E4C /* CarouselItem.swift in Sources */,
 				76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */,
+				BF0C54702979D06F00848A0A /* FileRepository.swift in Sources */,
 				BF54F1902977099200A1FF45 /* AppModule.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
@@ -586,6 +631,7 @@
 				B824BDB128CAA6BE00B27C8C /* AudioSermonsVC.swift in Sources */,
 				B8965F4C28D52C8100B64709 /* HomeRepositoryImpl.swift in Sources */,
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
+				BF0C54742979DA6100848A0A /* HomeImagesData.swift in Sources */,
 				BF54F18A297702F500A1FF45 /* HomeRepository.swift in Sources */,
 				76BE304B2979A0980084157E /* GalleryVC.swift in Sources */,
 				BF44EF34296DC27500F3D028 /* UIView.swift in Sources */,
@@ -593,10 +639,12 @@
 				BF723F8B291C96F800F2FAA4 /* AudioSermon.swift in Sources */,
 				76D3F97E2979AF2600831312 /* SettingsVC.swift in Sources */,
 				BF44EF3D296DCB0B00F3D028 /* VideoSermonsCollectionView.swift in Sources */,
+				BF0C54792979F1D800848A0A /* String.swift in Sources */,
 				BF54F18D2977083700A1FF45 /* HomeModel.swift in Sources */,
 				76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
 				76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */,
+				BF0C546D2979D04000848A0A /* FileRepositoryImpl.swift in Sources */,
 				B8965F4F28D52C9800B64709 /* HomeApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
