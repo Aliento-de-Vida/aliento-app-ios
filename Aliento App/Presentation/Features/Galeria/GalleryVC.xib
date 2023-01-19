@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryVC" customModule="Aliento_App" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Owj-zb-X8J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXv-jm-YqU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7q-BO-kWS">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="primer-plano-persona-sentada-sobre-roca-biblia-rodilla-rezando_181624-23325-2" translatesAutoresizingMaskIntoConstraints="NO" id="EQh-ci-E0Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="G23-mo-uNG"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="EQh-ci-E0Z" secondAttribute="trailing" id="0Kj-5o-0Kw"/>
+                                <constraint firstItem="EQh-ci-E0Z" firstAttribute="top" secondItem="d7q-BO-kWS" secondAttribute="top" id="Hpu-46-Xh4"/>
+                                <constraint firstAttribute="height" constant="400" id="dX2-ts-Pei"/>
+                                <constraint firstItem="EQh-ci-E0Z" firstAttribute="leading" secondItem="d7q-BO-kWS" secondAttribute="leading" id="eOt-zZ-0lR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="d7q-BO-kWS" firstAttribute="trailing" secondItem="V0Z-wI-Yee" secondAttribute="trailing" id="JEB-Wg-e06"/>
+                        <constraint firstItem="d7q-BO-kWS" firstAttribute="bottom" secondItem="V0Z-wI-Yee" secondAttribute="bottom" id="RUs-fb-glf"/>
+                        <constraint firstItem="d7q-BO-kWS" firstAttribute="leading" secondItem="V0Z-wI-Yee" secondAttribute="leading" id="Vef-DL-2rE"/>
+                        <constraint firstItem="d7q-BO-kWS" firstAttribute="top" secondItem="V0Z-wI-Yee" secondAttribute="top" id="c5G-Fg-3nB"/>
+                        <constraint firstItem="d7q-BO-kWS" firstAttribute="width" secondItem="ZNx-2h-ecG" secondAttribute="width" id="vYQ-dc-bVI"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="V0Z-wI-Yee"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="ZNx-2h-ecG"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uXv-jm-YqU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0ro-Wp-Nfb"/>
+                <constraint firstItem="uXv-jm-YqU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="HNl-K5-39i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uXv-jm-YqU" secondAttribute="trailing" id="ix7-ZX-O6S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uXv-jm-YqU" secondAttribute="bottom" id="r1S-Ep-3fe"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="primer-plano-persona-sentada-sobre-roca-biblia-rodilla-rezando_181624-23325-2" width="1800" height="1202"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
