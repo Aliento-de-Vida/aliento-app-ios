@@ -17,7 +17,9 @@ extension Resolver: ResolverRegistering {
         register { APIManager(sessionManager: resolve()) }
         
         register { HomeApi(apiManager: resolve()) }
-        register { HomeRepositoryImpl(homeApi: resolve()) }.implements(HomeRepository.self)
+        register { HomeRepositoryImpl(homeApi: resolve(), fileRepository: resolve()) }.implements(HomeRepository.self)
+        register { FileApi(apiManager: resolve()) }
+        register { FileRepositoryImpl(fileApi: resolve()) }.implements(FileRepository.self)
     }
     
 }

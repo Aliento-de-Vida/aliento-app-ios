@@ -8,5 +8,7 @@
 import Foundation
 
 protocol HomeRepository {
+    func getHome() async throws -> HomeModel
     func getHome(completion: @escaping (Result<HomeModel, ApiError>) -> Void)
+    func getHomeImages() async throws -> HomeImages
 }
