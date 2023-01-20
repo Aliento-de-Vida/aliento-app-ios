@@ -48,14 +48,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifW-XG-ofG" userLabel="Description">
-                                        <rect key="frame" x="16" y="291" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifW-XG-ofG" userLabel="Description">
+                                        <rect key="frame" x="16" y="291" width="416.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-Tu-S6k" userLabel="Date">
-                                        <rect key="frame" x="448" y="291" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-Tu-S6k" userLabel="Date">
+                                        <rect key="frame" x="448.5" y="291" width="41.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -67,6 +67,7 @@
                                     <constraint firstItem="kIN-J4-e8U" firstAttribute="leading" secondItem="0F7-3f-Th8" secondAttribute="leading" constant="16" id="3I7-zf-Xop"/>
                                     <constraint firstItem="ifW-XG-ofG" firstAttribute="leading" secondItem="0F7-3f-Th8" secondAttribute="leading" constant="16" id="4py-LJ-95M"/>
                                     <constraint firstItem="w2p-Ke-rxZ" firstAttribute="leading" secondItem="0F7-3f-Th8" secondAttribute="leading" id="Bxa-hO-MLb"/>
+                                    <constraint firstItem="ryj-Tu-S6k" firstAttribute="leading" secondItem="ifW-XG-ofG" secondAttribute="trailing" constant="16" id="DjY-sh-NET"/>
                                     <constraint firstItem="s6S-dD-XCQ" firstAttribute="leading" secondItem="0F7-3f-Th8" secondAttribute="leading" id="LR2-Kb-0WC"/>
                                     <constraint firstAttribute="bottom" secondItem="w2p-Ke-rxZ" secondAttribute="bottom" id="YeP-fM-Xpp"/>
                                     <constraint firstAttribute="bottom" secondItem="s6S-dD-XCQ" secondAttribute="bottom" id="dc1-eb-hap"/>
