@@ -86,17 +86,17 @@ class HomeVC: UIViewController {
         quickAccessOne.isUserInteractionEnabled = true
         quickAccessOne.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessOneClick)))
         shadowQuickAccessOne.addShadow()
-        quickAccessOne.roundCorners()
+        cardQuickAccessOne.roundCorners()
         
         quickAccesTwo.isUserInteractionEnabled = true
         quickAccesTwo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessTwoClick)))
         shadowQuickAccessTwo.addShadow()
-        quickAccesTwo.roundCorners()
+        cardQuickAccessTwo.roundCorners()
 
         quickAccesThree.isUserInteractionEnabled = true
         quickAccesThree.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessThreeClick)))
         shadowQuickAccessThree.addShadow()
-        quickAccesThree.roundCorners()
+        cardQuickAccessThree.roundCorners()
         
         shadowSocialMedia.addShadow()
         cardSocialMedia.roundCorners()
@@ -124,13 +124,17 @@ class HomeVC: UIViewController {
         setupNavBar()
     }
     
-<<<<<<< Updated upstream
-=======
     func loadData(home: HomeModel, homeImages: HomeImages) {
-//        cardOneImage.load(url: homeImages.churchImage)
+        cardOneImage.load(url: homeImages.churchImage)
+        cardTwoImage.load(url: homeImages.campusImage)
+        cardThreeImage.load(url: homeImages.galleriesImage)
+        
+        quickAccessOne.load(url: homeImages.donationsImage)
+        quickAccesTwo.load(url: homeImages.prayerImage)
+        quickAccesThree.load(url: homeImages.ebookImage)
+        
     }
     
->>>>>>> Stashed changes
     func setupNavBar() {
         setNavBarLogo()
         setupNavBarLefItem()
