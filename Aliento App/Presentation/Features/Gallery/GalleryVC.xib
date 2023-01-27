@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CampusVC" customModule="Aliento_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryVC" customModule="Aliento_App" customModuleProvider="target">
             <connections>
-                <outlet property="campusCollectionView" destination="z5d-yi-czI" id="qh1-hj-MAk"/>
-                <outlet property="view" destination="iN0-l3-epB" id="GXQ-Q3-ZmV"/>
+                <outlet property="galleryCollectionView" destination="rWR-oy-nIG" id="2Es-Cc-Had"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Owj-zb-X8J"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,16 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-BI-8q5">
-                    <rect key="frame" x="16" y="60" width="64.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galeria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdK-Fc-UKf">
+                    <rect key="frame" x="16" y="60" width="55" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z5d-yi-czI" customClass="CampusCollectionView" customModule="Aliento_App" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="97" width="414" height="799"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rWR-oy-nIG" customClass="GalleryCollectionView" customModule="Aliento_App" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="97" width="414" height="765"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tZC-Y0-qHm">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o9d-ia-99l">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -40,12 +40,12 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="z5d-yi-czI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0p8-JI-1xS"/>
-                <constraint firstAttribute="bottom" secondItem="z5d-yi-czI" secondAttribute="bottom" id="9RQ-CB-Bbq"/>
-                <constraint firstItem="0pK-BI-8q5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="MVq-T0-VEm"/>
-                <constraint firstItem="z5d-yi-czI" firstAttribute="top" secondItem="0pK-BI-8q5" secondAttribute="bottom" constant="16" id="cK0-eJ-W7v"/>
-                <constraint firstItem="0pK-BI-8q5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="jn3-zQ-tGh"/>
-                <constraint firstItem="z5d-yi-czI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nfl-dx-kZ4"/>
+                <constraint firstItem="YdK-Fc-UKf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Bz2-l7-QLl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rWR-oy-nIG" secondAttribute="trailing" id="ZIP-3c-0PR"/>
+                <constraint firstItem="rWR-oy-nIG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nsu-tz-qcF"/>
+                <constraint firstItem="rWR-oy-nIG" firstAttribute="top" secondItem="YdK-Fc-UKf" secondAttribute="bottom" constant="16" id="oIj-Sd-Zop"/>
+                <constraint firstItem="YdK-Fc-UKf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="reb-AE-mtH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rWR-oy-nIG" secondAttribute="bottom" id="vdX-Io-lZD"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
         </view>

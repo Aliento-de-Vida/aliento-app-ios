@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryItemCell" id="6MB-iu-6d3" customClass="GalleryItemCell" customModule="Aliento_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="609" height="221"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Y4P-hM-T62">
+                <rect key="frame" x="0.0" y="0.0" width="609" height="221"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze7-0O-SXV" userLabel="Shadow">
+                        <rect key="frame" x="8" y="0.0" width="593" height="221"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faS-gY-jdt" userLabel="Card">
+                                <rect key="frame" x="0.0" y="0.0" width="593" height="221"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCN-0b-Cfh">
+                                        <rect key="frame" x="0.0" y="0.0" width="593" height="221"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D03-Z0-oHO" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="121" width="593" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="fxp-lc-Gz1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wD-U6-q6l">
+                                        <rect key="frame" x="16" y="176.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="D03-Z0-oHO" secondAttribute="bottom" id="1dR-5L-pp1"/>
+                                    <constraint firstAttribute="bottom" secondItem="yCN-0b-Cfh" secondAttribute="bottom" id="I8e-Bm-fwX"/>
+                                    <constraint firstItem="D03-Z0-oHO" firstAttribute="leading" secondItem="faS-gY-jdt" secondAttribute="leading" id="KTY-jd-xYe"/>
+                                    <constraint firstAttribute="trailing" secondItem="D03-Z0-oHO" secondAttribute="trailing" id="OHO-DY-ZgW"/>
+                                    <constraint firstAttribute="trailing" secondItem="yCN-0b-Cfh" secondAttribute="trailing" id="Rby-b1-FxT"/>
+                                    <constraint firstItem="4wD-U6-q6l" firstAttribute="leading" secondItem="faS-gY-jdt" secondAttribute="leading" constant="16" id="ccr-Ws-LcA"/>
+                                    <constraint firstItem="yCN-0b-Cfh" firstAttribute="leading" secondItem="faS-gY-jdt" secondAttribute="leading" id="eKc-kP-zGA"/>
+                                    <constraint firstItem="yCN-0b-Cfh" firstAttribute="top" secondItem="faS-gY-jdt" secondAttribute="top" id="vco-QU-kec"/>
+                                    <constraint firstAttribute="bottom" secondItem="4wD-U6-q6l" secondAttribute="bottom" constant="24" id="yvI-Mg-nmC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="faS-gY-jdt" firstAttribute="leading" secondItem="ze7-0O-SXV" secondAttribute="leading" id="Kqv-cq-EwJ"/>
+                            <constraint firstAttribute="trailing" secondItem="faS-gY-jdt" secondAttribute="trailing" id="S8c-kU-mM1"/>
+                            <constraint firstAttribute="bottom" secondItem="faS-gY-jdt" secondAttribute="bottom" id="k2R-GT-qE1"/>
+                            <constraint firstItem="faS-gY-jdt" firstAttribute="top" secondItem="ze7-0O-SXV" secondAttribute="top" id="si5-z0-Um4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ze7-0O-SXV" secondAttribute="trailing" constant="8" id="Pk9-yW-5vf"/>
+                    <constraint firstItem="ze7-0O-SXV" firstAttribute="leading" secondItem="Y4P-hM-T62" secondAttribute="leading" constant="8" id="jOo-te-eFj"/>
+                    <constraint firstItem="ze7-0O-SXV" firstAttribute="top" secondItem="Y4P-hM-T62" secondAttribute="top" id="p4s-mE-uYI"/>
+                    <constraint firstAttribute="bottom" secondItem="ze7-0O-SXV" secondAttribute="bottom" id="wMO-WS-yTd"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="609" height="221"/>
+            <connections>
+                <outlet property="galleryCard" destination="faS-gY-jdt" id="3FL-uF-hs1"/>
+                <outlet property="galleryImage" destination="yCN-0b-Cfh" id="att-N9-PjF"/>
+                <outlet property="galleryLabel" destination="4wD-U6-q6l" id="Bn9-nt-OI1"/>
+                <outlet property="galleryShadow" destination="ze7-0O-SXV" id="HdZ-tt-pfI"/>
+            </connections>
+            <point key="canvasLocation" x="364.49275362318843" y="94.084821428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

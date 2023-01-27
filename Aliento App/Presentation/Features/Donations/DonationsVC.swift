@@ -1,18 +1,24 @@
 //
-//  Gallery.swift
+//  DonationsVC.swift
 //  Aliento App
 //
-//  Created by Juan Armando Frías Ramírez on 19/01/23.
+//  Created by Juan Armando Frías Ramírez on 26/01/23.
 //
 
 import UIKit
 
-class GalleryVC : UIViewController {
+class DonationsVC : UIViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        
+        
         setNavBarLogo()
+        
     }
     
     func setNavBarLogo() {
@@ -24,4 +30,3 @@ class GalleryVC : UIViewController {
     }
     
 }
-

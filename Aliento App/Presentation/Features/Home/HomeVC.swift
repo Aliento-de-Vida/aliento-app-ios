@@ -197,10 +197,12 @@ class HomeVC: UIViewController {
     }
     
     @objc func quickAccessOneClick() {
+        navigationController?.pushViewController(DonationsVC(), animated: true)
         print("Se presiono quick access one")
         // handling code
     }
     @objc func quickAccessTwoClick() {
+        navigationController?.pushViewController(PlayerVC(), animated: true)
         print("Se presiono quick access two")
         // handling code
     }
