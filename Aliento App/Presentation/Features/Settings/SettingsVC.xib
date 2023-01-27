@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC" customModule="Aliento_App" customModuleProvider="target">
             <connections>
+                <outlet property="notificationsPush" destination="sJS-gS-Q9C" id="6aR-DB-0j8"/>
+                <outlet property="theme" destination="4Fm-MD-Ut9" id="JL8-Vd-bF7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0eK-0W-Nik"/>
             </connections>
         </placeholder>
@@ -18,8 +20,47 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVg-As-6Af">
+                    <rect key="frame" x="16" y="60" width="382" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema Oscuro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQr-XF-wGS">
+                    <rect key="frame" x="16" y="113" width="101" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificaciones Push" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlj-FQ-LGb">
+                    <rect key="frame" x="16" y="166" width="151" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-MD-Ut9">
+                    <rect key="frame" x="349" y="113" width="51" height="31"/>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJS-gS-Q9C">
+                    <rect key="frame" x="349" y="160" width="51" height="31"/>
+                </switch>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dlj-FQ-LGb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="AIi-Cr-RKN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sJS-gS-Q9C" secondAttribute="trailing" constant="16" id="Oif-7b-oY8"/>
+                <constraint firstItem="sJS-gS-Q9C" firstAttribute="top" secondItem="4Fm-MD-Ut9" secondAttribute="bottom" constant="16" id="RFj-EY-M06"/>
+                <constraint firstItem="nVg-As-6Af" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Vns-Yc-SQy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nVg-As-6Af" secondAttribute="trailing" constant="16" id="YID-Sf-ZTm"/>
+                <constraint firstItem="ZQr-XF-wGS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="doC-4A-F6h"/>
+                <constraint firstItem="ZQr-XF-wGS" firstAttribute="top" secondItem="nVg-As-6Af" secondAttribute="bottom" constant="32" id="hhe-HT-fAp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Fm-MD-Ut9" secondAttribute="trailing" constant="16" id="t2n-UA-Wvg"/>
+                <constraint firstItem="dlj-FQ-LGb" firstAttribute="top" secondItem="ZQr-XF-wGS" secondAttribute="bottom" constant="32" id="vFL-ha-Bkb"/>
+                <constraint firstItem="nVg-As-6Af" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="vGX-NW-A8R"/>
+                <constraint firstItem="4Fm-MD-Ut9" firstAttribute="top" secondItem="nVg-As-6Af" secondAttribute="bottom" constant="32" id="vtY-hH-Jnk"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="81"/>
         </view>
     </objects>

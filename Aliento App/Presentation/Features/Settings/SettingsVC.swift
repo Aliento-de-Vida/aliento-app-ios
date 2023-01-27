@@ -8,6 +8,8 @@
 import UIKit
 
 class SettingsVC : UIViewController {
+    @IBOutlet var theme: UISwitch!
+    @IBOutlet var notificationsPush: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
