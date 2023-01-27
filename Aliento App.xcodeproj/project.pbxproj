@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		765E45A0297AFD58004FA458 /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E459F297AFD58004FA458 /* test.xib */; };
+		765E45A329819750004FA458 /* CampusCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45A229819750004FA458 /* CampusCollectionView.swift */; };
+		765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E45A6298197BA004FA458 /* CampusItemCell.xib */; };
+		765E45A929819A92004FA458 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45A829819A92004FA458 /* Campus.swift */; };
+		765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AA2981A289004FA458 /* CampusItemCell.swift */; };
+		765E45AD2981BC22004FA458 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AC2981BC22004FA458 /* Gallery.swift */; };
+		765E45B02981BCB1004FA458 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AF2981BCB1004FA458 /* GalleryCollectionView.swift */; };
+		765E45B22981BD08004FA458 /* GalleryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45B12981BD08004FA458 /* GalleryItemCell.swift */; };
+		765E45B42981BD1C004FA458 /* GalleryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E45B32981BD1C004FA458 /* GalleryItemCell.xib */; };
 		76BE30462978709A0084157E /* CampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE30452978709A0084157E /* CampusVC.swift */; };
 		76BE3048297870BC0084157E /* CampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE3047297870BC0084157E /* CampusVC.xib */; };
 		76BE304B2979A0980084157E /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE304A2979A0980084157E /* GalleryVC.swift */; };
@@ -16,7 +24,7 @@
 		76D3F9802979AF5F00831312 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D3F97F2979AF5F00831312 /* SettingsVC.xib */; };
 		76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F9822979AF8A00831312 /* NotificationsVC.swift */; };
 		76D3F9852979AF9F00831312 /* NotificationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D3F9842979AF9F00831312 /* NotificationsVC.xib */; };
-		76D3F9882979BADE00831312 /* notificationsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F9872979BADE00831312 /* notificationsCollectionView.swift */; };
+		76D3F9882979BADE00831312 /* NotificationsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F9872979BADE00831312 /* NotificationsCollectionView.swift */; };
 		76D3F98A2979BB4000831312 /* NotificationsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F9892979BB4000831312 /* NotificationsItemCell.swift */; };
 		76D3F98C2979BB6000831312 /* NotificationsItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D3F98B2979BB6000831312 /* NotificationsItemCell.xib */; };
 		76D3F98E2979BD3300831312 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F98D2979BD3300831312 /* Notifications.swift */; };
@@ -27,6 +35,10 @@
 		76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */; };
 		76D8A5D929772087003A9E4C /* ChurchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8A5D829772087003A9E4C /* ChurchVC.swift */; };
 		76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D8A5DA2977210F003A9E4C /* ChurchVC.xib */; };
+		76EF47152982F98A00178BE5 /* DonationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF47142982F98A00178BE5 /* DonationsVC.swift */; };
+		76EF47172982FA0700178BE5 /* DonationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EF47162982FA0700178BE5 /* DonationsVC.xib */; };
+		76EF471A2982FE1A00178BE5 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF47192982FE1A00178BE5 /* PlayerVC.swift */; };
+		76EF471C2982FE2700178BE5 /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EF471B2982FE2700178BE5 /* PlayerVC.xib */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
 		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
 		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
@@ -73,6 +85,14 @@
 
 /* Begin PBXFileReference section */
 		765E459F297AFD58004FA458 /* test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
+		765E45A229819750004FA458 /* CampusCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusCollectionView.swift; sourceTree = "<group>"; };
+		765E45A6298197BA004FA458 /* CampusItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusItemCell.xib; sourceTree = "<group>"; };
+		765E45A829819A92004FA458 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
+		765E45AA2981A289004FA458 /* CampusItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusItemCell.swift; sourceTree = "<group>"; };
+		765E45AC2981BC22004FA458 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		765E45AF2981BCB1004FA458 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		765E45B12981BD08004FA458 /* GalleryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItemCell.swift; sourceTree = "<group>"; };
+		765E45B32981BD1C004FA458 /* GalleryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryItemCell.xib; sourceTree = "<group>"; };
 		76BE30452978709A0084157E /* CampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusVC.swift; sourceTree = "<group>"; };
 		76BE3047297870BC0084157E /* CampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusVC.xib; sourceTree = "<group>"; };
 		76BE304A2979A0980084157E /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
@@ -81,7 +101,7 @@
 		76D3F97F2979AF5F00831312 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		76D3F9822979AF8A00831312 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		76D3F9842979AF9F00831312 /* NotificationsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsVC.xib; sourceTree = "<group>"; };
-		76D3F9872979BADE00831312 /* notificationsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationsCollectionView.swift; sourceTree = "<group>"; };
+		76D3F9872979BADE00831312 /* NotificationsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCollectionView.swift; sourceTree = "<group>"; };
 		76D3F9892979BB4000831312 /* NotificationsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsItemCell.swift; sourceTree = "<group>"; };
 		76D3F98B2979BB6000831312 /* NotificationsItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsItemCell.xib; sourceTree = "<group>"; };
 		76D3F98D2979BD3300831312 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -92,6 +112,10 @@
 		76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemCell.xib; sourceTree = "<group>"; };
 		76D8A5D829772087003A9E4C /* ChurchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchVC.swift; sourceTree = "<group>"; };
 		76D8A5DA2977210F003A9E4C /* ChurchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChurchVC.xib; sourceTree = "<group>"; };
+		76EF47142982F98A00178BE5 /* DonationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsVC.swift; sourceTree = "<group>"; };
+		76EF47162982FA0700178BE5 /* DonationsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationsVC.xib; sourceTree = "<group>"; };
+		76EF47192982FE1A00178BE5 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
+		76EF471B2982FE2700178BE5 /* PlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
 		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,22 +193,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		765E45A1298196DC004FA458 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				765E45A229819750004FA458 /* CampusCollectionView.swift */,
+				765E45AA2981A289004FA458 /* CampusItemCell.swift */,
+				765E45A6298197BA004FA458 /* CampusItemCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		765E45AE2981BC2E004FA458 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				765E45AF2981BCB1004FA458 /* GalleryCollectionView.swift */,
+				765E45B12981BD08004FA458 /* GalleryItemCell.swift */,
+				765E45B32981BD1C004FA458 /* GalleryItemCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		76BE3044297870450084157E /* Campus */ = {
 			isa = PBXGroup;
 			children = (
+				765E45A1298196DC004FA458 /* CollectionView */,
+				765E45A829819A92004FA458 /* Campus.swift */,
 				76BE30452978709A0084157E /* CampusVC.swift */,
 				76BE3047297870BC0084157E /* CampusVC.xib */,
 			);
 			path = Campus;
 			sourceTree = "<group>";
 		};
-		76BE30492979A0600084157E /* Galeria */ = {
+		76BE30492979A0600084157E /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				765E45AE2981BC2E004FA458 /* CollectionView */,
 				76BE304A2979A0980084157E /* GalleryVC.swift */,
 				76BE304C2979A1330084157E /* GalleryVC.xib */,
+				765E45AC2981BC22004FA458 /* Gallery.swift */,
 			);
-			path = Galeria;
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		76D3F97C2979AF0300831312 /* Settings */ = {
@@ -210,7 +258,7 @@
 		76D3F9862979BA9D00831312 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				76D3F9872979BADE00831312 /* notificationsCollectionView.swift */,
+				76D3F9872979BADE00831312 /* NotificationsCollectionView.swift */,
 				76D3F9892979BB4000831312 /* NotificationsItemCell.swift */,
 				76D3F98B2979BB6000831312 /* NotificationsItemCell.xib */,
 			);
@@ -236,6 +284,24 @@
 				76D8A5DA2977210F003A9E4C /* ChurchVC.xib */,
 			);
 			path = Church;
+			sourceTree = "<group>";
+		};
+		76EF47132982F63700178BE5 /* Donations */ = {
+			isa = PBXGroup;
+			children = (
+				76EF47142982F98A00178BE5 /* DonationsVC.swift */,
+				76EF47162982FA0700178BE5 /* DonationsVC.xib */,
+			);
+			path = Donations;
+			sourceTree = "<group>";
+		};
+		76EF47182982FE0700178BE5 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				76EF47192982FE1A00178BE5 /* PlayerVC.swift */,
+				76EF471B2982FE2700178BE5 /* PlayerVC.xib */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		B824BD5428CA966700B27C8C = {
@@ -270,9 +336,11 @@
 		B824BD9428CA99A800B27C8C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				76EF47182982FE0700178BE5 /* Player */,
+				76EF47132982F63700178BE5 /* Donations */,
 				76D3F9812979AF6F00831312 /* Notifications */,
 				76D3F97C2979AF0300831312 /* Settings */,
-				76BE30492979A0600084157E /* Galeria */,
+				76BE30492979A0600084157E /* Gallery */,
 				76BE3044297870450084157E /* Campus */,
 				76D8A5D729772051003A9E4C /* Church */,
 				B824BDAF28CAA6AA00B27C8C /* Sermons */,
@@ -558,8 +626,12 @@
 				76BE3048297870BC0084157E /* CampusVC.xib in Resources */,
 				76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */,
 				76BE304D2979A1330084157E /* GalleryVC.xib in Resources */,
+				765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */,
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */,
+				76EF47172982FA0700178BE5 /* DonationsVC.xib in Resources */,
+				765E45B42981BD1C004FA458 /* GalleryItemCell.xib in Resources */,
+				76EF471C2982FE2700178BE5 /* PlayerVC.xib in Resources */,
 				B824BDB828CAA72400B27C8C /* AudioSermonsVC.xib in Resources */,
 				76D3F98C2979BB6000831312 /* NotificationsItemCell.xib in Resources */,
 				76D3F9852979AF9F00831312 /* NotificationsVC.xib in Resources */,
@@ -607,16 +679,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76EF471A2982FE1A00178BE5 /* PlayerVC.swift in Sources */,
 				76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */,
 				BF0C54722979D25800848A0A /* FileApi.swift in Sources */,
 				BF44EF38296DCA3400F3D028 /* VideoSermonsVC.swift in Sources */,
 				BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */,
+				765E45B22981BD08004FA458 /* GalleryItemCell.swift in Sources */,
 				76BE30462978709A0084157E /* CampusVC.swift in Sources */,
 				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
 				76D3F98E2979BD3300831312 /* Notifications.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
 				76D8A5D929772087003A9E4C /* ChurchVC.swift in Sources */,
-				76D3F9882979BADE00831312 /* notificationsCollectionView.swift in Sources */,
+				765E45AD2981BC22004FA458 /* Gallery.swift in Sources */,
+				76D3F9882979BADE00831312 /* NotificationsCollectionView.swift in Sources */,
 				B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */,
 				B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */,
 				BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */,
@@ -624,6 +699,7 @@
 				BF0C54762979F11F00848A0A /* HomaImages.swift in Sources */,
 				BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModelData.swift in Sources */,
+				765E45A329819750004FA458 /* CampusCollectionView.swift in Sources */,
 				BF44EF4729708E9B00F3D028 /* Gradient.swift in Sources */,
 				76D8A5CF296F4A30003A9E4C /* CarouselItem.swift in Sources */,
 				76D8595B296DE4FE0087D935 /* VideoSermon.swift in Sources */,
@@ -634,10 +710,13 @@
 				BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */,
 				B824BDB128CAA6BE00B27C8C /* AudioSermonsVC.swift in Sources */,
 				B8965F4C28D52C8100B64709 /* HomeRepositoryImpl.swift in Sources */,
+				76EF47152982F98A00178BE5 /* DonationsVC.swift in Sources */,
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
+				765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */,
 				BF0C54742979DA6100848A0A /* HomeImagesData.swift in Sources */,
 				BF54F18A297702F500A1FF45 /* HomeRepository.swift in Sources */,
 				76BE304B2979A0980084157E /* GalleryVC.swift in Sources */,
+				765E45A929819A92004FA458 /* Campus.swift in Sources */,
 				BF44EF34296DC27500F3D028 /* UIView.swift in Sources */,
 				76D3F98A2979BB4000831312 /* NotificationsItemCell.swift in Sources */,
 				BF723F8B291C96F800F2FAA4 /* AudioSermon.swift in Sources */,
@@ -648,6 +727,7 @@
 				76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
 				76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */,
+				765E45B02981BCB1004FA458 /* GalleryCollectionView.swift in Sources */,
 				BF0C546D2979D04000848A0A /* FileRepositoryImpl.swift in Sources */,
 				B8965F4F28D52C9800B64709 /* HomeApi.swift in Sources */,
 			);

@@ -9,7 +9,7 @@ import UIKit
 
 class NotificationsVC : UIViewController {
     
-    @IBOutlet weak var notificationsCollectionView:notificationsCollectionView!
+    @IBOutlet weak var notificationsCollectionView: NotificationsCollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

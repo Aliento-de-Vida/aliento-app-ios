@@ -7,11 +7,11 @@
 
 import UIKit
 
-class notificationsCollectionView: UICollectionView {
+class NotificationsCollectionView: UICollectionView {
     var collectionNotification: [Notifications] = []
 }
 
-extension notificationsCollectionView: UICollectionViewDelegateFlowLayout {
+extension NotificationsCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
@@ -22,7 +22,7 @@ extension notificationsCollectionView: UICollectionViewDelegateFlowLayout {
         
 }
 
-extension notificationsCollectionView: UICollectionViewDataSource {
+extension NotificationsCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { collectionNotification.count }
     
