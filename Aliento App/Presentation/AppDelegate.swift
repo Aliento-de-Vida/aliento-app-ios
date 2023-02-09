@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        setDarkTheme(enabled: false)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = SplashScreen()
         window?.makeKeyAndVisible()
@@ -28,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func setDarkTheme(enabled: Bool) {
+        if enabled {
+            window?.overrideUserInterfaceStyle = .dark
+        } else {
+            window?.overrideUserInterfaceStyle = .light
+        }
+    }
+        
     func goToLogin() {
         window?.rootViewController = Login()
     }

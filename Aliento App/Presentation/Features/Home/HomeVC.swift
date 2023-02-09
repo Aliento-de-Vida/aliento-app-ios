@@ -47,14 +47,16 @@ class HomeVC: UIViewController {
     
     @Injected var homeRepository: HomeRepository
         
+    var home: HomeModel? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         Task {
             do {
-                let home = try await homeRepository.getHome()
+                home = try await homeRepository.getHome()
                 let homeImages = try await homeRepository.getHomeImages()
-                loadData(home: home, homeImages: homeImages)
+                loadData(home: home!, homeImages: homeImages)
             } catch {
                 //show(error)
                 return
@@ -101,23 +103,25 @@ class HomeVC: UIViewController {
         shadowSocialMedia.addShadow()
         cardSocialMedia.roundCorners()
         
-        instagramIcon.image = UIImage(named: "ic_instagram")?.withTintColor(UIColor.black)
+        cardSocialMedia.backgroundColor = UIColor(named: "surface")!
+        
+        instagramIcon.image = UIImage(named: "ic_instagram")?.withTintColor(UIColor(named: "on_background")!)
         instagramIcon.isUserInteractionEnabled = true
         instagramIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(InstagramClick)))
         
-        youtubeIcon.image = UIImage(named: "ic_youtube")?.withTintColor(UIColor.black)
+        youtubeIcon.image = UIImage(named: "ic_youtube")?.withTintColor(UIColor(named: "on_background")!)
         youtubeIcon.isUserInteractionEnabled = true
         youtubeIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(YoutubeClick)))
         
-        facebookIcon.image = UIImage(named: "ic_facebook-1")?.withTintColor(UIColor.black)
+        facebookIcon.image = UIImage(named: "ic_facebook-1")?.withTintColor(UIColor(named: "on_background")!)
         facebookIcon.isUserInteractionEnabled = true
         facebookIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FacebookClick)))
         
-        twitterIcon.image = UIImage(named: "ic_twitter")?.withTintColor(UIColor.black)
+        twitterIcon.image = UIImage(named: "ic_twitter")?.withTintColor(UIColor(named: "on_background")!)
         twitterIcon.isUserInteractionEnabled = true
         twitterIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TwitterClick)))
         
-        spotifyIcon.image = UIImage(named: "ic_spotify")?.withTintColor(UIColor.black)
+        spotifyIcon.image = UIImage(named: "ic_spotify")?.withTintColor(UIColor(named: "on_background")!)
         spotifyIcon.isUserInteractionEnabled = true
         spotifyIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SpotifyClick)))
                 
@@ -136,13 +140,15 @@ class HomeVC: UIViewController {
     }
     
     func setupNavBar() {
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "on_background")!
+
         setNavBarLogo()
         setupNavBarLefItem()
         setupNavBarRightItem()
     }
     
     func setNavBarLogo() {
-        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor(named:"on_background")!, renderingMode: .alwaysOriginal)
         let imageView = UIImageView(image: image)
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
         
@@ -150,14 +156,14 @@ class HomeVC: UIViewController {
     }
     
     func setupNavBarLefItem() {
-        let image = UIImage(systemName: "gearshape.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "gearshape.fill")!
         
         let leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(goToSettings))
         self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
     func setupNavBarRightItem() {
-        let image = UIImage(systemName: "bell.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "bell.fill")!
         
         let rightBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(goToNotifications))
         self.navigationItem.rightBarButtonItem = rightBarButton
@@ -211,23 +217,34 @@ class HomeVC: UIViewController {
         // handling code
     }
     @objc func InstagramClick() {
+        guard let instagramClick = URL(string: home?.socialMedia.instagramUrl ?? "") else { return }
+        UIApplication.shared.open(instagramClick)
+
         print("Se presiono instagram")
         // handling code
     }
     @objc func YoutubeClick() {
         print("Se presiono Youtube")
+        guard let YoutubeClick = URL(string: home?.socialMedia.youtubeChannelUrl ?? "") else { return }
+        UIApplication.shared.open(YoutubeClick)
         // handling code
     }
     @objc func FacebookClick() {
         print("Se presiono Facebook")
+        guard let FacebookClick = URL(string: home?.socialMedia.facebookPageUrl ?? "") else { return }
+        UIApplication.shared.open(FacebookClick)
         // handling code
     }
     @objc func TwitterClick() {
         print("Se presiono Twitter")
+        guard let TwitterClick = URL(string: home?.socialMedia.twitterUrl ?? "") else { return }
+        UIApplication.shared.open(TwitterClick)
         // handling code
     }
     @objc func SpotifyClick() {
         print("Se presiono Spotify")
+        guard let SpotifyClick = URL(string: home?.socialMedia.spotifyArtistId ?? "") else { return }
+        UIApplication.shared.open(SpotifyClick)
         // handling code
     }
    

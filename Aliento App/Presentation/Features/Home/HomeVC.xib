@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -335,7 +336,8 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <color key="backgroundColor" name="surface"/>
+                                            <color key="tintColor" name="surface"/>
                                             <constraints>
                                                 <constraint firstItem="9Gu-Et-GJl" firstAttribute="width" secondItem="cHc-pA-F2O" secondAttribute="width" id="1c1-ed-k9e"/>
                                                 <constraint firstItem="qRa-Y8-Blu" firstAttribute="width" secondItem="cHc-pA-F2O" secondAttribute="width" id="iA8-jL-jME"/>
@@ -634,11 +636,11 @@
         <image name="ic_spotify" width="422" height="381"/>
         <image name="ic_twitter" width="422" height="381"/>
         <image name="ic_youtube" width="422" height="381"/>
+        <namedColor name="surface">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
