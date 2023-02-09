@@ -25,7 +25,7 @@ class GalleryVC : UIViewController {
     
     
     func setNavBarLogo() {
-        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor(named: "on_background")!, renderingMode: .alwaysOriginal)
         let imageView = UIImageView(image: image)
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
         
