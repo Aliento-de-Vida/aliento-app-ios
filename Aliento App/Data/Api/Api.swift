@@ -16,6 +16,19 @@ public protocol APIConfiguration: URLRequestConvertible {
     var jsonDecoder: JSONDecoder { get }
 }
 
+struct Request: APIConfiguration {
+    func asURLRequest() throws -> URLRequest {
+        var urlRequest = try URLRequest(url: APIManager.baseUrl + APIVersion.v1.rawValue + path, method: method)
+        urlRequest = try encoding.encode(urlRequest, with: parameters)
+        return urlRequest
+    }
+    
+    var method: HTTPMethod
+    var path: String
+    var encoding: ParameterEncoding = URLEncoding.default
+    var parameters: Parameters? = nil
+}
+
 public extension APIConfiguration {
     var jsonDecoder: JSONDecoder {
         get {
@@ -45,32 +58,29 @@ public class APIManager {
     
     private var isConnected: Bool { return NetworkReachabilityManager()?.isReachable ?? false }
     
-    public func request<T: Codable>(urlRequest: APIConfiguration, completion: @escaping (Swift.Result<T, ApiError>) -> Void) {
+    public func request<T: Codable>(urlRequest: APIConfiguration, completion: @escaping (Result<T, ApiError>) -> Void) {
         if !isConnected {
             completion(.failure(.notInternetConection))
         } else {
             sessionManager.request(urlRequest).validate().responseData { [weak self] (response) in
                 guard let self = self else { return }
+                
                 #if DEBUG
                 self.printLogs(response)
                 #endif
+                
                 switch response.result {
                 case .success(let value):
-                    guard value.count > 0 else {
-                        if let emptyJson = "{}".data(using: .utf8), let decodedObject = try? urlRequest.jsonDecoder.decode(T.self, from: emptyJson) {
-                            completion(.success(decodedObject))
-                        }
-                        return
-                    }
                     do {
-                        let decodedObject = try urlRequest.jsonDecoder.decode(T.self, from: value)
-                        completion(.success(decodedObject))
+                        let response: T = try self.parseResult(jsonDecoder: urlRequest.jsonDecoder, value: value)
+                        completion(.success(response))
                     } catch {
                         #if DEBUG
                         print("JSON decode error: \(error)")
                         #endif
                         completion(.failure(ApiError.jsonDecodingError))
                     }
+                    
                 case .failure(let afError):
                     // MARK: - Alamofire error
                     switch afError {
@@ -107,6 +117,16 @@ public class APIManager {
                 }
             }
         }
+    }
+    
+    private func parseResult<T: Codable>(jsonDecoder: JSONDecoder, value: Data) throws -> T {
+        var data = "{}".data(using: .utf8)
+        if value.count > 0 {
+            data = value
+        }
+        
+        let decodedObject = try jsonDecoder.decode(T.self, from: data!)
+        return decodedObject
     }
     
     // MARK: - Private
