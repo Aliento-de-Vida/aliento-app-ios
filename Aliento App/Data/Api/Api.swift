@@ -8,43 +8,17 @@
 import Foundation
 import Alamofire
 
-public protocol APIConfiguration: URLRequestConvertible {
-    var method: HTTPMethod { get }
-    var path: String { get }
-    var encoding: ParameterEncoding { get }
-    var parameters: Parameters? { get }
-    var jsonDecoder: JSONDecoder { get }
-}
-
-struct Request: APIConfiguration {
-    func asURLRequest() throws -> URLRequest {
-        var urlRequest = try URLRequest(url: APIManager.baseUrl + APIVersion.v1.rawValue + path, method: method)
-        urlRequest = try encoding.encode(urlRequest, with: parameters)
-        return urlRequest
-    }
-    
-    var method: HTTPMethod
-    var path: String
-    var encoding: ParameterEncoding = URLEncoding.default
-    var parameters: Parameters? = nil
-}
-
-public extension APIConfiguration {
-    var jsonDecoder: JSONDecoder {
-        get {
-            let jsonDecoder = JSONDecoder()
-            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-            return jsonDecoder
-        }
-    }
-}
-
 public enum APIVersion: String {
     case v1 = "v1/"
 }
 
 public class APIManager {
     let sessionManager: Session
+    lazy var jsonDecoder: JSONDecoder = {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        return jsonDecoder
+    }()
 
     init(sessionManager: Session) {
         self.sessionManager = sessionManager
@@ -61,59 +35,51 @@ public class APIManager {
     public func request<T: Codable>(urlRequest: APIConfiguration, completion: @escaping (Result<T, ApiError>) -> Void) {
         if !isConnected {
             completion(.failure(.notInternetConection))
-        } else {
-            sessionManager.request(urlRequest).validate().responseData { [weak self] (response) in
-                guard let self = self else { return }
+            return
+        }
+            
+        sessionManager.request(urlRequest).validate().responseData { [weak self] (response) in
+            guard let self = self else { return }
+            
+            #if DEBUG
+            self.printLogs(response)
+            #endif
+            
+            switch response.result {
+            case .success(let value):
+                do {
+                    let response: T = try self.parseResult(jsonDecoder: self.jsonDecoder, value: value)
+                    completion(.success(response))
+                } catch {
+                    #if DEBUG
+                    print("JSON decode error: \(error)")
+                    #endif
+                    completion(.failure(ApiError.jsonDecodingError))
+                }
                 
-                #if DEBUG
-                self.printLogs(response)
-                #endif
-                
-                switch response.result {
-                case .success(let value):
-                    do {
-                        let response: T = try self.parseResult(jsonDecoder: urlRequest.jsonDecoder, value: value)
-                        completion(.success(response))
-                    } catch {
-                        #if DEBUG
-                        print("JSON decode error: \(error)")
-                        #endif
-                        completion(.failure(ApiError.jsonDecodingError))
-                    }
-                    
-                case .failure(let afError):
-                    // MARK: - Alamofire error
-                    switch afError {
-                    case .responseValidationFailed(let reason):
-                        switch reason {
-                        case .unacceptableStatusCode(let code):
-                            switch code {
-                            case 100...199: // Informational - Request received, continuing process
-                                completion(.failure(.serverError(error: "code 100...199")))
-                            case 300...399: // Redirection - Further action must be taken in order to complete the request
-                                completion(.failure(.serverError(error: "code 300...399")))
-                            case 400...499: // Client Error - The request contains bad syntax or cannot be fulfilled
-                                if let data = response.data {
-                                    do {
-                                        let genericError = try urlRequest.jsonDecoder.decode(ApiDefinedError.self, from: data)
-                                        completion(.failure(.apiDefinedError(error: genericError)))
-                                    } catch {
-                                        completion(.failure(.badRequestData(data: data)))
-                                    }
-                                } else {
-                                    completion(.failure(.badRequest))
-                                }
-                            case 500...599: // Server Error - The server failed to fulfill an apparently valid request
-                                completion(.failure(.serverError(error: "code 500...599")))
-                            default:
-                                completion(.failure(.serverError(error: "server")))
-                            }
+            case .failure(let afError):
+                // MARK: - Alamofire error
+                switch afError {
+                case .responseValidationFailed(let reason):
+                    switch reason {
+                    case .unacceptableStatusCode(let code):
+                        switch code {
+                        case 100...199: // Informational - Request received, continuing process
+                            completion(.failure(.serverError(error: "code 100...199")))
+                        case 300...399: // Redirection - Further action must be taken in order to complete the request
+                            completion(.failure(.serverError(error: "code 300...399")))
+                        case 400...499: // Client Error - The request contains bad syntax or cannot be fulfilled
+                            completion(.failure(.serverError(error: "code 400...499")))
+                        case 500...599: // Server Error - The server failed to fulfill an apparently valid request
+                            completion(.failure(.serverError(error: "code 500...599")))
                         default:
-                            completion(.failure(.serverError(error: "server error")))
+                            completion(.failure(.serverError(error: "server")))
                         }
                     default:
-                        break
+                        completion(.failure(.serverError(error: "server error")))
                     }
+                default:
+                    break
                 }
             }
         }
