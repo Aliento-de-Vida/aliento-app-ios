@@ -17,9 +17,9 @@ class NotificationsItemCell: UICollectionViewCell {
     @IBOutlet var shadow: UIView!
     @IBOutlet var card: UIView!
     
-    var item: Notifications? = nil
+    var item: NotificationPresentation? = nil
     
-    func configure(item: Notifications) {
+    func configure(item: NotificationPresentation) {
         self.item = item
        
         imageView.load(url: item.imageUrl)

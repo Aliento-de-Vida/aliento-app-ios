@@ -20,6 +20,9 @@ extension Resolver: ResolverRegistering {
         register { HomeRepositoryImpl(homeApi: resolve(), fileRepository: resolve()) }.implements(HomeRepository.self)
         register { FileApi(apiManager: resolve()) }
         register { FileRepositoryImpl(fileApi: resolve()) }.implements(FileRepository.self)
+        
+        register { NotificationApi(apiManager: resolve()) }
+        register { NotificationRepositoryImpl(notificationApi: resolve()) }.implements(NotificationRepository.self)
     }
     
 }
