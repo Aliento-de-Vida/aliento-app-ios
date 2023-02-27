@@ -25,14 +25,14 @@ class HomeRepositoryImpl: HomeRepository {
     func getHome(
         completion: @escaping (Result<HomeModel, ApiError>) -> Void
     ) {
-        homeApi.getHome { (result: Swift.Result<HomeModelData, ApiError>) in
+        homeApi.getHome(completion: { (result: Swift.Result<HomeModelData, ApiError>) in
             switch result {
             case .success(let response):
                 completion(.success(response.toDomain()))
             case .failure(let error):
                 completion(.failure(error))
             }
-        }
+        })
     }
     
     func getHomeImages() async throws -> HomeImages {
