@@ -46,6 +46,12 @@
 		76F04A3929AD2C1F006CFE64 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A3829AD2C1F006CFE64 /* NotificationRepository.swift */; };
 		76F04A3B29AD2C2F006CFE64 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A3A29AD2C2F006CFE64 /* NotificationModel.swift */; };
 		76F04A3F29AD38FC006CFE64 /* NotificationRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A3E29AD38FC006CFE64 /* NotificationRepositoryImpl.swift */; };
+		76F04A4329AE6412006CFE64 /* CampusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4229AE6412006CFE64 /* CampusRepository.swift */; };
+		76F04A4529AE642F006CFE64 /* CampusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4429AE642F006CFE64 /* CampusModel.swift */; };
+		76F04A4729AE6452006CFE64 /* CampusApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4629AE6452006CFE64 /* CampusApi.swift */; };
+		76F04A4929AE6466006CFE64 /* CampusModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4829AE6466006CFE64 /* CampusModelData.swift */; };
+		76F04A4B29AE6478006CFE64 /* CampusRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4A29AE6478006CFE64 /* CampusRepositoryImpl.swift */; };
+		76F04A4D29AE70D4006CFE64 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4C29AE70D4006CFE64 /* Date.swift */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
 		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
 		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
@@ -130,6 +136,12 @@
 		76F04A3829AD2C1F006CFE64 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		76F04A3A29AD2C2F006CFE64 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		76F04A3E29AD38FC006CFE64 /* NotificationRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryImpl.swift; sourceTree = "<group>"; };
+		76F04A4229AE6412006CFE64 /* CampusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusRepository.swift; sourceTree = "<group>"; };
+		76F04A4429AE642F006CFE64 /* CampusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusModel.swift; sourceTree = "<group>"; };
+		76F04A4629AE6452006CFE64 /* CampusApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusApi.swift; sourceTree = "<group>"; };
+		76F04A4829AE6466006CFE64 /* CampusModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusModelData.swift; sourceTree = "<group>"; };
+		76F04A4A29AE6478006CFE64 /* CampusRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusRepositoryImpl.swift; sourceTree = "<group>"; };
+		76F04A4C29AE70D4006CFE64 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
 		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +351,25 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		76F04A4029AE639E006CFE64 /* Campus */ = {
+			isa = PBXGroup;
+			children = (
+				76F04A4229AE6412006CFE64 /* CampusRepository.swift */,
+				76F04A4429AE642F006CFE64 /* CampusModel.swift */,
+			);
+			path = Campus;
+			sourceTree = "<group>";
+		};
+		76F04A4129AE63AB006CFE64 /* Campus */ = {
+			isa = PBXGroup;
+			children = (
+				76F04A4629AE6452006CFE64 /* CampusApi.swift */,
+				76F04A4829AE6466006CFE64 /* CampusModelData.swift */,
+				76F04A4A29AE6478006CFE64 /* CampusRepositoryImpl.swift */,
+			);
+			path = Campus;
+			sourceTree = "<group>";
+		};
 		B824BD5428CA966700B27C8C = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +460,7 @@
 		B8965F4328D52A5000B64709 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				76F04A4029AE639E006CFE64 /* Campus */,
 				76F04A3029AD1930006CFE64 /* Notification */,
 				BF0C54772979F1D100848A0A /* Extensions */,
 				BF0C546E2979D06200848A0A /* File */,
@@ -494,6 +526,7 @@
 		B8965F6528D535C000B64709 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				76F04A4129AE63AB006CFE64 /* Campus */,
 				76F04A2F29AD18F9006CFE64 /* Notification */,
 				BF0C546B2979D02B00848A0A /* File */,
 				B8965F4A28D52C6700B64709 /* Home */,
@@ -522,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0C54782979F1D800848A0A /* String.swift */,
+				76F04A4C29AE70D4006CFE64 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -725,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F04A3F29AD38FC006CFE64 /* NotificationRepositoryImpl.swift in Sources */,
+				76F04A4729AE6452006CFE64 /* CampusApi.swift in Sources */,
 				76EF471A2982FE1A00178BE5 /* PlayerVC.swift in Sources */,
 				BFE27B2729A9C305000D2B3B /* Request.swift in Sources */,
 				76D8A5D129706F5E003A9E4C /* CarouselItemCell.swift in Sources */,
@@ -758,10 +793,14 @@
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				76F04A3929AD2C1F006CFE64 /* NotificationRepository.swift in Sources */,
 				B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */,
+				76F04A4D29AE70D4006CFE64 /* Date.swift in Sources */,
 				76F04A3429AD260F006CFE64 /* NotificationApi.swift in Sources */,
 				BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */,
 				B824BDB128CAA6BE00B27C8C /* AudioSermonsVC.swift in Sources */,
+				76F04A4B29AE6478006CFE64 /* CampusRepositoryImpl.swift in Sources */,
 				B8965F4C28D52C8100B64709 /* HomeRepositoryImpl.swift in Sources */,
+				76F04A4529AE642F006CFE64 /* CampusModel.swift in Sources */,
+				76F04A4329AE6412006CFE64 /* CampusRepository.swift in Sources */,
 				76EF47152982F98A00178BE5 /* DonationsVC.swift in Sources */,
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
 				765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */,
@@ -775,6 +814,7 @@
 				76D3F97E2979AF2600831312 /* SettingsVC.swift in Sources */,
 				BF44EF3D296DCB0B00F3D028 /* VideoSermonsCollectionView.swift in Sources */,
 				BF0C54792979F1D800848A0A /* String.swift in Sources */,
+				76F04A4929AE6466006CFE64 /* CampusModelData.swift in Sources */,
 				BF54F18D2977083700A1FF45 /* HomeModel.swift in Sources */,
 				76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,

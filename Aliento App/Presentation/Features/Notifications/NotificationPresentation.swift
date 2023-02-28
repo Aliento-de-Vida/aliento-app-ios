@@ -20,7 +20,7 @@ extension NotificationModel {
             imageUrl: self.imageUrl.toImageUrl(),
             title: self.tittle,
             phrase: self.phrase,
-            date: self.date
+            date: self.date.format() ?? ""
         )
     }
 }
