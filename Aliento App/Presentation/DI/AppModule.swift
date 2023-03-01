@@ -23,6 +23,9 @@ extension Resolver: ResolverRegistering {
         
         register { NotificationApi(apiManager: resolve()) }
         register { NotificationRepositoryImpl(notificationApi: resolve()) }.implements(NotificationRepository.self)
+        
+        register { CampusApi(apiManager: resolve()) }
+        register { CampusRepositoryImpl(campusApi: resolve()) }.implements(CampusRepository.self)
     }
     
 }

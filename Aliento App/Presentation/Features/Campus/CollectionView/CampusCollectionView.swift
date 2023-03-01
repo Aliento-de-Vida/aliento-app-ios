@@ -8,7 +8,7 @@
 import UIKit
 
 class CampusCollectionView: UICollectionView {
-    var collectionCampus: [Campus] = []
+    var collectionCampus: [CampusPresentation] = []
 }
 
 extension CampusCollectionView: UICollectionViewDelegateFlowLayout {
