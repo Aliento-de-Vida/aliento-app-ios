@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol CampusRepository {
+    func getCampus(completion: @escaping (Result<[CampusModel], ApiError>) -> Void)
+}

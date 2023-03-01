@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct CampusModel {
+    let id: Int
+    let name: String
+    let description: String
+    let shortDescription: String
+    let imageUrl: String
+    let videoUrl: String
+    let location: Location
+    let images: [String]
+    let contact: String
+
+}

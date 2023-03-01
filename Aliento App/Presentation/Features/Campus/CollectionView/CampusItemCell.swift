@@ -17,14 +17,14 @@ class CampusItemCell: UICollectionViewCell {
     @IBOutlet var campusTitle: UILabel!
     @IBOutlet var campusPhrase: UILabel!
     
-    var item: Campus? = nil
+    var item: CampusPresentation? = nil
     
-    func configure(item: Campus) {
+    func configure(item: CampusPresentation) {
         self.item = item
        
         imageUrl.load(url: item.imageUrl)
-        campusTitle.text = "\(item.title)"
-        campusPhrase.text = "\(item.phrase)"
+        campusTitle.text = "\(item.name)"
+        campusPhrase.text = "\(item.description)"
       
         shadowCampus.addShadow()
         cardCampus.roundCorners()

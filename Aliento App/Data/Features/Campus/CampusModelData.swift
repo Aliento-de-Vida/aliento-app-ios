@@ -7,29 +7,27 @@
 
 import Foundation
 
-/*struct CampusModelData
-    let
-*/
-
-
-
-
-
-/*struct NotificationModelData: Codable {
+struct CampusModelData : Codable {
     let id: Int
-    let title: String
-    let content: String
-    let image: NotificationImage
-    let date: String
-}
-
-struct NotificationImage: Codable {
     let name: String
+    let description: String
+    let shortDescription: String
+    let imageUrl: String
+    let videoUrl: String
+    let location: Location
+    let images: [String]
+    let contact: String 
+
 }
 
-extension NotificationModelData {
-    func toDomain() -> NotificationModel {
-        return NotificationModel(imageUrl: self.image.name, tittle: self.title, phrase: self.content, date: self.date)
+struct Location : Codable {
+    let latitude: String
+    let longitude: String
+}
+
+extension CampusModelData {
+    func toDomain() -> CampusModel {
+        return CampusModel(id: self.id, name: self.name, description: self.description, shortDescription: self.shortDescription, imageUrl: self.imageUrl, videoUrl: self.videoUrl, location: self.location, images: self.images, contact: self.contact)
     }
 }
-*/
+
