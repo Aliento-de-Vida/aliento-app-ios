@@ -17,13 +17,23 @@ public protocol APIConfiguration: URLRequestConvertible {
 
 struct Request: APIConfiguration {
     func asURLRequest() throws -> URLRequest {
-        var urlRequest = try URLRequest(url: APIManager.baseUrl + APIVersion.v1.rawValue + path, method: method)
+        var urlRequest: URLRequest
+        
+        if (url != nil) {
+            urlRequest = try URLRequest(url: url!, method: method)
+        } else {
+            urlRequest = try URLRequest(url: APIManager.baseUrl + APIVersion.v1.rawValue + path, method: method)
+        }
+        
         urlRequest = try encoding.encode(urlRequest, with: parameters)
         return urlRequest
     }
     
     var method: HTTPMethod
-    var path: String
+
+    var url: String? = nil
+    var path: String = ""
+    
     var encoding: ParameterEncoding = URLEncoding.default
     var parameters: Parameters? = nil
 }

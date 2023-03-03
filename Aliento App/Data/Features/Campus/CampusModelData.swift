@@ -27,7 +27,17 @@ struct Location : Codable {
 
 extension CampusModelData {
     func toDomain() -> CampusModel {
-        return CampusModel(id: self.id, name: self.name, description: self.description, shortDescription: self.shortDescription, imageUrl: self.imageUrl, videoUrl: self.videoUrl, location: self.location, images: self.images, contact: self.contact)
+        return CampusModel(
+        id: self.id,
+        name: self.name,
+        description: self.description,
+        shortDescription: self.shortDescription,
+        imageUrl: self.imageUrl,
+        videoUrl: self.videoUrl,
+        location: self.location,
+        images: self.images,
+        contact: self.contact
+        )
     }
 }
 

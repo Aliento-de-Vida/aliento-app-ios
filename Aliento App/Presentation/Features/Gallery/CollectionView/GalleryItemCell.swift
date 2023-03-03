@@ -16,14 +16,14 @@ class GalleryItemCell : UICollectionViewCell {
     @IBOutlet var galleryImage: UIImageView!
     @IBOutlet var galleryLabel: UILabel!
     
-    var item: Gallery? = nil
+    var item: GalleryPresentation? = nil
     
     
-    func configure(item: Gallery) {
+    func configure(item: GalleryPresentation) {
         self.item = item
        
-        galleryImage.load(url: item.imageUrl)
-        galleryLabel.text = "\(item.phrase)"
+        galleryImage.load(url: item.coverPicture)
+        galleryLabel.text = "\(item.name)"
        
       
         galleryShadow.addShadow()
@@ -34,7 +34,7 @@ class GalleryItemCell : UICollectionViewCell {
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.imageUrl)")
+        print("Se presiono \(item?.coverPicture)")
     }
     
 }
