@@ -8,7 +8,7 @@
 import UIKit
 
 class VideoSermonsCollectionView: UICollectionView {
-    var collectionVideo: [SermonVideo] = []    
+    var collectionVideo: [VideoModelPresentation] = []    
 }
 
 extension VideoSermonsCollectionView: UICollectionViewDelegateFlowLayout {

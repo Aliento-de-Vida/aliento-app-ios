@@ -26,6 +26,12 @@ extension Resolver: ResolverRegistering {
         
         register { CampusApi(apiManager: resolve()) }
         register { CampusRepositoryImpl(campusApi: resolve()) }.implements(CampusRepository.self)
+        
+        register { GalleryApi(apiManager: resolve()) }
+        register { GalleryRepositoryImpl(galleryApi: resolve()) }.implements(GalleryRepository.self)
+        
+        register { VideoApi(apiManager: resolve()) }
+        register { VideoRepositoryImpl(videoApi: resolve()) }.implements(VideoRepository.self)
     }
     
 }

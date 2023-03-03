@@ -8,7 +8,7 @@
 import UIKit
 
 class GalleryCollectionView : UICollectionView {
-    var collectionGallery: [Gallery] = []
+    var collectionGallery: [GalleryPresentation] = []
 }
 
 extension GalleryCollectionView: UICollectionViewDelegateFlowLayout {

@@ -17,14 +17,14 @@ class VideoSermonItemCell: UICollectionViewCell {
     @IBOutlet var card: UIView!
     @IBOutlet weak var shadow: UIView!
     
-    var item: SermonVideo? = nil
+    var item: VideoModelPresentation? = nil
     
-    func configure(item: SermonVideo) {
+    func configure(item: VideoModelPresentation) {
         self.item = item
         
-        nameLabel.text = item.name
-        durationLabel.text = "\(item.phrase)"
-        imageView.load(url: item.imageUrl)
+        nameLabel.text = item.title
+        durationLabel.text = "\(item.description)"
+        imageView.load(url: item.thumbnulsUrl)
         dateLabel.text = item.date
                 
         card.roundCorners()
@@ -34,7 +34,7 @@ class VideoSermonItemCell: UICollectionViewCell {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.name)")
+        print("Se presiono \(item?.id)")
     }
         
 }

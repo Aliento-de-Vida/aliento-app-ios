@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Resolver
 
 class GalleryVC : UIViewController {
     @IBOutlet var galleryCollectionView: GalleryCollectionView!
+    @Injected var galleryRepository : GalleryRepository
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +19,19 @@ class GalleryVC : UIViewController {
         galleryCollectionView.register(UINib(nibName: GalleryItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: GalleryItemCell.identifier)
         galleryCollectionView.dataSource = galleryCollectionView
         galleryCollectionView.delegate = galleryCollectionView
-        galleryCollectionView.collectionGallery = collection
-        galleryCollectionView.reloadData()
-      
+       
         setNavBarLogo()
+        galleryRepository.getGallery { result in
+            switch result {
+            case .success(let gallery):
+                let campusPresentation = gallery.map { value in value.toPresentation() }
+                self.galleryCollectionView.collectionGallery = campusPresentation
+                self.galleryCollectionView.reloadData()
+                
+            case .failure(let error):
+                print("Error")
+            }
+        }
     }
     
     
@@ -31,11 +42,6 @@ class GalleryVC : UIViewController {
         
         self.navigationItem.titleView = imageView
     }
-    
-    let collection = [
-        Gallery(phrase: "Vivir la vida", imageUrl: "https://img.freepik.com/foto-gratis/foto-escala-grises-dos-hombres-rezando-juntos_181624-45295.jpg?w=1800&t=st=1674154108~exp=1674154708~hmac=8680c756c7fa54a74a6c4a4146aa7d76276eddae036200701f601d8ac7fe7cea"),
-        Gallery(phrase: "No vivas tanto la vida", imageUrl: "https://img.freepik.com/foto-gratis/mujer-sentada-montana_1303-11174.jpg?w=1800&t=st=1674155773~exp=1674156373~hmac=315ad4530ef3975c8819eea407bf0aaad909e9927b75aab321201c5c3c9ea46f")]
-
     
 }
 
