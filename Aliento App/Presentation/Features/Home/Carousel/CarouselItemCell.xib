@@ -20,19 +20,43 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7M-G1-s6f">
                         <rect key="frame" x="0.0" y="0.0" width="532" height="248"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qra-ad-zFm">
+                        <rect key="frame" x="0.0" y="197" width="160" height="35"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Da clic aqui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0v-ab-PA4">
+                                <rect key="frame" x="8" y="8" width="144" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43529411764705883" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="4Ge-3l-3uS"/>
+                            <constraint firstItem="S0v-ab-PA4" firstAttribute="top" secondItem="qra-ad-zFm" secondAttribute="top" constant="8" id="Bhg-7t-3uS"/>
+                            <constraint firstAttribute="width" constant="160" id="EHi-cB-4pt"/>
+                            <constraint firstItem="S0v-ab-PA4" firstAttribute="leading" secondItem="qra-ad-zFm" secondAttribute="leading" constant="8" id="ebB-PO-d0o"/>
+                            <constraint firstAttribute="bottom" secondItem="S0v-ab-PA4" secondAttribute="bottom" constant="8" id="n4c-VY-mBn"/>
+                            <constraint firstAttribute="trailing" secondItem="S0v-ab-PA4" secondAttribute="trailing" constant="8" id="ywM-Cj-9eM"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="I7M-G1-s6f" secondAttribute="bottom" id="7hC-u1-p78"/>
+                    <constraint firstItem="qra-ad-zFm" firstAttribute="leading" secondItem="ZFp-aG-Jae" secondAttribute="leading" id="Qos-Pw-nQv"/>
                     <constraint firstItem="I7M-G1-s6f" firstAttribute="top" secondItem="ZFp-aG-Jae" secondAttribute="top" id="TIK-1E-aQ4"/>
                     <constraint firstItem="I7M-G1-s6f" firstAttribute="leading" secondItem="ZFp-aG-Jae" secondAttribute="leading" id="jCe-SU-Uho"/>
                     <constraint firstAttribute="trailing" secondItem="I7M-G1-s6f" secondAttribute="trailing" id="jbq-B2-nR5"/>
+                    <constraint firstAttribute="bottom" secondItem="qra-ad-zFm" secondAttribute="bottom" constant="16" id="tr7-6E-1Dc"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="532" height="248"/>
             <connections>
                 <outlet property="carouselImage" destination="I7M-G1-s6f" id="hp6-MI-2fr"/>
+                <outlet property="form" destination="qra-ad-zFm" id="9Pc-CW-gS9"/>
+                <outlet property="textLabel" destination="S0v-ab-PA4" id="s5d-gV-cvY"/>
             </connections>
-            <point key="canvasLocation" x="161" y="40"/>
+            <point key="canvasLocation" x="160.86956521739131" y="39.508928571428569"/>
         </collectionViewCell>
     </objects>
 </document>

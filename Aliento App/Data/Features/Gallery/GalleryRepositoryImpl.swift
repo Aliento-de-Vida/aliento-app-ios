@@ -14,7 +14,9 @@ class GalleryRepositoryImpl : GalleryRepository {
         self.galleryApi = galleryApi
     }
     
-    func getGallery(completion: @escaping (Result<[GalleryModel], ApiError>) -> Void) {
+    func getGallery(
+        completion: @escaping (Result<[GalleryModel], ApiError>) -> Void
+    ) {
         galleryApi.getGallery { result in
             switch result {
             case.success(let response):
@@ -24,7 +26,6 @@ class GalleryRepositoryImpl : GalleryRepository {
                 
             }
         }
-    
     }
 
 }

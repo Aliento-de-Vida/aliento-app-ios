@@ -249,9 +249,24 @@ class HomeVC: UIViewController {
     }
    
     let collectionCarousel = [
-        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/gente-feliz-apilando-comunidad_1150-1689.jpg?w=2000&t=st=1673290399~exp=1673290999~hmac=ca9a255747e3908c907837f7aa1c13281665b26ccb21a5b5a4606b42874fa47d" , videoUrl: nil, menuName: nil),
-        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/silueta-ave-voladora-cielo-nublado_181624-5431.jpg?w=1800&t=st=1673545881~exp=1673546481~hmac=e66fa03c5c1cb7e24e873ecd79111de7df6e416acb2f0b801e0369d88e8b984e" , videoUrl: nil, menuName: nil),
-        CarouselItem(imageUrl:"https://img.freepik.com/foto-gratis/mujer-disfruta-leyendo-libros_329181-19648.jpg?w=1800&t=st=1673546117~exp=1673546717~hmac=74d6d615e061bd01f49a0f62985c8d585519cd2487aac02ea88e6b9ea858ef9b" , videoUrl: nil, menuName: nil),
+        
+    CarouselItem(
+        // Case: Se muestra imagen y frase "Ver predicas"
+        imageUrl: "https://img.freepik.com/foto-gratis/personas-alto-angulo-leyendo-juntas_23-2150062128.jpg?w=2000&t=st=1678305507~exp=1678306107~hmac=04e34c84934c945198053ae391bd4885dee49e0681b37aef0a7a81ae980bd358",
+        video: nil,
+        menu: CarouselMenu(menuName: "Ver prédicas")
+    ),
+    CarouselItem(
+        imageUrl: "https://img.freepik.com/foto-gratis/linda-familia-jugando-campo-verano_1157-37691.jpg?w=2000&t=st=1678304955~exp=1678305555~hmac=a65000845007ec34ff7774f1c79c300afa83907aaae24523772f12a3d623af2d",
+        video: CarouselVideo(videoUrl: "https://www.youtube.com/watch?v=RCIjUAtidc4"),
+        menu: nil
+    ),
+    CarouselItem(
+        imageUrl: "https://img.freepik.com/foto-gratis/mama-nina-divirtiendose-jardin_1153-7488.jpg?w=2000&t=st=1678305086~exp=1678305686~hmac=769f6486dfe4933219827aec0e72bd988f74c1b56b852e1ecb74dab996f18e30",
+        video: CarouselVideo(videoUrl: "https://www.youtube.com/watch?v=RCIjUAtidc4"),
+        menu: nil
+    )
+   
     ]
     
 }

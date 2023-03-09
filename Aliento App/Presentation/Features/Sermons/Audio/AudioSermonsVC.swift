@@ -6,23 +6,15 @@
 //
 
 import UIKit
+import Resolver
+
 
 class AudioSermonsVC: UIViewController {
     
     @IBOutlet var floatinActionButton: UIView!
     @IBOutlet weak var sermonsCollectionView: AudioSermonsCollectionView!
+    @Injected var audioRepository : AudioRepository
     
-    let collection = [
-        AudioSermon(name: "predica 1", duration: 3000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        AudioSermon(name: "predica 2", duration: 5000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        AudioSermon(name: "predica 3", duration: 8000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        AudioSermon(name: "predica 4", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        AudioSermon(name: "predica 5", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        AudioSermon(name: "predica 6", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        AudioSermon(name: "predica 7", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-        AudioSermon(name: "predica 8", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/vida-cristiana-crisis-oracion-dios_1150-12938.jpg?w=2000&t=st=1673281128~exp=1673281728~hmac=74e2f4535cdc2418307aa3da83426170ac2d465622d161a977a38bdcdf1e18cf"),
-        AudioSermon(name: "predica 9", duration: 9000, imageUrl: "https://img.freepik.com/foto-gratis/silueta-mujer-manos-levantadas_1150-354.jpg?1&w=2000&t=st=1673280205~exp=1673280805~hmac=3d82da85635bea44b6c8f0461f5f4469256cb8c44b57f005a9e5019d0b676784"),
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +22,18 @@ class AudioSermonsVC: UIViewController {
         sermonsCollectionView.register(UINib(nibName: AudioSermonItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: AudioSermonItemCell.identifier)
         sermonsCollectionView.dataSource = sermonsCollectionView
         sermonsCollectionView.delegate = sermonsCollectionView
-        sermonsCollectionView.collection = collection
-        sermonsCollectionView.reloadData()
+      
+        audioRepository.getTracks(artistId: "4VYxusCiKsWxcfUveymGU5") { result in
+            switch result {
+            case.success(let tracks):
+                let audiosPresentation = tracks.map { value in value.toPresentation() }
+                self.sermonsCollectionView.collection = audiosPresentation
+                self.sermonsCollectionView.reloadData()
+                
+            case .failure(let error):
+                print("Error")
+            }
+        }
         
         floatinActionButton.layer.cornerRadius = floatinActionButton.layer.frame.width/2
         floatinActionButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
