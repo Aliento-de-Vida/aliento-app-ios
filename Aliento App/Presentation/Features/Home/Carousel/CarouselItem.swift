@@ -9,6 +9,17 @@ import Foundation
 
 struct CarouselItem{
     let imageUrl: String
-    let videoUrl: String?
-    let menuName: String?
+    let video: CarouselVideo?
+    let menu: CarouselMenu?
 }
+
+struct CarouselVideo {
+    let videoUrl :String
+}
+
+struct CarouselMenu {
+    let menuName: String
+}
+
+
+

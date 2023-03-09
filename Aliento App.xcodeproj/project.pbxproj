@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		765E45A0297AFD58004FA458 /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E459F297AFD58004FA458 /* test.xib */; };
 		765E45A329819750004FA458 /* CampusCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45A229819750004FA458 /* CampusCollectionView.swift */; };
 		765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E45A6298197BA004FA458 /* CampusItemCell.xib */; };
 		765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AA2981A289004FA458 /* CampusItemCell.swift */; };
@@ -25,6 +24,14 @@
 		7679B3FE29B110CB00C3F5CD /* VideoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B3FD29B110CB00C3F5CD /* VideoRepositoryImpl.swift */; };
 		7679B40229B112F000C3F5CD /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B40129B112F000C3F5CD /* VideoModel.swift */; };
 		7679B40429B1130800C3F5CD /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B40329B1130800C3F5CD /* VideoRepository.swift */; };
+		7679B40929B2795400C3F5CD /* AudioApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B40829B2795400C3F5CD /* AudioApi.swift */; };
+		7679B40B29B27A9A00C3F5CD /* AlbumsModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B40A29B27A9A00C3F5CD /* AlbumsModelData.swift */; };
+		7679B40D29B27AB400C3F5CD /* AudioRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B40C29B27AB400C3F5CD /* AudioRepositoryImpl.swift */; };
+		7679B41029B27B4F00C3F5CD /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B40F29B27B4F00C3F5CD /* AudioModel.swift */; };
+		7679B41229B27B5D00C3F5CD /* AudioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41129B27B5D00C3F5CD /* AudioRepository.swift */; };
+		7679B41429B653E600C3F5CD /* TracksModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41329B653E600C3F5CD /* TracksModelData.swift */; };
+		7679B41629B6712E00C3F5CD /* TokenModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41529B6712D00C3F5CD /* TokenModelData.swift */; };
+		7679B41829B7BC2000C3F5CD /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41729B7BC2000C3F5CD /* Int.swift */; };
 		76BE30462978709A0084157E /* CampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE30452978709A0084157E /* CampusVC.swift */; };
 		76BE3048297870BC0084157E /* CampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE3047297870BC0084157E /* CampusVC.xib */; };
 		76BE304B2979A0980084157E /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE304A2979A0980084157E /* GalleryVC.swift */; };
@@ -99,7 +106,7 @@
 		BF54F1902977099200A1FF45 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F18F2977099200A1FF45 /* AppModule.swift */; };
 		BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */; };
 		BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */; };
-		BF723F8B291C96F800F2FAA4 /* AudioSermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* AudioSermon.swift */; };
+		BF723F8B291C96F800F2FAA4 /* AudioModelPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* AudioModelPresentation.swift */; };
 		BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8C291C972600F2FAA4 /* Constants.swift */; };
 		BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */; };
 		BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C22A42924830E0082C0C5 /* UIImage.swift */; };
@@ -108,7 +115,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		765E459F297AFD58004FA458 /* test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 		765E45A229819750004FA458 /* CampusCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusCollectionView.swift; sourceTree = "<group>"; };
 		765E45A6298197BA004FA458 /* CampusItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusItemCell.xib; sourceTree = "<group>"; };
 		765E45AA2981A289004FA458 /* CampusItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusItemCell.swift; sourceTree = "<group>"; };
@@ -126,6 +132,14 @@
 		7679B3FD29B110CB00C3F5CD /* VideoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepositoryImpl.swift; sourceTree = "<group>"; };
 		7679B40129B112F000C3F5CD /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		7679B40329B1130800C3F5CD /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
+		7679B40829B2795400C3F5CD /* AudioApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioApi.swift; sourceTree = "<group>"; };
+		7679B40A29B27A9A00C3F5CD /* AlbumsModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModelData.swift; sourceTree = "<group>"; };
+		7679B40C29B27AB400C3F5CD /* AudioRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRepositoryImpl.swift; sourceTree = "<group>"; };
+		7679B40F29B27B4F00C3F5CD /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		7679B41129B27B5D00C3F5CD /* AudioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRepository.swift; sourceTree = "<group>"; };
+		7679B41329B653E600C3F5CD /* TracksModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksModelData.swift; sourceTree = "<group>"; };
+		7679B41529B6712D00C3F5CD /* TokenModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModelData.swift; sourceTree = "<group>"; };
+		7679B41729B7BC2000C3F5CD /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		76BE30452978709A0084157E /* CampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusVC.swift; sourceTree = "<group>"; };
 		76BE3047297870BC0084157E /* CampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusVC.xib; sourceTree = "<group>"; };
 		76BE304A2979A0980084157E /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
@@ -204,7 +218,7 @@
 		BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonsCollectionView.swift; sourceTree = "<group>"; };
 		BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSermonItemCell.xib; sourceTree = "<group>"; };
 		BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonItemCell.swift; sourceTree = "<group>"; };
-		BF723F8A291C96F800F2FAA4 /* AudioSermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermon.swift; sourceTree = "<group>"; };
+		BF723F8A291C96F800F2FAA4 /* AudioModelPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModelPresentation.swift; sourceTree = "<group>"; };
 		BF723F8C291C972600F2FAA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF9C22A42924830E0082C0C5 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BFADCF8977C40630EE77FC8A /* Pods-Aliento App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.release.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,6 +307,7 @@
 		7679B3FF29B1110900C3F5CD /* Sermons */ = {
 			isa = PBXGroup;
 			children = (
+				7679B40E29B27B4100C3F5CD /* Audio */,
 				7679B40529B1258700C3F5CD /* Video */,
 			);
 			path = Sermons;
@@ -301,8 +316,8 @@
 		7679B40529B1258700C3F5CD /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				7679B40129B112F000C3F5CD /* VideoModel.swift */,
 				7679B40329B1130800C3F5CD /* VideoRepository.swift */,
+				7679B40129B112F000C3F5CD /* VideoModel.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -310,9 +325,31 @@
 		7679B40629B1321900C3F5CD /* Sermons */ = {
 			isa = PBXGroup;
 			children = (
+				7679B40729B2794700C3F5CD /* Audio */,
 				7679B3F829B1108F00C3F5CD /* Video */,
 			);
 			path = Sermons;
+			sourceTree = "<group>";
+		};
+		7679B40729B2794700C3F5CD /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				7679B40829B2795400C3F5CD /* AudioApi.swift */,
+				7679B40A29B27A9A00C3F5CD /* AlbumsModelData.swift */,
+				7679B41329B653E600C3F5CD /* TracksModelData.swift */,
+				7679B40C29B27AB400C3F5CD /* AudioRepositoryImpl.swift */,
+				7679B41529B6712D00C3F5CD /* TokenModelData.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		7679B40E29B27B4100C3F5CD /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				7679B41129B27B5D00C3F5CD /* AudioRepository.swift */,
+				7679B40F29B27B4F00C3F5CD /* AudioModel.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		76BE3044297870450084157E /* Campus */ = {
@@ -374,7 +411,6 @@
 				76D8A5CE296F4A30003A9E4C /* CarouselItem.swift */,
 				76D8A5D029706F5E003A9E4C /* CarouselItemCell.swift */,
 				76D8A5D429706FC6003A9E4C /* CarouselItemCell.xib */,
-				765E459F297AFD58004FA458 /* test.xib */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -634,6 +670,7 @@
 			children = (
 				BF0C54782979F1D800848A0A /* String.swift */,
 				76F04A4C29AE70D4006CFE64 /* Date.swift */,
+				7679B41729B7BC2000C3F5CD /* Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -642,7 +679,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7E1049291D513700DD9844 /* Collection View */,
-				BF723F8A291C96F800F2FAA4 /* AudioSermon.swift */,
+				BF723F8A291C96F800F2FAA4 /* AudioModelPresentation.swift */,
 				B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */,
 				B824BDB728CAA72400B27C8C /* AudioSermonsVC.xib */,
 			);
@@ -798,7 +835,6 @@
 				76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */,
 				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
 				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
-				765E45A0297AFD58004FA458 /* test.xib in Resources */,
 				B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */,
 				B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */,
 			);
@@ -838,6 +874,7 @@
 			files = (
 				76F04A3F29AD38FC006CFE64 /* NotificationRepositoryImpl.swift in Sources */,
 				76F04A4729AE6452006CFE64 /* CampusApi.swift in Sources */,
+				7679B40929B2795400C3F5CD /* AudioApi.swift in Sources */,
 				76EF471A2982FE1A00178BE5 /* PlayerVC.swift in Sources */,
 				7679B3FC29B110C500C3F5CD /* VideoModelData.swift in Sources */,
 				BFE27B2729A9C305000D2B3B /* Request.swift in Sources */,
@@ -851,6 +888,7 @@
 				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
 				76D3F98E2979BD3300831312 /* NotificationPresentation.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
+				7679B40B29B27A9A00C3F5CD /* AlbumsModelData.swift in Sources */,
 				76D8A5D929772087003A9E4C /* ChurchVC.swift in Sources */,
 				7679B3EB29AFD62D00C3F5CD /* GalleryPresentation.swift in Sources */,
 				76D3F9882979BADE00831312 /* NotificationsCollectionView.swift in Sources */,
@@ -859,6 +897,7 @@
 				BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */,
 				76F04A3229AD1C30006CFE64 /* Smaple.swift in Sources */,
 				76F04A3B29AD2C2F006CFE64 /* NotificationModel.swift in Sources */,
+				7679B41629B6712E00C3F5CD /* TokenModelData.swift in Sources */,
 				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
 				7679B3F729AFE12E00C3F5CD /* GalleryModel.swift in Sources */,
 				BF0C54762979F11F00848A0A /* HomeImages.swift in Sources */,
@@ -869,6 +908,8 @@
 				76D8A5CF296F4A30003A9E4C /* CarouselItem.swift in Sources */,
 				76D8595B296DE4FE0087D935 /* VideoModelPresentation.swift in Sources */,
 				76F04A4F29AE9AC3006CFE64 /* CampusPresentation.swift in Sources */,
+				7679B41429B653E600C3F5CD /* TracksModelData.swift in Sources */,
+				7679B40D29B27AB400C3F5CD /* AudioRepositoryImpl.swift in Sources */,
 				7679B40429B1130800C3F5CD /* VideoRepository.swift in Sources */,
 				76F04A3629AD28DA006CFE64 /* NotificationModelData.swift in Sources */,
 				BF0C54702979D06F00848A0A /* FileRepository.swift in Sources */,
@@ -893,14 +934,17 @@
 				76BE304B2979A0980084157E /* GalleryVC.swift in Sources */,
 				BF44EF34296DC27500F3D028 /* UIView.swift in Sources */,
 				76D3F98A2979BB4000831312 /* NotificationsItemCell.swift in Sources */,
-				BF723F8B291C96F800F2FAA4 /* AudioSermon.swift in Sources */,
+				BF723F8B291C96F800F2FAA4 /* AudioModelPresentation.swift in Sources */,
 				76D3F97E2979AF2600831312 /* SettingsVC.swift in Sources */,
+				7679B41229B27B5D00C3F5CD /* AudioRepository.swift in Sources */,
 				7679B3FA29B110B500C3F5CD /* VideoApi.swift in Sources */,
 				BF44EF3D296DCB0B00F3D028 /* VideoSermonsCollectionView.swift in Sources */,
 				BF0C54792979F1D800848A0A /* String.swift in Sources */,
 				76F04A4929AE6466006CFE64 /* CampusModelData.swift in Sources */,
 				7679B3FE29B110CB00C3F5CD /* VideoRepositoryImpl.swift in Sources */,
 				BF54F18D2977083700A1FF45 /* HomeModel.swift in Sources */,
+				7679B41829B7BC2000C3F5CD /* Int.swift in Sources */,
+				7679B41029B27B4F00C3F5CD /* AudioModel.swift in Sources */,
 				76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */,
 				7679B3F229AFD69700C3F5CD /* GalleryRepositoryImpl.swift in Sources */,
 				7679B3F029AFD68200C3F5CD /* GalleryModelData.swift in Sources */,

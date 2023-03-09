@@ -16,25 +16,24 @@ class AudioSermonItemCell: UICollectionViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var background: UIView!
+    @IBOutlet var shadow: UIView!
     
-    var item: AudioSermon? = nil
+    var item: AudioModelPresentation? = nil
     
-    func configure(item: AudioSermon) {
+    func configure(item: AudioModelPresentation) {
         self.item = item
         
-        nameLabel.text = item.name
+        nameLabel.text = item.title
         durationLabel.text = "\(item.duration)"
-        imageView.layer.cornerRadius = imageView.layer.frame.width/2
         imageView.load(url: item.imageUrl)
-        
+        dateLabel.text = item.releaseDate
+        shadow.addShadow()
         background.roundCorners()
-        background.addShadow()
-        
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.name)")
+        print("Se presiono \(item?.title)")
     }
         
 }

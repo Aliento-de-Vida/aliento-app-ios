@@ -32,6 +32,9 @@ extension Resolver: ResolverRegistering {
         
         register { VideoApi(apiManager: resolve()) }
         register { VideoRepositoryImpl(videoApi: resolve()) }.implements(VideoRepository.self)
+        
+        register { AudioApi(apiManager: resolve()) }
+        register { AudioRepositoryImpl(audioApi: resolve()) }.implements(AudioRepository.self)
     }
     
 }

@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 class AudioSermonsCollectionView: UICollectionView {
-    var collection: [AudioSermon] = []
+    var collection: [AudioModelPresentation] = []
 }
 
 extension AudioSermonsCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 16
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: Constants.SCREEN_WIDTH, height: 130)
+        CGSize(width: Constants.SCREEN_WIDTH, height: 100)
     }
         
 }

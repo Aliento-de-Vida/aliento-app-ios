@@ -29,4 +29,9 @@ extension UIView {
         layer.cornerRadius = radius
         clipsToBounds = true
     }
+    
+    func roundRightCorners(radius: CGFloat = CORNER_RADIUS) {
+        layer.cornerRadius = radius
+        layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+    }
 }
