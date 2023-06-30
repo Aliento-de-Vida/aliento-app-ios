@@ -18,9 +18,11 @@ class CampusItemCell: UICollectionViewCell {
     @IBOutlet var campusPhrase: UILabel!
     
     var item: CampusPresentation? = nil
+    var onClick: (CampusPresentation) -> Void = { _ in }
     
-    func configure(item: CampusPresentation) {
+    func configure(item: CampusPresentation, onClick: @escaping (CampusPresentation) -> Void ) {
         self.item = item
+        self.onClick = onClick
        
         imageUrl.load(url: item.imageUrl)
         campusTitle.text = "\(item.name)"
@@ -34,9 +36,10 @@ class CampusItemCell: UICollectionViewCell {
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.imageUrl)")
+        guard let item = item else { return }
+        onClick(item)
+        print("Se presiono \(item.imageUrl)")
     }
-    
     
 }
 

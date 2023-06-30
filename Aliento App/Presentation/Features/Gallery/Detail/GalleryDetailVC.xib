@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryDetailVC">
+            <connections>
+                <outlet property="galleryDetailCollectionView" destination="o5U-9a-v0d" id="lSd-io-tRi"/>
+                <outlet property="titleDetailLabel" destination="fCk-cu-CrL" id="pN6-6B-ELd"/>
+                <outlet property="view" destination="b5d-Nc-XQP" id="yYl-fU-Abf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="b5d-Nc-XQP">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="o5U-9a-v0d" customClass="GalleryDetailCollectionView" customModule="Aliento_App" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="96" width="393" height="722"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1bG-1Y-MFM">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCk-cu-CrL" userLabel="Title">
+                    <rect key="frame" x="0.0" y="67" width="393" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="OCC-FH-cnl"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="o5U-9a-v0d" firstAttribute="top" secondItem="fCk-cu-CrL" secondAttribute="bottom" constant="8" id="3oy-Rh-vyV"/>
+                <constraint firstItem="o5U-9a-v0d" firstAttribute="leading" secondItem="OCC-FH-cnl" secondAttribute="leading" id="HSW-4Q-V9X"/>
+                <constraint firstItem="fCk-cu-CrL" firstAttribute="leading" secondItem="OCC-FH-cnl" secondAttribute="leading" id="KHh-5N-l4Y"/>
+                <constraint firstItem="OCC-FH-cnl" firstAttribute="trailing" secondItem="fCk-cu-CrL" secondAttribute="trailing" id="Q79-u0-ey8"/>
+                <constraint firstItem="fCk-cu-CrL" firstAttribute="top" secondItem="OCC-FH-cnl" secondAttribute="top" constant="8" id="Rzu-EB-cG3"/>
+                <constraint firstItem="OCC-FH-cnl" firstAttribute="trailing" secondItem="o5U-9a-v0d" secondAttribute="trailing" id="XL2-gO-Tba"/>
+                <constraint firstItem="OCC-FH-cnl" firstAttribute="bottom" secondItem="o5U-9a-v0d" secondAttribute="bottom" id="vJ5-90-HV4"/>
+            </constraints>
+            <point key="canvasLocation" x="-19.083969465648853" y="-47.183098591549296"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

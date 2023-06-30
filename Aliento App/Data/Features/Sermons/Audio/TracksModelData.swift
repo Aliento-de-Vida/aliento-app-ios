@@ -17,8 +17,12 @@ struct Track: Codable {
     let name: String
     let durationMs : Int?
     let images: [SpotifyImage]?
+    let externalUrls : Spotify
 }
 
+struct Spotify: Codable {
+    let spotify : String
+}
 extension Track {
     func toDomain(album: Album) -> AudioModel {
     return AudioModel(
@@ -27,8 +31,8 @@ extension Track {
         title: self.name,
         subtitle: album.name ?? "",
         duration: self.durationMs ?? 0,
-        imageUrl: album.images?.first?.url ?? ""
-    )
+        imageUrl: album.images?.first?.url ?? "",
+        spotify: self.externalUrls.spotify)
     }
 }
 

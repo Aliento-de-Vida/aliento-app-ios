@@ -9,8 +9,10 @@ import Foundation
 
 struct VideoModel {
     let id: String
+    let videoId: String
     let description: String
     let title: String
     let date: String
     let thumbnulsUrl: String?
+   
 }

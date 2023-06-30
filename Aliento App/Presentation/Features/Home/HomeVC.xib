@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -47,10 +47,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYX-rm-MsO">
-                    <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="793"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="755"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4eo-DA-RZk" customClass="CarouselCollectionView" customModule="Aliento_App" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
@@ -354,13 +354,6 @@
                                         <constraint firstItem="c7d-Zr-4OE" firstAttribute="leading" secondItem="J1P-vl-XEX" secondAttribute="leading" id="nIq-dn-TOC"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2av-Ub-DPv">
-                                    <rect key="frame" x="0.0" y="755" width="390" height="30"/>
-                                    <state key="normal" title="Predicas"/>
-                                    <connections>
-                                        <action selector="goToPredicas:" destination="-1" eventType="touchUpInside" id="kCf-xV-cge"/>
-                                    </connections>
-                                </button>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-jB-JaT">
                                     <rect key="frame" x="0.0" y="456.66666666666674" width="390" height="160"/>
                                     <subviews>
@@ -583,12 +576,11 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="2av-Ub-DPv" secondAttribute="trailing" id="1av-6f-4sy"/>
                                 <constraint firstAttribute="trailing" secondItem="4eo-DA-RZk" secondAttribute="trailing" id="6tK-n1-OXd"/>
                                 <constraint firstItem="J1P-vl-XEX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="7ht-kt-EjH"/>
                                 <constraint firstAttribute="trailing" secondItem="tTa-jB-JaT" secondAttribute="trailing" id="8Cb-Dk-BpD"/>
-                                <constraint firstItem="2av-Ub-DPv" firstAttribute="top" secondItem="J1P-vl-XEX" secondAttribute="bottom" constant="16" id="AP0-Df-VMp"/>
                                 <constraint firstItem="tTa-jB-JaT" firstAttribute="top" secondItem="CHo-RN-Zh1" secondAttribute="bottom" constant="8" id="AdS-pe-Ptw"/>
+                                <constraint firstAttribute="bottom" secondItem="J1P-vl-XEX" secondAttribute="bottom" constant="16" id="C4n-RG-074"/>
                                 <constraint firstItem="CHo-RN-Zh1" firstAttribute="top" secondItem="ufQ-Nl-fS7" secondAttribute="bottom" constant="16" id="M82-Wx-tyc"/>
                                 <constraint firstItem="4eo-DA-RZk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MuW-LC-nYM"/>
                                 <constraint firstItem="ufQ-Nl-fS7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NfZ-t0-l2Q"/>
@@ -602,9 +594,7 @@
                                 <constraint firstItem="ze4-hf-haL" firstAttribute="top" secondItem="4eo-DA-RZk" secondAttribute="bottom" constant="16" id="cbi-IC-oaG"/>
                                 <constraint firstItem="ufQ-Nl-fS7" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="hKQ-lV-Nhm"/>
                                 <constraint firstItem="CHo-RN-Zh1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="kVQ-Al-md0"/>
-                                <constraint firstAttribute="bottom" secondItem="2av-Ub-DPv" secondAttribute="bottom" constant="8" id="m3i-Do-eBg"/>
                                 <constraint firstItem="4eo-DA-RZk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nea-Gl-VeL"/>
-                                <constraint firstItem="2av-Ub-DPv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zzk-aY-Imj"/>
                             </constraints>
                         </view>
                     </subviews>

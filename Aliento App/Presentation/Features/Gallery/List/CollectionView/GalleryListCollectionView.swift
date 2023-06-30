@@ -7,11 +7,12 @@
 
 import UIKit
 
-class GalleryCollectionView : UICollectionView {
+class GalleryListCollectionView : UICollectionView {
     var collectionGallery: [GalleryPresentation] = []
+    var onClick : (GalleryPresentation) -> Void = { galleryDetail in }
 }
 
-extension GalleryCollectionView: UICollectionViewDelegateFlowLayout {
+extension GalleryListCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
@@ -22,14 +23,14 @@ extension GalleryCollectionView: UICollectionViewDelegateFlowLayout {
         
 }
 
-extension GalleryCollectionView: UICollectionViewDataSource {
+extension GalleryListCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { collectionGallery.count }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryItemCell.identifier, for: indexPath) as! GalleryItemCell
         let index = indexPath.item
-        cell.configure(item: collectionGallery[index])
+        cell.configure(item: collectionGallery[index], onClick: onClick)
         return cell
     }
     

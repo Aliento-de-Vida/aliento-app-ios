@@ -18,9 +18,11 @@ class NotificationsItemCell: UICollectionViewCell {
     @IBOutlet var card: UIView!
     
     var item: NotificationPresentation? = nil
+    var onClick: (NotificationPresentation) -> Void = { _ in }
     
-    func configure(item: NotificationPresentation) {
+    func configure(item: NotificationPresentation, onClick: @escaping (NotificationPresentation) -> Void ) {
         self.item = item
+        self.onClick = onClick
        
         imageView.load(url: item.imageUrl)
         title.text = "\(item.title)"
@@ -35,7 +37,9 @@ class NotificationsItemCell: UICollectionViewCell {
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.imageUrl)")
+        guard let item = item else { return }
+        onClick(item)
+        print("Se presiono \(item.imageUrl)")
     }
     
 }

@@ -14,7 +14,7 @@ struct CarouselItem{
 }
 
 struct CarouselVideo {
-    let videoUrl :String
+    let videoId :String
 }
 
 struct CarouselMenu {

@@ -9,6 +9,7 @@ import UIKit
 
 class NotificationsCollectionView: UICollectionView {
     var collectionNotification: [NotificationPresentation] = []
+    var onClick: (NotificationPresentation) -> Void = { notification in }
 }
 
 extension NotificationsCollectionView: UICollectionViewDelegateFlowLayout {
@@ -29,7 +30,7 @@ extension NotificationsCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotificationsItemCell.identifier, for: indexPath) as! NotificationsItemCell
         let index = indexPath.item
-        cell.configure(item: collectionNotification[index])
+        cell.configure(item: collectionNotification[index], onClick: onClick)
         return cell
     }
     

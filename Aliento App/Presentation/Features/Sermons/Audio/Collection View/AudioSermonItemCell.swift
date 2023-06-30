@@ -19,21 +19,28 @@ class AudioSermonItemCell: UICollectionViewCell {
     @IBOutlet var shadow: UIView!
     
     var item: AudioModelPresentation? = nil
+    var onTap: (AudioModelPresentation) -> Void = { _ in }
     
-    func configure(item: AudioModelPresentation) {
-        self.item = item
+    func configure(
+        item: AudioModelPresentation,
+        onTap : @escaping (AudioModelPresentation) -> Void
+    ) {
         
+        self.item = item
+        self.onTap = onTap
         nameLabel.text = item.title
         durationLabel.text = "\(item.duration)"
         imageView.load(url: item.imageUrl)
         dateLabel.text = item.releaseDate
         shadow.addShadow()
         background.roundCorners()
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SpotifyClick(_:))))
     }
     
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.title)")
+    @objc func SpotifyClick(_ sender: UITapGestureRecognizer) {
+        guard let item = item else { return }
+        onTap(item)
+        print("Se presiono \(item.spotify)")
     }
         
 }

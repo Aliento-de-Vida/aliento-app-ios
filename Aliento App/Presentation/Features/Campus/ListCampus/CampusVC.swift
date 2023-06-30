@@ -11,6 +11,7 @@ import Resolver
 class CampusVC : UIViewController {
     @IBOutlet var campusCollectionView: CampusCollectionView!
     @Injected var campusRepository: CampusRepository
+    var onClick: (CampusPresentation) -> Void = { item in }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,11 @@ class CampusVC : UIViewController {
         campusCollectionView.register(UINib(nibName: CampusItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CampusItemCell.identifier)
         campusCollectionView.dataSource = campusCollectionView
         campusCollectionView.delegate = campusCollectionView
+        campusCollectionView.onClick = { [self] item in
+            let goToDetailsCampus = DetailCampusVC.create(item: item)
+            goToDetailsCampus.modalPresentationStyle = .popover
+            self.present(goToDetailsCampus, animated: true, completion: nil)
+        }
     
         setNavBarLogo()
         campusRepository.getCampus { result in

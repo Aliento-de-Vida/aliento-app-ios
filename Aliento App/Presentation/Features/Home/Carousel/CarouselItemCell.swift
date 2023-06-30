@@ -13,7 +13,13 @@ class CarouselItemCell: UICollectionViewCell {
     @IBOutlet var form: UIView!
     @IBOutlet var textLabel: UILabel!
     
-    func configure(item: CarouselItem) {
+    var onClick: (CarouselItem) -> Void = { _ in }
+    var item: CarouselItem? = nil
+    
+    func configure(item: CarouselItem, onClick: @escaping (CarouselItem) -> Void) {
+        self.item = item
+        self.onClick = onClick
+        
         carouselImage.load(url: item.imageUrl)
         
         carouselImage.isUserInteractionEnabled = true
@@ -29,7 +35,7 @@ class CarouselItemCell: UICollectionViewCell {
     }
     
     @objc func carouselImageClick() {
-        print("Se presiono carousel image")
-        // handling code
+        guard let item = item else { return }
+        onClick(item)
     }
 }

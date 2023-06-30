@@ -17,11 +17,12 @@ class GalleryItemCell : UICollectionViewCell {
     @IBOutlet var galleryLabel: UILabel!
     
     var item: GalleryPresentation? = nil
+    var onClick: (GalleryPresentation) -> Void = { _ in }
     
-    
-    func configure(item: GalleryPresentation) {
+    func configure(item: GalleryPresentation, onClick: @escaping (GalleryPresentation) -> Void) {
         self.item = item
-       
+        self.onClick = onClick
+        
         galleryImage.load(url: item.coverPicture)
         galleryLabel.text = "\(item.name)"
        
@@ -34,7 +35,8 @@ class GalleryItemCell : UICollectionViewCell {
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.coverPicture)")
+        guard let item = item else { return }
+        onClick(item)
     }
     
 }

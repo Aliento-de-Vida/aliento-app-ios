@@ -8,7 +8,8 @@
 import UIKit
 
 class VideoSermonsCollectionView: UICollectionView {
-    var collectionVideo: [VideoModelPresentation] = []    
+    var collectionVideo: [VideoModelPresentation] = []
+    var onTap : (VideoModelPresentation) -> Void = { _ in }
 }
 
 extension VideoSermonsCollectionView: UICollectionViewDelegateFlowLayout {
@@ -29,7 +30,7 @@ extension VideoSermonsCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideoSermonItemCell.identifier, for: indexPath) as! VideoSermonItemCell
         let index = indexPath.item
-        cell.configure(item: collectionVideo[index])
+        cell.configure(item: collectionVideo[index], onTap: onTap)
         return cell
     }
     

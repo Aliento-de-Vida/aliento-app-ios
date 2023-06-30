@@ -19,8 +19,13 @@ struct Album : Codable {
     let releaseDate: String
     let duration: Int?
     let images: [SpotifyImage]?
+    let externalUrls : ExternalUrls
 }
 
 struct SpotifyImage : Codable {
     let url: String?
+}
+
+struct ExternalUrls : Codable {
+    let spotify: String
 }

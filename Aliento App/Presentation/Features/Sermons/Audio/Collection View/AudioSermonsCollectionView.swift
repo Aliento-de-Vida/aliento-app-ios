@@ -10,6 +10,7 @@ import UIKit
 
 class AudioSermonsCollectionView: UICollectionView {
     var collection: [AudioModelPresentation] = []
+    var onTap : (AudioModelPresentation) -> Void = { _ in }
 }
 
 extension AudioSermonsCollectionView: UICollectionViewDelegateFlowLayout {
@@ -30,7 +31,7 @@ extension AudioSermonsCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AudioSermonItemCell.identifier, for: indexPath) as! AudioSermonItemCell
         let index = indexPath.item
-        cell.configure(item: collection[index])
+        cell.configure(item: collection[index], onTap: onTap)
         return cell
     }
     

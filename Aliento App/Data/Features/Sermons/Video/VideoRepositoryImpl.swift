@@ -21,7 +21,10 @@ class VideoRepositoryImpl : VideoRepository {
         videoApi.getVideo(playlistId: playlistId, maxResults: maxResults) { result in
             switch result {
             case.success(let response):
-                completion(.success(response.items.map { value in value.toDomain() }))
+                completion(.success(response.items
+                    .map { value in value.toDomain() }
+                    .filter {value in value.thumbnulsUrl != nil }
+                ))
             case.failure(let error):
                 completion(.failure(error))
             }

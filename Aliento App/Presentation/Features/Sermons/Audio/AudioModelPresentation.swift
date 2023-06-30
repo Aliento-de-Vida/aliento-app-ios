@@ -14,6 +14,7 @@ struct AudioModelPresentation {
     let subtitle: String
     let duration: String
     let imageUrl: String
+    let spotify : String
 }
 
 extension AudioModel {
@@ -24,7 +25,8 @@ extension AudioModel {
             title: self.title,
             subtitle: self.subtitle,
             duration: "\(self.duration.msToMinutes()) min",
-            imageUrl: self.imageUrl
+            imageUrl: self.imageUrl,
+            spotify: self.spotify
         )
     }
 }

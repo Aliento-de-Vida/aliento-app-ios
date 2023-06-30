@@ -20,7 +20,7 @@ extension GalleryModel {
             id: self.id,
             name: self.name,
             coverPicture: self.coverPicture.toImageUrl(),
-            images: self.images
+            images: self.images.map { imageName in imageName.toImageUrl() }
         )
     }
 }

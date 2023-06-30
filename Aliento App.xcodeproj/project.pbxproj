@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761AB30F2A4C891500D1EDCF /* GalleryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AB30E2A4C891500D1EDCF /* GalleryDetailVC.swift */; };
+		761AB3112A4C892A00D1EDCF /* GalleryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761AB3102A4C892A00D1EDCF /* GalleryDetailVC.xib */; };
+		761AB3142A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AB3132A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift */; };
+		761AB3162A4C8B3500D1EDCF /* GalleryDetailItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AB3152A4C8B3500D1EDCF /* GalleryDetailItemCell.swift */; };
+		761AB3182A4C8B6800D1EDCF /* GalleryDetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761AB3172A4C8B6800D1EDCF /* GalleryDetailItemCell.xib */; };
+		76501C9F2A3B99B5006C0970 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 76501C9E2A3B99B5006C0970 /* YouTubeiOSPlayerHelper */; };
+		76501CA12A3BA57E006C0970 /* PlayerYoutubeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76501CA02A3BA57E006C0970 /* PlayerYoutubeVC.swift */; };
+		76501CA32A3BA597006C0970 /* PlayerYoutubeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76501CA22A3BA597006C0970 /* PlayerYoutubeVC.xib */; };
+		76501CA72A40DA1D006C0970 /* PlayerSpotifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76501CA62A40DA1D006C0970 /* PlayerSpotifyVC.swift */; };
+		76501CA92A40DA3C006C0970 /* PlayerSpotifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76501CA82A40DA3C006C0970 /* PlayerSpotifyVC.xib */; };
 		765E45A329819750004FA458 /* CampusCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45A229819750004FA458 /* CampusCollectionView.swift */; };
 		765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E45A6298197BA004FA458 /* CampusItemCell.xib */; };
 		765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AA2981A289004FA458 /* CampusItemCell.swift */; };
-		765E45B02981BCB1004FA458 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AF2981BCB1004FA458 /* GalleryCollectionView.swift */; };
+		765E45B02981BCB1004FA458 /* GalleryListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45AF2981BCB1004FA458 /* GalleryListCollectionView.swift */; };
 		765E45B22981BD08004FA458 /* GalleryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E45B12981BD08004FA458 /* GalleryItemCell.swift */; };
 		765E45B42981BD1C004FA458 /* GalleryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E45B32981BD1C004FA458 /* GalleryItemCell.xib */; };
 		7679B3EB29AFD62D00C3F5CD /* GalleryPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B3EA29AFD62D00C3F5CD /* GalleryPresentation.swift */; };
@@ -32,10 +42,14 @@
 		7679B41429B653E600C3F5CD /* TracksModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41329B653E600C3F5CD /* TracksModelData.swift */; };
 		7679B41629B6712E00C3F5CD /* TokenModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41529B6712D00C3F5CD /* TokenModelData.swift */; };
 		7679B41829B7BC2000C3F5CD /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41729B7BC2000C3F5CD /* Int.swift */; };
+		76A914F72A462502005589C0 /* NotificationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A914F62A462502005589C0 /* NotificationDetailVC.swift */; };
+		76A914F92A462514005589C0 /* NotificationDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A914F82A462514005589C0 /* NotificationDetailVC.xib */; };
+		76AB9D162A4F59990041903D /* DetailCampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB9D152A4F59990041903D /* DetailCampusVC.swift */; };
+		76AB9D182A4F59AD0041903D /* DetailCampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76AB9D172A4F59AD0041903D /* DetailCampusVC.xib */; };
 		76BE30462978709A0084157E /* CampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE30452978709A0084157E /* CampusVC.swift */; };
 		76BE3048297870BC0084157E /* CampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE3047297870BC0084157E /* CampusVC.xib */; };
-		76BE304B2979A0980084157E /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE304A2979A0980084157E /* GalleryVC.swift */; };
-		76BE304D2979A1330084157E /* GalleryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE304C2979A1330084157E /* GalleryVC.xib */; };
+		76BE304B2979A0980084157E /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE304A2979A0980084157E /* GalleryListVC.swift */; };
+		76BE304D2979A1330084157E /* GalleryListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE304C2979A1330084157E /* GalleryListVC.xib */; };
 		76D3F97E2979AF2600831312 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F97D2979AF2600831312 /* SettingsVC.swift */; };
 		76D3F9802979AF5F00831312 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D3F97F2979AF5F00831312 /* SettingsVC.xib */; };
 		76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F9822979AF8A00831312 /* NotificationsVC.swift */; };
@@ -115,10 +129,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		761AB30E2A4C891500D1EDCF /* GalleryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailVC.swift; sourceTree = "<group>"; };
+		761AB3102A4C892A00D1EDCF /* GalleryDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryDetailVC.xib; sourceTree = "<group>"; };
+		761AB3132A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailCollectionView.swift; sourceTree = "<group>"; };
+		761AB3152A4C8B3500D1EDCF /* GalleryDetailItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailItemCell.swift; sourceTree = "<group>"; };
+		761AB3172A4C8B6800D1EDCF /* GalleryDetailItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryDetailItemCell.xib; sourceTree = "<group>"; };
+		76501CA02A3BA57E006C0970 /* PlayerYoutubeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerYoutubeVC.swift; sourceTree = "<group>"; };
+		76501CA22A3BA597006C0970 /* PlayerYoutubeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerYoutubeVC.xib; sourceTree = "<group>"; };
+		76501CA62A40DA1D006C0970 /* PlayerSpotifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSpotifyVC.swift; sourceTree = "<group>"; };
+		76501CA82A40DA3C006C0970 /* PlayerSpotifyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSpotifyVC.xib; sourceTree = "<group>"; };
 		765E45A229819750004FA458 /* CampusCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusCollectionView.swift; sourceTree = "<group>"; };
 		765E45A6298197BA004FA458 /* CampusItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusItemCell.xib; sourceTree = "<group>"; };
 		765E45AA2981A289004FA458 /* CampusItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusItemCell.swift; sourceTree = "<group>"; };
-		765E45AF2981BCB1004FA458 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		765E45AF2981BCB1004FA458 /* GalleryListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListCollectionView.swift; sourceTree = "<group>"; };
 		765E45B12981BD08004FA458 /* GalleryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItemCell.swift; sourceTree = "<group>"; };
 		765E45B32981BD1C004FA458 /* GalleryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryItemCell.xib; sourceTree = "<group>"; };
 		7679B3EA29AFD62D00C3F5CD /* GalleryPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresentation.swift; sourceTree = "<group>"; };
@@ -140,10 +163,14 @@
 		7679B41329B653E600C3F5CD /* TracksModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksModelData.swift; sourceTree = "<group>"; };
 		7679B41529B6712D00C3F5CD /* TokenModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModelData.swift; sourceTree = "<group>"; };
 		7679B41729B7BC2000C3F5CD /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		76A914F62A462502005589C0 /* NotificationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailVC.swift; sourceTree = "<group>"; };
+		76A914F82A462514005589C0 /* NotificationDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationDetailVC.xib; sourceTree = "<group>"; };
+		76AB9D152A4F59990041903D /* DetailCampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampusVC.swift; sourceTree = "<group>"; };
+		76AB9D172A4F59AD0041903D /* DetailCampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCampusVC.xib; sourceTree = "<group>"; };
 		76BE30452978709A0084157E /* CampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusVC.swift; sourceTree = "<group>"; };
 		76BE3047297870BC0084157E /* CampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusVC.xib; sourceTree = "<group>"; };
-		76BE304A2979A0980084157E /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
-		76BE304C2979A1330084157E /* GalleryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryVC.xib; sourceTree = "<group>"; };
+		76BE304A2979A0980084157E /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
+		76BE304C2979A1330084157E /* GalleryListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryListVC.xib; sourceTree = "<group>"; };
 		76D3F97D2979AF2600831312 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		76D3F97F2979AF5F00831312 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		76D3F9822979AF8A00831312 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
@@ -232,6 +259,7 @@
 			files = (
 				DAA5BC0554963CBFAB25DF98 /* libPods-Aliento App.a in Frameworks */,
 				76F04A2E29A7FA5B006CFE64 /* Alamofire in Frameworks */,
+				76501C9F2A3B99B5006C0970 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +283,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		761AB30C2A4C882700D1EDCF /* List */ = {
+			isa = PBXGroup;
+			children = (
+				765E45AE2981BC2E004FA458 /* CollectionView */,
+				76BE304A2979A0980084157E /* GalleryListVC.swift */,
+				76BE304C2979A1330084157E /* GalleryListVC.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		761AB30D2A4C884600D1EDCF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				761AB3122A4C896D00D1EDCF /* GalleryDetailCollectionView */,
+				761AB30E2A4C891500D1EDCF /* GalleryDetailVC.swift */,
+				761AB3102A4C892A00D1EDCF /* GalleryDetailVC.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		761AB3122A4C896D00D1EDCF /* GalleryDetailCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				761AB3132A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift */,
+				761AB3152A4C8B3500D1EDCF /* GalleryDetailItemCell.swift */,
+				761AB3172A4C8B6800D1EDCF /* GalleryDetailItemCell.xib */,
+			);
+			path = GalleryDetailCollectionView;
+			sourceTree = "<group>";
+		};
 		765E45A1298196DC004FA458 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +326,7 @@
 		765E45AE2981BC2E004FA458 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				765E45AF2981BCB1004FA458 /* GalleryCollectionView.swift */,
+				765E45AF2981BCB1004FA458 /* GalleryListCollectionView.swift */,
 				765E45B12981BD08004FA458 /* GalleryItemCell.swift */,
 				765E45B32981BD1C004FA458 /* GalleryItemCell.xib */,
 			);
@@ -352,13 +410,50 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		76BE3044297870450084157E /* Campus */ = {
+		76A914F42A46246B005589C0 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				76D3F9862979BA9D00831312 /* CollectionView */,
+				76D3F9822979AF8A00831312 /* NotificationsVC.swift */,
+				76D3F9842979AF9F00831312 /* NotificationsVC.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		76A914F52A4624BE005589C0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				76A914F62A462502005589C0 /* NotificationDetailVC.swift */,
+				76A914F82A462514005589C0 /* NotificationDetailVC.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		76AB9D132A4F59340041903D /* DetailCampus */ = {
+			isa = PBXGroup;
+			children = (
+				76AB9D152A4F59990041903D /* DetailCampusVC.swift */,
+				76AB9D172A4F59AD0041903D /* DetailCampusVC.xib */,
+			);
+			path = DetailCampus;
+			sourceTree = "<group>";
+		};
+		76AB9D142A4F59610041903D /* ListCampus */ = {
 			isa = PBXGroup;
 			children = (
 				765E45A1298196DC004FA458 /* CollectionView */,
-				76F04A4E29AE9AC3006CFE64 /* CampusPresentation.swift */,
 				76BE30452978709A0084157E /* CampusVC.swift */,
 				76BE3047297870BC0084157E /* CampusVC.xib */,
+			);
+			path = ListCampus;
+			sourceTree = "<group>";
+		};
+		76BE3044297870450084157E /* Campus */ = {
+			isa = PBXGroup;
+			children = (
+				76AB9D142A4F59610041903D /* ListCampus */,
+				76AB9D132A4F59340041903D /* DetailCampus */,
+				76F04A4E29AE9AC3006CFE64 /* CampusPresentation.swift */,
 			);
 			path = Campus;
 			sourceTree = "<group>";
@@ -366,10 +461,9 @@
 		76BE30492979A0600084157E /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				765E45AE2981BC2E004FA458 /* CollectionView */,
+				761AB30D2A4C884600D1EDCF /* Detail */,
+				761AB30C2A4C882700D1EDCF /* List */,
 				7679B3EA29AFD62D00C3F5CD /* GalleryPresentation.swift */,
-				76BE304A2979A0980084157E /* GalleryVC.swift */,
-				76BE304C2979A1330084157E /* GalleryVC.xib */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -386,10 +480,9 @@
 		76D3F9812979AF6F00831312 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				76D3F9862979BA9D00831312 /* CollectionView */,
+				76A914F52A4624BE005589C0 /* Detail */,
+				76A914F42A46246B005589C0 /* List */,
 				76D3F98D2979BD3300831312 /* NotificationPresentation.swift */,
-				76D3F9822979AF8A00831312 /* NotificationsVC.swift */,
-				76D3F9842979AF9F00831312 /* NotificationsVC.xib */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -682,6 +775,8 @@
 				BF723F8A291C96F800F2FAA4 /* AudioModelPresentation.swift */,
 				B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */,
 				B824BDB728CAA72400B27C8C /* AudioSermonsVC.xib */,
+				76501CA62A40DA1D006C0970 /* PlayerSpotifyVC.swift */,
+				76501CA82A40DA3C006C0970 /* PlayerSpotifyVC.xib */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -693,6 +788,8 @@
 				76D8595A296DE4FE0087D935 /* VideoModelPresentation.swift */,
 				BF44EF37296DCA3400F3D028 /* VideoSermonsVC.swift */,
 				BF44EF39296DCA4500F3D028 /* VideoSermonsVC.xib */,
+				76501CA02A3BA57E006C0970 /* PlayerYoutubeVC.swift */,
+				76501CA22A3BA597006C0970 /* PlayerYoutubeVC.xib */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -771,6 +868,7 @@
 			name = "Aliento App";
 			packageProductDependencies = (
 				76F04A2D29A7FA5B006CFE64 /* Alamofire */,
+				76501C9E2A3B99B5006C0970 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = "Aliento App";
 			productReference = B824BD5D28CA966700B27C8C /* Aliento App.app */;
@@ -801,6 +899,7 @@
 			mainGroup = B824BD5428CA966700B27C8C;
 			packageReferences = (
 				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = B824BD5E28CA966700B27C8C /* Products */;
 			projectDirPath = "";
@@ -816,10 +915,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761AB3112A4C892A00D1EDCF /* GalleryDetailVC.xib in Resources */,
 				B824BD9728CA99DA00B27C8C /* SplashScreen.xib in Resources */,
+				761AB3182A4C8B6800D1EDCF /* GalleryDetailItemCell.xib in Resources */,
+				76A914F92A462514005589C0 /* NotificationDetailVC.xib in Resources */,
+				76501CA92A40DA3C006C0970 /* PlayerSpotifyVC.xib in Resources */,
+				76501CA32A3BA597006C0970 /* PlayerYoutubeVC.xib in Resources */,
 				76BE3048297870BC0084157E /* CampusVC.xib in Resources */,
 				76D8A5D529706FC6003A9E4C /* CarouselItemCell.xib in Resources */,
-				76BE304D2979A1330084157E /* GalleryVC.xib in Resources */,
+				76BE304D2979A1330084157E /* GalleryListVC.xib in Resources */,
 				765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */,
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */,
@@ -835,6 +939,7 @@
 				76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */,
 				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
 				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
+				76AB9D182A4F59AD0041903D /* DetailCampusVC.xib in Resources */,
 				B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */,
 				B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */,
 			);
@@ -885,6 +990,7 @@
 				BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */,
 				765E45B22981BD08004FA458 /* GalleryItemCell.swift in Sources */,
 				76BE30462978709A0084157E /* CampusVC.swift in Sources */,
+				761AB3142A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift in Sources */,
 				BF44EF3F296DCBFA00F3D028 /* VideoSermonItemCell.swift in Sources */,
 				76D3F98E2979BD3300831312 /* NotificationPresentation.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
@@ -893,6 +999,7 @@
 				7679B3EB29AFD62D00C3F5CD /* GalleryPresentation.swift in Sources */,
 				76D3F9882979BADE00831312 /* NotificationsCollectionView.swift in Sources */,
 				B8965F5D28D532C500B64709 /* RequestInterceptor.swift in Sources */,
+				76501CA72A40DA1D006C0970 /* PlayerSpotifyVC.swift in Sources */,
 				B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */,
 				BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */,
 				76F04A3229AD1C30006CFE64 /* Smaple.swift in Sources */,
@@ -901,6 +1008,7 @@
 				BF723F8D291C972600F2FAA4 /* Constants.swift in Sources */,
 				7679B3F729AFE12E00C3F5CD /* GalleryModel.swift in Sources */,
 				BF0C54762979F11F00848A0A /* HomeImages.swift in Sources */,
+				761AB3162A4C8B3500D1EDCF /* GalleryDetailItemCell.swift in Sources */,
 				BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModelData.swift in Sources */,
 				765E45A329819750004FA458 /* CampusCollectionView.swift in Sources */,
@@ -913,6 +1021,7 @@
 				7679B40429B1130800C3F5CD /* VideoRepository.swift in Sources */,
 				76F04A3629AD28DA006CFE64 /* NotificationModelData.swift in Sources */,
 				BF0C54702979D06F00848A0A /* FileRepository.swift in Sources */,
+				76501CA12A3BA57E006C0970 /* PlayerYoutubeVC.swift in Sources */,
 				BF54F1902977099200A1FF45 /* AppModule.swift in Sources */,
 				B8965F6028D5335100B64709 /* ApiError.swift in Sources */,
 				76F04A3929AD2C1F006CFE64 /* NotificationRepository.swift in Sources */,
@@ -925,13 +1034,14 @@
 				B8965F4C28D52C8100B64709 /* HomeRepositoryImpl.swift in Sources */,
 				76F04A4529AE642F006CFE64 /* CampusModel.swift in Sources */,
 				7679B40229B112F000C3F5CD /* VideoModel.swift in Sources */,
+				76A914F72A462502005589C0 /* NotificationDetailVC.swift in Sources */,
 				76F04A4329AE6412006CFE64 /* CampusRepository.swift in Sources */,
 				76EF47152982F98A00178BE5 /* DonationsVC.swift in Sources */,
 				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
 				765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */,
 				BF0C54742979DA6100848A0A /* HomeImagesData.swift in Sources */,
 				BF54F18A297702F500A1FF45 /* HomeRepository.swift in Sources */,
-				76BE304B2979A0980084157E /* GalleryVC.swift in Sources */,
+				76BE304B2979A0980084157E /* GalleryListVC.swift in Sources */,
 				BF44EF34296DC27500F3D028 /* UIView.swift in Sources */,
 				76D3F98A2979BB4000831312 /* NotificationsItemCell.swift in Sources */,
 				BF723F8B291C96F800F2FAA4 /* AudioModelPresentation.swift in Sources */,
@@ -950,7 +1060,9 @@
 				7679B3F029AFD68200C3F5CD /* GalleryModelData.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
 				76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */,
-				765E45B02981BCB1004FA458 /* GalleryCollectionView.swift in Sources */,
+				765E45B02981BCB1004FA458 /* GalleryListCollectionView.swift in Sources */,
+				761AB30F2A4C891500D1EDCF /* GalleryDetailVC.swift in Sources */,
+				76AB9D162A4F59990041903D /* DetailCampusVC.swift in Sources */,
 				BF0C546D2979D04000848A0A /* FileRepositoryImpl.swift in Sources */,
 				B8965F4F28D52C9800B64709 /* HomeApi.swift in Sources */,
 				7679B3EE29AFD67300C3F5CD /* GalleryApi.swift in Sources */,
@@ -1102,13 +1214,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UJSRV9HAGZ;
 				INFOPLIST_FILE = "Aliento App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alientodevida.app.Aliento-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alientodevida.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1122,13 +1234,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UJSRV9HAGZ;
 				INFOPLIST_FILE = "Aliento App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alientodevida.app.Aliento-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alientodevida.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1159,6 +1271,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.4;
+			};
+		};
 		76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1170,6 +1290,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		76501C9E2A3B99B5006C0970 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		76F04A2D29A7FA5B006CFE64 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */;

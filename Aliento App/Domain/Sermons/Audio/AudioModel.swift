@@ -13,6 +13,9 @@ struct AudioModel {
     let title: String
     let subtitle: String
     let duration: Int
-    let imageUrl: String 
+    let imageUrl: String
+    let spotify : String
 }
 
+let hours = 65 / 60
+let minutes = 65%60

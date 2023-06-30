@@ -18,10 +18,15 @@ class VideoSermonItemCell: UICollectionViewCell {
     @IBOutlet weak var shadow: UIView!
     
     var item: VideoModelPresentation? = nil
+    var onTap: (VideoModelPresentation) -> Void = { _ in }
     
-    func configure(item: VideoModelPresentation) {
-        self.item = item
+    func configure(
+        item: VideoModelPresentation,
+        onTap: @escaping (VideoModelPresentation) -> Void
+    ) {
         
+        self.item = item
+        self.onTap = onTap
         nameLabel.text = item.title
         durationLabel.text = "\(item.description)"
         imageView.load(url: item.thumbnulsUrl)
@@ -34,7 +39,9 @@ class VideoSermonItemCell: UICollectionViewCell {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        print("Se presiono \(item?.id)")
+        guard let item = item else { return }
+        onTap(item)
+        print("Se presiono \(item.id)")
     }
         
 }

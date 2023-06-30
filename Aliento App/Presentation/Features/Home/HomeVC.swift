@@ -46,9 +46,10 @@ class HomeVC: UIViewController {
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
     
     @Injected var homeRepository: HomeRepository
+    @Injected var videoRepository : VideoRepository
         
     var home: HomeModel? = nil
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -63,10 +64,41 @@ class HomeVC: UIViewController {
             }
         }
 
+        // getVideos
+        self.videoRepository.getVideo(playlistId: playlistId, maxResults: 5) { result in
+            switch result {
+            case.success(let videos):
+                videos.prefix(3)
+                    .forEach { video in
+                    let item = CarouselItem(
+                        imageUrl: video.thumbnulsUrl ?? "",
+                        video: CarouselVideo(videoId: video.id),
+                        menu: nil
+                    )
+                    self.collectionCarousel.append(item)
+                }
+                
+                self.carouselCollectionView.collectionCarousel = self.collectionCarousel
+                self.carouselCollectionView.reloadData()
+                
+            case .failure(let error):
+                print("Error")
+            }
+        }
+        // add 3 Carousel Items with real videos
+       
         carouselCollectionView.register(UINib(nibName: CarouselItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarouselItemCell.identifier)
         carouselCollectionView.dataSource = carouselCollectionView
         carouselCollectionView.delegate = carouselCollectionView
         carouselCollectionView.collectionCarousel = collectionCarousel
+        carouselCollectionView.onClick = { item in
+            if item.menu != nil {
+                self.navigationController?.pushViewController(TabBarController(), animated: true)
+            } else if item.video != nil {
+                let viewController = PlayerYoutubeVC.create(videoId: item.video!.videoId)
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
         carouselCollectionView.reloadData()
                 
         cardOne.isUserInteractionEnabled = true
@@ -169,10 +201,6 @@ class HomeVC: UIViewController {
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
-    @IBAction func goToPredicas(_ sender: Any) {
-        navigationController?.pushViewController(TabBarController(), animated: true)
-    } 
-    
     @objc func goToSettings() {
         navigationController?.pushViewController(SettingsVC(), animated: true)
         print("Se presiono Go to Settings")
@@ -186,7 +214,10 @@ class HomeVC: UIViewController {
     }
     
     @objc func cardOneClick() {
-        navigationController?.pushViewController(ChurchVC(), animated: true)
+        let churchVC = ChurchVC()
+        churchVC.modalPresentationStyle = .popover
+        self.present(churchVC, animated: true, completion: nil)
+        //navigationController?.pushViewController(ChurchVC(), animated: true)
         print("Se presiono card one")
         // handling code
         
@@ -197,7 +228,7 @@ class HomeVC: UIViewController {
         // handling code
     }
     @objc func cardThreeClick() {
-        navigationController?.pushViewController(GalleryVC(), animated: true)
+        navigationController?.pushViewController(GalleryListVC(), animated: true)
         print("Se presiono card three")
         // handling code
     }
@@ -248,25 +279,13 @@ class HomeVC: UIViewController {
         // handling code
     }
    
-    let collectionCarousel = [
-        
+    var collectionCarousel = [
     CarouselItem(
         // Case: Se muestra imagen y frase "Ver predicas"
         imageUrl: "https://img.freepik.com/foto-gratis/personas-alto-angulo-leyendo-juntas_23-2150062128.jpg?w=2000&t=st=1678305507~exp=1678306107~hmac=04e34c84934c945198053ae391bd4885dee49e0681b37aef0a7a81ae980bd358",
         video: nil,
         menu: CarouselMenu(menuName: "Ver prédicas")
-    ),
-    CarouselItem(
-        imageUrl: "https://img.freepik.com/foto-gratis/linda-familia-jugando-campo-verano_1157-37691.jpg?w=2000&t=st=1678304955~exp=1678305555~hmac=a65000845007ec34ff7774f1c79c300afa83907aaae24523772f12a3d623af2d",
-        video: CarouselVideo(videoUrl: "https://www.youtube.com/watch?v=RCIjUAtidc4"),
-        menu: nil
-    ),
-    CarouselItem(
-        imageUrl: "https://img.freepik.com/foto-gratis/mama-nina-divirtiendose-jardin_1153-7488.jpg?w=2000&t=st=1678305086~exp=1678305686~hmac=769f6486dfe4933219827aec0e72bd988f74c1b56b852e1ecb74dab996f18e30",
-        video: CarouselVideo(videoUrl: "https://www.youtube.com/watch?v=RCIjUAtidc4"),
-        menu: nil
     )
-   
     ]
     
 }

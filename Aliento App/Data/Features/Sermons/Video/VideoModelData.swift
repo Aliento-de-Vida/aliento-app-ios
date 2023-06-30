@@ -16,11 +16,17 @@ struct Items : Codable {
     let snippet : Snippet
 }
 
+struct ResourceId : Codable {
+    let kind : String
+    let videoId : String
+}
+
 struct Snippet : Codable {
     let publishedAt: String
     let title: String
     let description: String
     let thumbnails: Thumbnails
+    let resourceId : ResourceId
 }
 
 struct Thumbnails : Codable {
@@ -35,6 +41,7 @@ extension Items {
     func toDomain() -> VideoModel {
     return VideoModel(
         id: self.id,
+        videoId: self.snippet.resourceId.videoId,
         description: self.snippet.description,
         title: self.snippet.title,
         date: self.snippet.publishedAt,

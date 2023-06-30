@@ -9,6 +9,7 @@ import UIKit
 
 class CampusCollectionView: UICollectionView {
     var collectionCampus: [CampusPresentation] = []
+    var onClick: (CampusPresentation) -> Void = { campus in }
 }
 
 extension CampusCollectionView: UICollectionViewDelegateFlowLayout {
@@ -29,7 +30,7 @@ extension CampusCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CampusItemCell.identifier, for: indexPath) as! CampusItemCell
         let index = indexPath.item
-        cell.configure(item: collectionCampus[index])
+        cell.configure(item: collectionCampus[index], onClick : onClick)
         return cell
     }
     
