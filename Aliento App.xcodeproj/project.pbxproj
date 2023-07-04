@@ -46,6 +46,8 @@
 		76A914F92A462514005589C0 /* NotificationDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A914F82A462514005589C0 /* NotificationDetailVC.xib */; };
 		76AB9D162A4F59990041903D /* DetailCampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB9D152A4F59990041903D /* DetailCampusVC.swift */; };
 		76AB9D182A4F59AD0041903D /* DetailCampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76AB9D172A4F59AD0041903D /* DetailCampusVC.xib */; };
+		76AB9D1E2A535A160041903D /* FullScreenNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB9D1D2A535A160041903D /* FullScreenNotificationVC.swift */; };
+		76AB9D202A535A280041903D /* FullScreenNotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76AB9D1F2A535A280041903D /* FullScreenNotificationVC.xib */; };
 		76BE30462978709A0084157E /* CampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE30452978709A0084157E /* CampusVC.swift */; };
 		76BE3048297870BC0084157E /* CampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE3047297870BC0084157E /* CampusVC.xib */; };
 		76BE304B2979A0980084157E /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE304A2979A0980084157E /* GalleryListVC.swift */; };
@@ -167,6 +169,8 @@
 		76A914F82A462514005589C0 /* NotificationDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationDetailVC.xib; sourceTree = "<group>"; };
 		76AB9D152A4F59990041903D /* DetailCampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampusVC.swift; sourceTree = "<group>"; };
 		76AB9D172A4F59AD0041903D /* DetailCampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCampusVC.xib; sourceTree = "<group>"; };
+		76AB9D1D2A535A160041903D /* FullScreenNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenNotificationVC.swift; sourceTree = "<group>"; };
+		76AB9D1F2A535A280041903D /* FullScreenNotificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullScreenNotificationVC.xib; sourceTree = "<group>"; };
 		76BE30452978709A0084157E /* CampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusVC.swift; sourceTree = "<group>"; };
 		76BE3047297870BC0084157E /* CampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusVC.xib; sourceTree = "<group>"; };
 		76BE304A2979A0980084157E /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
@@ -448,6 +452,15 @@
 			path = ListCampus;
 			sourceTree = "<group>";
 		};
+		76AB9D1C2A5359F00041903D /* FullScreenNotification */ = {
+			isa = PBXGroup;
+			children = (
+				76AB9D1D2A535A160041903D /* FullScreenNotificationVC.swift */,
+				76AB9D1F2A535A280041903D /* FullScreenNotificationVC.xib */,
+			);
+			path = FullScreenNotification;
+			sourceTree = "<group>";
+		};
 		76BE3044297870450084157E /* Campus */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +493,7 @@
 		76D3F9812979AF6F00831312 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				76AB9D1C2A5359F00041903D /* FullScreenNotification */,
 				76A914F52A4624BE005589C0 /* Detail */,
 				76A914F42A46246B005589C0 /* List */,
 				76D3F98D2979BD3300831312 /* NotificationPresentation.swift */,
@@ -860,6 +874,7 @@
 				B824BD5928CA966700B27C8C /* Sources */,
 				B824BD5A28CA966700B27C8C /* Frameworks */,
 				B824BD5B28CA966700B27C8C /* Resources */,
+				9C34C1C4318EA60E2EF34D7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -898,8 +913,8 @@
 			);
 			mainGroup = B824BD5428CA966700B27C8C;
 			packageReferences = (
-				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper.git" */,
 			);
 			productRefGroup = B824BD5E28CA966700B27C8C /* Products */;
 			projectDirPath = "";
@@ -935,6 +950,7 @@
 				76D3F9852979AF9F00831312 /* NotificationsVC.xib in Resources */,
 				BF44EF3A296DCA4500F3D028 /* VideoSermonsVC.xib in Resources */,
 				B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */,
+				76AB9D202A535A280041903D /* FullScreenNotificationVC.xib in Resources */,
 				76D3F9802979AF5F00831312 /* SettingsVC.xib in Resources */,
 				76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */,
 				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
@@ -948,6 +964,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9C34C1C4318EA60E2EF34D7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F45F10F57D0DBFD026FCC927 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -995,6 +1028,7 @@
 				76D3F98E2979BD3300831312 /* NotificationPresentation.swift in Sources */,
 				B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */,
 				7679B40B29B27A9A00C3F5CD /* AlbumsModelData.swift in Sources */,
+				76AB9D1E2A535A160041903D /* FullScreenNotificationVC.swift in Sources */,
 				76D8A5D929772087003A9E4C /* ChurchVC.swift in Sources */,
 				7679B3EB29AFD62D00C3F5CD /* GalleryPresentation.swift in Sources */,
 				76D3F9882979BADE00831312 /* NotificationsCollectionView.swift in Sources */,
@@ -1271,7 +1305,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+		76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
 			requirement = {
@@ -1279,7 +1313,7 @@
 				version = 1.0.4;
 			};
 		};
-		76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1292,12 +1326,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		76501C9E2A3B99B5006C0970 /* YouTubeiOSPlayerHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			package = 76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper.git" */;
 			productName = YouTubeiOSPlayerHelper;
 		};
 		76F04A2D29A7FA5B006CFE64 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

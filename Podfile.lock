@@ -1,22 +1,34 @@
 PODS:
+  - Cache (6.0.0)
+  - Imaginary (5.0.0):
+    - Cache (~> 6.0.0)
+  - Lightbox (2.5.0):
+    - Imaginary (~> 5.0.0)
   - Resolver (1.5.0)
   - SDWebImage (5.14.2):
     - SDWebImage/Core (= 5.14.2)
   - SDWebImage/Core (5.14.2)
 
 DEPENDENCIES:
+  - Lightbox
   - Resolver (~> 1.5.0)
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
+    - Cache
+    - Imaginary
+    - Lightbox
     - Resolver
     - SDWebImage
 
 SPEC CHECKSUMS:
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+  Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   Resolver: 68984624572763018fd8ec7b8e3e8df0e3b6bba5
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
 
-PODFILE CHECKSUM: 7e4856175c77d6b8f8e158b17f2e88141691c846
+PODFILE CHECKSUM: a83932560795f5abe37398cf3cb340aaa2c00681
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

@@ -7,6 +7,7 @@
 
 import UIKit
 import Resolver
+import Lightbox
 
 class DetailCampusVC : UIViewController {
     var item: CampusPresentation? = nil
@@ -30,6 +31,8 @@ class DetailCampusVC : UIViewController {
         label2.text = item.shortDescription
         label3.text = item.contact
         campusImage.load(url: item.imageUrl)
+        campusImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        campusImage.isUserInteractionEnabled = true
         
     }
    
@@ -37,6 +40,13 @@ class DetailCampusVC : UIViewController {
         let viewController = DetailCampusVC()
         viewController.item = item
         return viewController
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        guard let item = item else { return }
+        let images = [LightboxImage(imageURL: URL (string: item.imageUrl)!)]
+        let controller = LightboxController(images: images)
+        present(controller, animated: true, completion: nil)
     }
         
 }

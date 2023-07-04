@@ -7,6 +7,7 @@
 
 import UIKit
 import Resolver
+import Lightbox
 
 class NotificationDetailVC : UIViewController {
     var item: NotificationPresentation? = nil
@@ -24,6 +25,8 @@ class NotificationDetailVC : UIViewController {
         
         detailText.text = item.title
         ImageNotificationDetail.load(url: item.imageUrl)
+        ImageNotificationDetail.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        ImageNotificationDetail.isUserInteractionEnabled = true
         descriptionNotificationImage.text = item.phrase
         
     }
@@ -32,5 +35,13 @@ class NotificationDetailVC : UIViewController {
         let viewController = NotificationDetailVC()
         viewController.item = item
         return viewController
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        guard let item = item else { return }
+        
+        let images = [LightboxImage(imageURL: URL(string: item.imageUrl)!)]
+        let controller = LightboxController(images: images)
+        present(controller, animated: true, completion: nil)
     }
 }
