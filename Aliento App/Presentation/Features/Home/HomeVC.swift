@@ -9,6 +9,7 @@ import UIKit
 import Resolver
 
 class HomeVC: UIViewController {
+    var item : NotificationPresentation? = nil
         
     @IBOutlet weak var cardOneShadow: UIView!
     @IBOutlet weak var cardOneImage: UIImageView!
@@ -45,8 +46,14 @@ class HomeVC: UIViewController {
     
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
     
+    @IBOutlet var notificationView: UIView!
+    @IBOutlet var notificationsCollectionView: NotificationsCollectionView!
+    @IBOutlet var notificationViewHeight: NSLayoutConstraint!
+    
     @Injected var homeRepository: HomeRepository
-    @Injected var videoRepository : VideoRepository
+    @Injected var videoRepository: VideoRepository
+    @Injected var notificationsRepository: NotificationRepository
+    
         
     var home: HomeModel? = nil
    
@@ -81,16 +88,48 @@ class HomeVC: UIViewController {
                 self.carouselCollectionView.collectionCarousel = self.collectionCarousel
                 self.carouselCollectionView.reloadData()
                 
-            case .failure(let error):
+            case .failure(_):
                 print("Error")
             }
         }
+        
+        // getNotifications
+        
+        notificationsRepository.getNotification { [self] result in
+            switch result {
+            case .success(let notifications):
+                switch notifications.count{
+                case 0 :
+                    notificationViewHeight.constant = 0
+                    notificationView.isHidden = true
+                case 1 :
+                    notificationViewHeight.constant = 45 + 216 //45 static, 216 one item
+                    notificationView.isHidden = false
+                default:
+                    notificationViewHeight.constant = 45 + (2 * 216) //45 static, 216 * 2 two items
+                    notificationView.isHidden = false
+                }
+                let notificationsPresentation = notifications.prefix(2).map { value in value.toPresentation() }
+                self.notificationsCollectionView.collectionNotification = notificationsPresentation
+                self.notificationsCollectionView.onClick = { [self] item in
+                    let goToDetailsNotification = NotificationDetailVC.create(item: item)
+                    goToDetailsNotification.modalPresentationStyle = .popover
+                    self.present(goToDetailsNotification, animated: true, completion: nil)
+                }
+                self.notificationsCollectionView.reloadData()
+                
+            case .failure(_):
+                print("Error")
+            }
+        }
+        
         // add 3 Carousel Items with real videos
        
         carouselCollectionView.register(UINib(nibName: CarouselItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarouselItemCell.identifier)
         carouselCollectionView.dataSource = carouselCollectionView
         carouselCollectionView.delegate = carouselCollectionView
         carouselCollectionView.collectionCarousel = collectionCarousel
+        carouselCollectionView.reloadData()
         carouselCollectionView.onClick = { item in
             if item.menu != nil {
                 self.navigationController?.pushViewController(TabBarController(), animated: true)
@@ -99,8 +138,11 @@ class HomeVC: UIViewController {
                 self.navigationController?.pushViewController(viewController, animated: true)
             }
         }
-        carouselCollectionView.reloadData()
-                
+        
+        notificationsCollectionView.register(UINib(nibName: NotificationsItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: NotificationsItemCell.identifier)
+        notificationsCollectionView.dataSource = notificationsCollectionView
+        notificationsCollectionView.delegate = notificationsCollectionView
+                    
         cardOne.isUserInteractionEnabled = true
         cardOne.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardOneClick)))
         cardOneShadow.addShadow()

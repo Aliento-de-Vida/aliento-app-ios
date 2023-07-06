@@ -913,8 +913,8 @@
 			);
 			mainGroup = B824BD5428CA966700B27C8C;
 			packageReferences = (
-				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper.git" */,
+				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = B824BD5E28CA966700B27C8C /* Products */;
 			projectDirPath = "";
@@ -1305,7 +1305,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper.git" */ = {
+		76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
 			requirement = {
@@ -1313,7 +1313,7 @@
 				version = 1.0.4;
 			};
 		};
-		76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1326,12 +1326,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		76501C9E2A3B99B5006C0970 /* YouTubeiOSPlayerHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper.git" */;
+			package = 76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
 		};
 		76F04A2D29A7FA5B006CFE64 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
