@@ -29,7 +29,7 @@ class VideoSermonItemCell: UICollectionViewCell {
         self.onTap = onTap
         nameLabel.text = item.title
         durationLabel.text = "\(item.description)"
-        imageView.load(url: item.thumbnulsUrl)
+        imageView.loadWithShimmering(url: item.thumbnulsUrl)
         dateLabel.text = item.date
                 
         card.roundCorners()

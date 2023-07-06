@@ -30,9 +30,12 @@ class DetailCampusVC : UIViewController {
         label1.text = item.description
         label2.text = item.shortDescription
         label3.text = item.contact
-        campusImage.load(url: item.imageUrl)
+        campusImage.image = nil
+        campusImage.loadWithShimmering(url: item.imageUrl)
         campusImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
         campusImage.isUserInteractionEnabled = true
+        campusMaps.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(GoogleMapsClick)))
+        
         
     }
    
@@ -47,6 +50,18 @@ class DetailCampusVC : UIViewController {
         let images = [LightboxImage(imageURL: URL (string: item.imageUrl)!)]
         let controller = LightboxController(images: images)
         present(controller, animated: true, completion: nil)
+    }
+    
+    @objc func GoogleMapsClick() {
+        guard let item = item else { return }
+        //let lat = 21.0406393
+        //let lon = -89.5688631
+        
+        if (UIApplication.shared.canOpenURL(NSURL(string:"https://maps.google.com")! as URL))
+        {
+            UIApplication.shared.openURL(NSURL(string: "https://maps.google.com/?q=@\(item.location.latitude),\(item.location.longitude)")! as URL)
+        }
+        print("Se presiono Google Maps")
     }
         
 }

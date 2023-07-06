@@ -19,8 +19,8 @@ class CarouselItemCell: UICollectionViewCell {
     func configure(item: CarouselItem, onClick: @escaping (CarouselItem) -> Void) {
         self.item = item
         self.onClick = onClick
-        
-        carouselImage.load(url: item.imageUrl)
+        carouselImage.image = nil
+        carouselImage.loadWithShimmering(url: item.imageUrl) 
         
         carouselImage.isUserInteractionEnabled = true
         carouselImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(carouselImageClick)))

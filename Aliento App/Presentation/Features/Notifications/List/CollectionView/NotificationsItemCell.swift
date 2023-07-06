@@ -24,7 +24,7 @@ class NotificationsItemCell: UICollectionViewCell {
         self.item = item
         self.onClick = onClick
        
-        imageView.load(url: item.imageUrl)
+        imageView.loadWithShimmering(url: item.imageUrl)
         title.text = "\(item.title)"
         descriptionLabel.text = "\(item.phrase)"
         date.text = item.date

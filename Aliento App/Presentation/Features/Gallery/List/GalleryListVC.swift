@@ -33,7 +33,9 @@ class GalleryListVC : UIViewController {
             case .success(let gallery):
                 let campusPresentation = gallery.map { value in value.toPresentation() }
                 self.gallerylistCollectionView.collectionGallery = campusPresentation
+                
                 self.gallerylistCollectionView.reloadData()
+                
                 
             case .failure(let error):
                 print("Error")

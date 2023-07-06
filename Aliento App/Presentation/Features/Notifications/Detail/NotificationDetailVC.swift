@@ -24,7 +24,7 @@ class NotificationDetailVC : UIViewController {
         guard let item = item else { return }
         
         detailText.text = item.title
-        ImageNotificationDetail.load(url: item.imageUrl)
+        ImageNotificationDetail.loadWithShimmering(url: item.imageUrl)
         ImageNotificationDetail.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
         ImageNotificationDetail.isUserInteractionEnabled = true
         descriptionNotificationImage.text = item.phrase

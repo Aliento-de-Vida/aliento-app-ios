@@ -15,10 +15,20 @@ extension UIImageView {
         })
     }
     
+    func loadWithShimmering(
+        url: String?,
+        contentMode: ContentMode = UIView.ContentMode.scaleAspectFill
+    ) {
+        self.startShimmering()
+        self.load(url: url, contentMode: contentMode) {
+            self.stopShimmering()
+        }
+    }
+    
     func load(
         url: String?,
-        completion: @escaping () -> () = { },
-        contentMode: ContentMode = UIView.ContentMode.scaleAspectFill
+        contentMode: ContentMode = UIView.ContentMode.scaleAspectFill,
+        completion: @escaping () -> () = { }
     ) {
         self.contentMode = contentMode
         if let url = url, !url.isEmpty {

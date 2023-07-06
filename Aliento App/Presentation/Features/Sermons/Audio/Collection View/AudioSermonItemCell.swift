@@ -30,7 +30,7 @@ class AudioSermonItemCell: UICollectionViewCell {
         self.onTap = onTap
         nameLabel.text = item.title
         durationLabel.text = "\(item.duration)"
-        imageView.load(url: item.imageUrl)
+        imageView.loadWithShimmering(url: item.imageUrl)
         dateLabel.text = item.releaseDate
         shadow.addShadow()
         background.roundCorners()

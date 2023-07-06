@@ -59,11 +59,27 @@ class HomeVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
                 
         Task {
+            cardOneImage.startShimmering()
+            cardTwoImage.startShimmering()
+            cardThreeImage.startShimmering()
+            quickAccessOne.startShimmering()
+            quickAccesTwo.startShimmering()
+            quickAccesThree.startShimmering()
+            
             do {
                 home = try await homeRepository.getHome()
                 let homeImages = try await homeRepository.getHomeImages()
+                
+                cardOneImage.stopShimmering()
+                cardTwoImage.stopShimmering()
+                cardThreeImage.stopShimmering()
+                quickAccessOne.stopShimmering()
+                quickAccesTwo.stopShimmering()
+                quickAccesThree.stopShimmering()
+
                 loadData(home: home!, homeImages: homeImages)
             } catch {
                 //show(error)
@@ -203,13 +219,13 @@ class HomeVC: UIViewController {
     }
     
     func loadData(home: HomeModel, homeImages: HomeImages) {
-        cardOneImage.load(url: homeImages.churchImage)
-        cardTwoImage.load(url: homeImages.campusImage)
-        cardThreeImage.load(url: homeImages.galleriesImage)
+        cardOneImage.loadWithShimmering(url: homeImages.churchImage)
+        cardTwoImage.loadWithShimmering(url: homeImages.campusImage)
+        cardThreeImage.loadWithShimmering(url: homeImages.galleriesImage)
         
-        quickAccessOne.load(url: homeImages.donationsImage)
-        quickAccesTwo.load(url: homeImages.prayerImage)
-        quickAccesThree.load(url: homeImages.ebookImage)
+        quickAccessOne.loadWithShimmering(url: homeImages.donationsImage)
+        quickAccesTwo.loadWithShimmering(url: homeImages.prayerImage)
+        quickAccesThree.loadWithShimmering(url: homeImages.ebookImage)
         
     }
     
@@ -245,7 +261,6 @@ class HomeVC: UIViewController {
     
     @objc func goToSettings() {
         navigationController?.pushViewController(SettingsVC(), animated: true)
-        print("Se presiono Go to Settings")
         
     }
     
@@ -286,9 +301,10 @@ class HomeVC: UIViewController {
         // handling code
     }
     @objc func quickAccessThreeClick() {
-        print("Se presiono quick access three")
-        // handling code
+        guard let home = home, let ebookUrl = URL(string: home.ebook) else { return }
+        UIApplication.shared.open(ebookUrl)
     }
+    
     @objc func InstagramClick() {
         guard let instagramClick = URL(string: home?.socialMedia.instagramUrl ?? "") else { return }
         UIApplication.shared.open(instagramClick)

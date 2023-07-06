@@ -23,7 +23,7 @@ class GalleryDetailItemCell : UICollectionViewCell {
     ) {
         self.item = item
         self.onClick = onClick
-        imageGalleryItemCell.load(url: item)
+        imageGalleryItemCell.loadWithShimmering(url: item)
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(DetailClick)))
         
     }

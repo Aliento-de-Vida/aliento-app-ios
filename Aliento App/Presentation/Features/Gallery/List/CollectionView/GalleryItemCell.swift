@@ -23,7 +23,8 @@ class GalleryItemCell : UICollectionViewCell {
         self.item = item
         self.onClick = onClick
         
-        galleryImage.load(url: item.coverPicture)
+        galleryImage.image = nil
+        galleryImage.loadWithShimmering(url: item.coverPicture)
         galleryLabel.text = "\(item.name)"
        
       

@@ -23,8 +23,10 @@ class CampusItemCell: UICollectionViewCell {
     func configure(item: CampusPresentation, onClick: @escaping (CampusPresentation) -> Void ) {
         self.item = item
         self.onClick = onClick
-       
-        imageUrl.load(url: item.imageUrl)
+        
+        imageUrl.image = nil
+        imageUrl.loadWithShimmering(url: item.imageUrl)
+        
         campusTitle.text = "\(item.name)"
         campusPhrase.text = "\(item.description)"
       
