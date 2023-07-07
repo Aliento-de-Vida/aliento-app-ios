@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +49,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYX-rm-MsO">
-                    <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                             <rect key="frame" x="0.0" y="0.0" width="430" height="1105"/>
@@ -75,7 +74,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufQ-Nl-fS7">
-                                    <rect key="frame" x="0.0" y="252.33333333333331" width="430" height="160"/>
+                                    <rect key="frame" x="0.0" y="252.33333333333337" width="430" height="160"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E0I-ni-fB8">
                                             <rect key="frame" x="0.0" y="0.0" width="752" height="160"/>
@@ -100,7 +99,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-n6-tXe" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="110" width="240" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="109.99999999999997" width="240" height="50"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="cxl-aZ-WR5"/>
@@ -115,7 +114,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aliento de vida " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsT-4Y-yBD">
-                                                                    <rect key="frame" x="16" y="139.66666666666669" width="208" height="20.333333333333343"/>
+                                                                    <rect key="frame" x="16" y="139.66666666666666" width="208" height="20.333333333333343"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -157,7 +156,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="un1-h0-pzD" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="110" width="240" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="109.99999999999997" width="240" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-D2-HfQ">
                                                                             <rect key="frame" x="16" y="29" width="208" height="20.333333333333343"/>
@@ -215,7 +214,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-u1-AHS" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="110" width="240" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="109.99999999999997" width="240" height="50"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="0bA-nV-H8n"/>
@@ -232,7 +231,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galeria " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSp-he-uUC">
-                                                                    <rect key="frame" x="16" y="137.66666666666669" width="208" height="20.333333333333343"/>
+                                                                    <rect key="frame" x="16" y="137.66666666666666" width="208" height="20.333333333333343"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -289,7 +288,7 @@
                                     <viewLayoutGuide key="frameLayoutGuide" id="KZS-GT-R0U"/>
                                 </scrollView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redes Sociales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLd-MN-buQ">
-                                    <rect key="frame" x="16" y="982.66666666666674" width="123" height="20.333333333333371"/>
+                                    <rect key="frame" x="16" y="982.66666666666663" width="123" height="20.333333333333371"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -358,7 +357,7 @@
                                     </constraints>
                                 </view>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-jB-JaT">
-                                    <rect key="frame" x="0.0" y="456.66666666666663" width="430" height="160"/>
+                                    <rect key="frame" x="0.0" y="456.66666666666674" width="430" height="160"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fEe-4r-7ix">
                                             <rect key="frame" x="0.0" y="0.0" width="752" height="160"/>
@@ -383,7 +382,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNZ-Fs-HHl" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="110" width="240" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="109.99999999999994" width="240" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donaciones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PN-T1-FvF">
                                                                             <rect key="frame" x="16" y="29.666666666666742" width="208" height="20.333333333333329"/>
@@ -442,7 +441,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRc-B2-g6x" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="110" width="240" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="109.99999999999994" width="240" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-JR-9Hx">
                                                                             <rect key="frame" x="16" y="29.666666666666742" width="208" height="20.333333333333329"/>
@@ -501,7 +500,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vW-QM-JY1" customClass="GradientView" customModule="Aliento_App" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="110" width="240" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="109.99999999999994" width="240" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ebook " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCx-dB-knk">
                                                                             <rect key="frame" x="16" y="29.666666666666742" width="208" height="20.333333333333329"/>
@@ -648,13 +647,12 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="Nn0-ap-v8M"/>
                 </scrollView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="Z3t-1h-8Mf"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="kYX-rm-MsO" firstAttribute="leading" secondItem="z2y-6R-wg9" secondAttribute="leading" id="4xd-PT-00t"/>
-                <constraint firstItem="Z3t-1h-8Mf" firstAttribute="trailing" secondItem="kYX-rm-MsO" secondAttribute="trailing" id="FAI-Oh-VJU"/>
-                <constraint firstItem="Z3t-1h-8Mf" firstAttribute="bottom" secondItem="kYX-rm-MsO" secondAttribute="bottom" id="H6w-9j-9iG"/>
-                <constraint firstItem="kYX-rm-MsO" firstAttribute="top" secondItem="Z3t-1h-8Mf" secondAttribute="top" id="WjV-kM-uII"/>
+                <constraint firstAttribute="trailing" secondItem="kYX-rm-MsO" secondAttribute="trailing" id="FAI-Oh-VJU"/>
+                <constraint firstAttribute="bottom" secondItem="kYX-rm-MsO" secondAttribute="bottom" id="H6w-9j-9iG"/>
+                <constraint firstItem="kYX-rm-MsO" firstAttribute="top" secondItem="z2y-6R-wg9" secondAttribute="top" id="WjV-kM-uII"/>
             </constraints>
             <point key="canvasLocation" x="708.83720930232562" y="103.00429184549357"/>
         </view>

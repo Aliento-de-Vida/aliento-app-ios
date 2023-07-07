@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,6 +14,9 @@
                 <outlet property="bbva" destination="26c-Qp-eaI" id="Udc-WU-n6Y"/>
                 <outlet property="cardDonationsBbva" destination="7fV-xb-2xE" id="jJW-B4-gzK"/>
                 <outlet property="cardDonationsPayPal" destination="rIh-U3-tNB" id="85Y-DT-u3i"/>
+                <outlet property="cardNumber" destination="TyL-jO-4cV" id="Dql-gX-R5d"/>
+                <outlet property="clabe" destination="cvX-qG-no8" id="BJY-Nv-lnO"/>
+                <outlet property="numeroCuenta" destination="ruB-ut-gqu" id="OaB-A8-SF8"/>
                 <outlet property="paypal" destination="ect-ZB-Rpo" id="kLM-JM-VLL"/>
                 <outlet property="shadowDonationsBbva" destination="pIl-9b-gQC" id="Dih-e3-BOJ"/>
                 <outlet property="shadowDonationsPayPal" destination="4TS-8A-Z1a" id="AWw-5O-grn"/>
@@ -26,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fnv-hs-2jH">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUi-WJ-JQ3">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
@@ -38,7 +41,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EFZ-gG-qWi">
-                                    <rect key="frame" x="8" y="93.5" width="398" height="504"/>
+                                    <rect key="frame" x="8" y="89" width="398" height="504"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp7-cg-6Ch" userLabel="Spacer">
                                             <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
@@ -141,7 +144,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clic para donar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHb-TS-bnQ">
                                                             <rect key="frame" x="8" y="211.5" width="115.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -179,9 +182,9 @@
                                         <constraint firstItem="pIl-9b-gQC" firstAttribute="leading" secondItem="EFZ-gG-qWi" secondAttribute="leading" id="k0t-7J-0fu"/>
                                     </constraints>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Haz clic para copiar los datos)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-pv-4YU">
-                                    <rect key="frame" x="170.5" y="65" width="235.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Manten presionada la tarjeta para copiar los datos)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-pv-4YU">
+                                    <rect key="frame" x="8" y="65" width="398" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -195,6 +198,7 @@
                                 <constraint firstItem="EFZ-gG-qWi" firstAttribute="leading" secondItem="uUi-WJ-JQ3" secondAttribute="leading" constant="8" id="N5O-Jm-0VM"/>
                                 <constraint firstAttribute="height" constant="800" id="isp-yh-CEp"/>
                                 <constraint firstItem="kLU-pv-4YU" firstAttribute="top" secondItem="b2r-Us-7iH" secondAttribute="bottom" constant="16" id="iyD-5D-Q99"/>
+                                <constraint firstItem="kLU-pv-4YU" firstAttribute="leading" secondItem="uUi-WJ-JQ3" secondAttribute="leading" constant="8" id="k24-eV-iAw"/>
                                 <constraint firstAttribute="trailing" secondItem="b2r-Us-7iH" secondAttribute="trailing" constant="8" id="nNo-dv-Axs"/>
                                 <constraint firstItem="b2r-Us-7iH" firstAttribute="leading" secondItem="uUi-WJ-JQ3" secondAttribute="leading" constant="16" id="sWo-Ex-Xc7"/>
                             </constraints>
