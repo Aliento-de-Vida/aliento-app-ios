@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,8 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullScreenNotificationVC" customModule="Aliento_App" customModuleProvider="target">
             <connections>
-                <outlet property="back" destination="JO6-sw-MzU" id="TwC-Gi-Uyi"/>
-                <outlet property="imageView" destination="wyU-Iw-HA7" id="EMM-rB-pMs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="PNd-e8-ClV"/>
             </connections>
         </placeholder>
@@ -20,27 +18,8 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wyU-Iw-HA7">
-                    <rect key="frame" x="0.0" y="110" width="393" height="708"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO6-sw-MzU">
-                    <rect key="frame" x="8" y="67" width="377" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="center"/>
-                </button>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wyU-Iw-HA7" secondAttribute="bottom" id="0mO-Av-ruQ"/>
-                <constraint firstItem="wyU-Iw-HA7" firstAttribute="top" secondItem="JO6-sw-MzU" secondAttribute="bottom" constant="8" id="7uL-Ek-fSn"/>
-                <constraint firstItem="JO6-sw-MzU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="FUE-4o-AKT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JO6-sw-MzU" secondAttribute="trailing" constant="8" id="PmE-5U-4vZ"/>
-                <constraint firstItem="wyU-Iw-HA7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="at0-pR-1sz"/>
-                <constraint firstItem="JO6-sw-MzU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="boY-VF-yLC"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wyU-Iw-HA7" secondAttribute="trailing" id="i4s-9Z-pUS"/>
-            </constraints>
             <point key="canvasLocation" x="-11.450381679389313" y="19.718309859154932"/>
         </view>
     </objects>

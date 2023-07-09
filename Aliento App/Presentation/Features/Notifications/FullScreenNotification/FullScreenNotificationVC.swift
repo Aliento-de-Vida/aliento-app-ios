@@ -10,16 +10,39 @@ import Lightbox
 
 
 class FullScreenNotificationVC : UIViewController {
-    var url: String?
+    private let imageUrl: String
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var back: UIButton!
+    init(imageUrl: String) {
+        self.imageUrl = imageUrl
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable, renamed: "init(product:coder:)")
+    required init(coder: NSCoder) {
+        fatalError("Invalid way of decoding this class")
+    }
     
+    private var hasDisplayed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //imageView.image = UIImage(named: "20513")
-    
+        view.backgroundColor = .black
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let images = [LightboxImage(imageURL: URL(string: imageUrl)!)]
+        let controller = LightboxController(images: images)
+        
+        if hasDisplayed {
+            dismiss(animated: false, completion: nil)
+        } else {
+            hasDisplayed = true
+            controller.modalPresentationStyle = .fullScreen
+            controller.dynamicBackground = true
+            present(controller, animated: true)
+        }
+    }
+
 }

@@ -7,7 +7,6 @@
 
 import UIKit
 import Resolver
-import Lightbox
 
 class GalleryDetailVC : UIViewController {
     var item : GalleryPresentation? = nil
@@ -27,12 +26,9 @@ class GalleryDetailVC : UIViewController {
         galleryDetailCollectionView.dataSource = galleryDetailCollectionView
         galleryDetailCollectionView.delegate = galleryDetailCollectionView
         galleryDetailCollectionView.onClick = { item in
-           
-            let images = [LightboxImage(imageURL: URL(string: item)!)]
-            let controller = LightboxController(images: images)
-            self.present(controller, animated: true, completion: nil)
-            
-            // pendiente
+            let controller = FullScreenNotificationVC(imageUrl: item)
+            controller.modalPresentationStyle = .fullScreen
+            self.present(controller, animated: false, completion: nil)
         }
         galleryDetailCollectionView.galleryDetailCollectionView = item.images
         galleryDetailCollectionView.reloadData()

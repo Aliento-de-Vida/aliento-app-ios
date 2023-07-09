@@ -7,7 +7,6 @@
 
 import UIKit
 import Resolver
-import Lightbox
 
 class NotificationDetailVC : UIViewController {
     var item: NotificationPresentation? = nil
@@ -40,8 +39,8 @@ class NotificationDetailVC : UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         guard let item = item else { return }
         
-        let images = [LightboxImage(imageURL: URL(string: item.imageUrl)!)]
-        let controller = LightboxController(images: images)
-        present(controller, animated: true, completion: nil)
+        let controller = FullScreenNotificationVC(imageUrl: item.imageUrl)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: false, completion: nil)
     }
 }

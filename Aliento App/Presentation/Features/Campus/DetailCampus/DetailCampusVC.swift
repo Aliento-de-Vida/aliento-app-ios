@@ -7,7 +7,6 @@
 
 import UIKit
 import Resolver
-import Lightbox
 
 class DetailCampusVC : UIViewController {
     var item: CampusPresentation? = nil
@@ -47,21 +46,17 @@ class DetailCampusVC : UIViewController {
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         guard let item = item else { return }
-        let images = [LightboxImage(imageURL: URL (string: item.imageUrl)!)]
-        let controller = LightboxController(images: images)
-        present(controller, animated: true, completion: nil)
+        let controller = FullScreenNotificationVC(imageUrl: item.imageUrl)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: false, completion: nil)
     }
     
     @objc func GoogleMapsClick() {
         guard let item = item else { return }
-        //let lat = 21.0406393
-        //let lon = -89.5688631
         
-        if (UIApplication.shared.canOpenURL(NSURL(string:"https://maps.google.com")! as URL))
-        {
+        if (UIApplication.shared.canOpenURL(NSURL(string:"https://maps.google.com")! as URL)) {
             UIApplication.shared.openURL(NSURL(string: "https://maps.google.com/?q=@\(item.location.latitude),\(item.location.longitude)")! as URL)
         }
-        print("Se presiono Google Maps")
     }
         
 }
