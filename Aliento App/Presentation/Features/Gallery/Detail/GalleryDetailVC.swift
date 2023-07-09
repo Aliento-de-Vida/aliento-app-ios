@@ -26,7 +26,7 @@ class GalleryDetailVC : UIViewController {
         galleryDetailCollectionView.dataSource = galleryDetailCollectionView
         galleryDetailCollectionView.delegate = galleryDetailCollectionView
         galleryDetailCollectionView.onClick = { item in
-            let controller = FullScreenNotificationVC(imageUrl: item)
+            let controller = FullScreenImageVC(imageUrl: item)
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: false, completion: nil)
         }

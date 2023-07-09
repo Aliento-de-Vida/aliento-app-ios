@@ -39,7 +39,7 @@ class NotificationDetailVC : UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         guard let item = item else { return }
         
-        let controller = FullScreenNotificationVC(imageUrl: item.imageUrl)
+        let controller = FullScreenImageVC(imageUrl: item.imageUrl)
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: false, completion: nil)
     }

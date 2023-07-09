@@ -1,5 +1,5 @@
 //
-//  FullScreenNotificationVC.swift
+//  FullScreenImageVC.swift
 //  Aliento App
 //
 //  Created by Juan Armando Frías Ramírez on 03/07/23.
@@ -9,7 +9,7 @@ import UIKit
 import Lightbox
 
 
-class FullScreenNotificationVC : UIViewController {
+class FullScreenImageVC : UIViewController {
     private let imageUrl: String
     
     init(imageUrl: String) {
