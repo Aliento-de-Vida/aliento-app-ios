@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import FirebaseMessaging
+import FirebaseCore
+
+let NOTIFICATION_TOPIC = "push_notifications"
 
 class SettingsVC : UIViewController {
-   
+    private let userDefaults = UserDefaults.standard
+
     @IBAction func darkModeSwitch(_ sender: UISwitch) {
         if (sender.isOn) {
             AppDelegate.singleton.setDarkTheme(enabled: true)
@@ -17,8 +22,17 @@ class SettingsVC : UIViewController {
         }
     }
     @IBOutlet var switchDarkMode: UISwitch!
+    @IBOutlet var switchNotifications: UISwitch!
     
-    @IBOutlet var notificationsPush: UISwitch!
+    @IBAction func notificationsPush(_ subscribe: UISwitch) {
+        if (subscribe.isOn) {
+            Messaging.messaging().subscribe(toTopic: NOTIFICATION_TOPIC)
+            userDefaults.set(true, forKey: NOTIFICATIONS_SUBSCRIPTION_KEY)
+        } else {
+            Messaging.messaging().unsubscribe(fromTopic: NOTIFICATION_TOPIC)
+            userDefaults.set(false, forKey: NOTIFICATIONS_SUBSCRIPTION_KEY)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +41,13 @@ class SettingsVC : UIViewController {
         } else {
             switchDarkMode.isOn = false
         }
-     
+    
+        if (userDefaults.bool(forKey: NOTIFICATIONS_SUBSCRIPTION_KEY)) {
+            switchNotifications.isOn = true
+        } else {
+            switchNotifications.isOn = false
+        }
+        
         setNavBarLogo()
         
     }

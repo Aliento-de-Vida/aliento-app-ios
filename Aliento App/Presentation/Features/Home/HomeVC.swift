@@ -60,7 +60,6 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                
         Task {
             cardOneImage.startShimmering()
             cardTwoImage.startShimmering()

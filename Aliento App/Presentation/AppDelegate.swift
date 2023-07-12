@@ -7,10 +7,13 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseMessaging
+
+let NOTIFICATIONS_SUBSCRIPTION_KEY = "push_notifications_subscription"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+        
     static var singleton: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
@@ -21,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        UNUserNotificationCenter.current().delegate.self
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in })
+        application.registerForRemoteNotifications()
+        
+        initNotificationsSubscription()
+        
         setDarkTheme(enabled: false)
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -29,6 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.singleton.window = window
         
         return true
+    }
+    
+    private func initNotificationsSubscription() {
+        let userDefaults = UserDefaults.standard
+        
+        if (userDefaults.object(forKey: NOTIFICATIONS_SUBSCRIPTION_KEY) == nil) {
+            Messaging.messaging().subscribe(toTopic: NOTIFICATION_TOPIC)
+            userDefaults.setValue(true, forKey: NOTIFICATIONS_SUBSCRIPTION_KEY)
+        }
     }
     
     func setDarkTheme(enabled: Bool) {
