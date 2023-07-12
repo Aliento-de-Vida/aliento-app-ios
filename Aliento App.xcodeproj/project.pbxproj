@@ -118,6 +118,10 @@
 		BF54F18A297702F500A1FF45 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F189297702F500A1FF45 /* HomeRepository.swift */; };
 		BF54F18D2977083700A1FF45 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F18C2977083700A1FF45 /* HomeModel.swift */; };
 		BF54F1902977099200A1FF45 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F18F2977099200A1FF45 /* AppModule.swift */; };
+		BF6586512A5F143500369ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF6586502A5F143500369ABE /* GoogleService-Info.plist */; };
+		BF6586542A5F152E00369ABE /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BF6586532A5F152E00369ABE /* FirebaseAnalyticsSwift */; };
+		BF6586562A5F152E00369ABE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BF6586552A5F152E00369ABE /* FirebaseCrashlytics */; };
+		BF6586582A5F152E00369ABE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BF6586572A5F152E00369ABE /* FirebaseMessaging */; };
 		BF723F84291C900000F2FAA4 /* AudioSermonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */; };
 		BF723F88291C945D00F2FAA4 /* AudioSermonItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */; };
 		BF723F8B291C96F800F2FAA4 /* AudioModelPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF723F8A291C96F800F2FAA4 /* AudioModelPresentation.swift */; };
@@ -243,6 +247,7 @@
 		BF54F189297702F500A1FF45 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRepository.swift; path = "Aliento App/Domain/Home/HomeRepository.swift"; sourceTree = SOURCE_ROOT; };
 		BF54F18C2977083700A1FF45 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		BF54F18F2977099200A1FF45 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		BF6586502A5F143500369ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonsCollectionView.swift; sourceTree = "<group>"; };
 		BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSermonItemCell.xib; sourceTree = "<group>"; };
 		BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonItemCell.swift; sourceTree = "<group>"; };
@@ -258,7 +263,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6586582A5F152E00369ABE /* FirebaseMessaging in Frameworks */,
+				BF6586542A5F152E00369ABE /* FirebaseAnalyticsSwift in Frameworks */,
 				DAA5BC0554963CBFAB25DF98 /* libPods-Aliento App.a in Frameworks */,
+				BF6586562A5F152E00369ABE /* FirebaseCrashlytics in Frameworks */,
 				76F04A2E29A7FA5B006CFE64 /* Alamofire in Frameworks */,
 				76501C9F2A3B99B5006C0970 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
@@ -597,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				76939EEE2A5DEC900099BB47 /* Aliento App.entitlements */,
+				BF6586502A5F143500369ABE /* GoogleService-Info.plist */,
 				B824BD6E28CA966F00B27C8C /* Info.plist */,
 				B8965F4528D52A5C00B64709 /* Presentation */,
 				B8965F4328D52A5000B64709 /* Domain */,
@@ -872,6 +881,9 @@
 			packageProductDependencies = (
 				76F04A2D29A7FA5B006CFE64 /* Alamofire */,
 				76501C9E2A3B99B5006C0970 /* YouTubeiOSPlayerHelper */,
+				BF6586532A5F152E00369ABE /* FirebaseAnalyticsSwift */,
+				BF6586552A5F152E00369ABE /* FirebaseCrashlytics */,
+				BF6586572A5F152E00369ABE /* FirebaseMessaging */,
 			);
 			productName = "Aliento App";
 			productReference = B824BD5D28CA966700B27C8C /* Aliento App.app */;
@@ -903,6 +915,7 @@
 			packageReferences = (
 				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				BF6586522A5F152E00369ABE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B824BD5E28CA966700B27C8C /* Products */;
 			projectDirPath = "";
@@ -929,6 +942,7 @@
 				76BE304D2979A1330084157E /* GalleryListVC.xib in Resources */,
 				765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */,
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
+				BF6586512A5F143500369ABE /* GoogleService-Info.plist in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */,
 				76EF47172982FA0700178BE5 /* DonationsVC.xib in Resources */,
 				765E45B42981BD1C004FA458 /* GalleryItemCell.xib in Resources */,
@@ -1321,6 +1335,14 @@
 				version = 5.2.2;
 			};
 		};
+		BF6586522A5F152E00369ABE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1333,6 +1355,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BF6586532A5F152E00369ABE /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6586522A5F152E00369ABE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		BF6586552A5F152E00369ABE /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6586522A5F152E00369ABE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		BF6586572A5F152E00369ABE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6586522A5F152E00369ABE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
