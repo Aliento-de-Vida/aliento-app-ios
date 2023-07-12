@@ -27,6 +27,8 @@ class NotificationDetailVC : UIViewController {
         ImageNotificationDetail.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
         ImageNotificationDetail.isUserInteractionEnabled = true
         descriptionNotificationImage.text = item.phrase
+        fullScreenNotification.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        fullScreenNotification.isUserInteractionEnabled = true
         
     }
     
@@ -38,7 +40,6 @@ class NotificationDetailVC : UIViewController {
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         guard let item = item else { return }
-        
         let controller = FullScreenImageVC(imageUrl: item.imageUrl)
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: false, completion: nil)

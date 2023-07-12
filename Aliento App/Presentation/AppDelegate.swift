@@ -9,8 +9,6 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var isLoggedIn = false
     
     static var singleton: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -38,9 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
         
-    func goToLogin() {
-        window?.rootViewController = Login()
-    }
     func goToHome() {
         window?.rootViewController = UINavigationController(rootViewController: HomeVC())
     }

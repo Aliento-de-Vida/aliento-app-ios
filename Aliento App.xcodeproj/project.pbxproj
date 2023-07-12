@@ -42,6 +42,7 @@
 		7679B41429B653E600C3F5CD /* TracksModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41329B653E600C3F5CD /* TracksModelData.swift */; };
 		7679B41629B6712E00C3F5CD /* TokenModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41529B6712D00C3F5CD /* TokenModelData.swift */; };
 		7679B41829B7BC2000C3F5CD /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41729B7BC2000C3F5CD /* Int.swift */; };
+		769A1EFA2A5DCC6600A31A37 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A1EF92A5DCC6600A31A37 /* PlayerViewModel.swift */; };
 		76A914F72A462502005589C0 /* NotificationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A914F62A462502005589C0 /* NotificationDetailVC.swift */; };
 		76A914F92A462514005589C0 /* NotificationDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A914F82A462514005589C0 /* NotificationDetailVC.xib */; };
 		76AB9D162A4F59990041903D /* DetailCampusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB9D152A4F59990041903D /* DetailCampusVC.swift */; };
@@ -86,13 +87,10 @@
 		76F04A4D29AE70D4006CFE64 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4C29AE70D4006CFE64 /* Date.swift */; };
 		76F04A4F29AE9AC3006CFE64 /* CampusPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F04A4E29AE9AC3006CFE64 /* CampusPresentation.swift */; };
 		B824BD6128CA966700B27C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD6028CA966700B27C8C /* AppDelegate.swift */; };
-		B824BD6828CA966700B27C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6628CA966700B27C8C /* Main.storyboard */; };
 		B824BD6A28CA966F00B27C8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6928CA966F00B27C8C /* Assets.xcassets */; };
 		B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */; };
 		B824BD9728CA99DA00B27C8C /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BD9628CA99DA00B27C8C /* SplashScreen.xib */; };
 		B824BD9A28CA9A4400B27C8C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BD9928CA9A4400B27C8C /* SplashScreen.swift */; };
-		B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BD9E28CA9E4800B27C8C /* Login.xib */; };
-		B824BDA228CA9E7400B27C8C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDA128CA9E7400B27C8C /* Login.swift */; };
 		B824BDAA28CAA12F00B27C8C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDA928CAA12F00B27C8C /* HomeVC.swift */; };
 		B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B824BDAC28CAA15600B27C8C /* HomeVC.xib */; };
 		B824BDB128CAA6BE00B27C8C /* AudioSermonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */; };
@@ -165,6 +163,8 @@
 		7679B41329B653E600C3F5CD /* TracksModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksModelData.swift; sourceTree = "<group>"; };
 		7679B41529B6712D00C3F5CD /* TokenModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModelData.swift; sourceTree = "<group>"; };
 		7679B41729B7BC2000C3F5CD /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		76939EEE2A5DEC900099BB47 /* Aliento App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Aliento App.entitlements"; sourceTree = "<group>"; };
+		769A1EF92A5DCC6600A31A37 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		76A914F62A462502005589C0 /* NotificationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailVC.swift; sourceTree = "<group>"; };
 		76A914F82A462514005589C0 /* NotificationDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationDetailVC.xib; sourceTree = "<group>"; };
 		76AB9D152A4F59990041903D /* DetailCampusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCampusVC.swift; sourceTree = "<group>"; };
@@ -211,14 +211,11 @@
 		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD6028CA966700B27C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B824BD6728CA966700B27C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B824BD6928CA966F00B27C8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B824BD6C28CA966F00B27C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B824BD6E28CA966F00B27C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B824BD9628CA99DA00B27C8C /* SplashScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreen.xib; sourceTree = "<group>"; };
 		B824BD9928CA9A4400B27C8C /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		B824BD9E28CA9E4800B27C8C /* Login.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
-		B824BDA128CA9E7400B27C8C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B824BDA928CAA12F00B27C8C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B824BDAC28CAA15600B27C8C /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		B824BDB028CAA6BE00B27C8C /* AudioSermonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonsVC.swift; sourceTree = "<group>"; };
@@ -535,6 +532,7 @@
 			children = (
 				76EF47192982FE1A00178BE5 /* PlayerVC.swift */,
 				76EF471B2982FE2700178BE5 /* PlayerVC.xib */,
+				769A1EF92A5DCC6600A31A37 /* PlayerViewModel.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -598,6 +596,7 @@
 		B824BD5F28CA966700B27C8C /* Aliento App */ = {
 			isa = PBXGroup;
 			children = (
+				76939EEE2A5DEC900099BB47 /* Aliento App.entitlements */,
 				B824BD6E28CA966F00B27C8C /* Info.plist */,
 				B8965F4528D52A5C00B64709 /* Presentation */,
 				B8965F4328D52A5000B64709 /* Domain */,
@@ -619,7 +618,6 @@
 				76D8A5D729772051003A9E4C /* Church */,
 				B824BDAF28CAA6AA00B27C8C /* Sermons */,
 				B824BDA428CAA0EF00B27C8C /* Home */,
-				B824BD9D28CA9E3800B27C8C /* Login */,
 				B824BD9528CA99BA00B27C8C /* Splashscreen */,
 				BF723F8C291C972600F2FAA4 /* Constants.swift */,
 			);
@@ -633,16 +631,6 @@
 				B824BD9928CA9A4400B27C8C /* SplashScreen.swift */,
 			);
 			path = Splashscreen;
-			sourceTree = "<group>";
-		};
-		B824BD9D28CA9E3800B27C8C /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				B824BD6628CA966700B27C8C /* Main.storyboard */,
-				B824BD9E28CA9E4800B27C8C /* Login.xib */,
-				B824BDA128CA9E7400B27C8C /* Login.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		B824BDA428CAA0EF00B27C8C /* Home */ = {
@@ -954,10 +942,8 @@
 				76D3F9802979AF5F00831312 /* SettingsVC.xib in Resources */,
 				76D8A5DB2977210F003A9E4C /* ChurchVC.xib in Resources */,
 				BF44EF41296DCC0500F3D028 /* VideoSermonItemCell.xib in Resources */,
-				B824BD6828CA966700B27C8C /* Main.storyboard in Resources */,
 				76AB9D182A4F59AD0041903D /* DetailCampusVC.xib in Resources */,
 				B824BDAD28CAA15600B27C8C /* HomeVC.xib in Resources */,
-				B824BD9F28CA9E4800B27C8C /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,7 +1057,6 @@
 				76A914F72A462502005589C0 /* NotificationDetailVC.swift in Sources */,
 				76F04A4329AE6412006CFE64 /* CampusRepository.swift in Sources */,
 				76EF47152982F98A00178BE5 /* DonationsVC.swift in Sources */,
-				B824BDA228CA9E7400B27C8C /* Login.swift in Sources */,
 				765E45AB2981A289004FA458 /* CampusItemCell.swift in Sources */,
 				BF0C54742979DA6100848A0A /* HomeImagesData.swift in Sources */,
 				BF54F18A297702F500A1FF45 /* HomeRepository.swift in Sources */,
@@ -1092,6 +1077,7 @@
 				76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */,
 				7679B3F229AFD69700C3F5CD /* GalleryRepositoryImpl.swift in Sources */,
 				7679B3F029AFD68200C3F5CD /* GalleryModelData.swift in Sources */,
+				769A1EFA2A5DCC6600A31A37 /* PlayerViewModel.swift in Sources */,
 				B8965F5A28D5325700B64709 /* Api.swift in Sources */,
 				76D8595D296F3E210087D935 /* CarouselCollectionView.swift in Sources */,
 				765E45B02981BCB1004FA458 /* GalleryListCollectionView.swift in Sources */,
@@ -1106,14 +1092,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B824BD6628CA966700B27C8C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B824BD6728CA966700B27C8C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1247,17 +1225,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Aliento App/Aliento App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8S9257SG3Q;
 				INFOPLIST_FILE = "Aliento App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aliento de Vida";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alientodevida.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1267,17 +1256,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Aliento App/Aliento App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8S9257SG3Q;
 				INFOPLIST_FILE = "Aliento App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Aliento de Vida";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alientodevida.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

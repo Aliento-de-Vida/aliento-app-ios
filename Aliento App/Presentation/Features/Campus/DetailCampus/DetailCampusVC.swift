@@ -34,6 +34,8 @@ class DetailCampusVC : UIViewController {
         campusImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
         campusImage.isUserInteractionEnabled = true
         campusMaps.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(GoogleMapsClick)))
+        galleryDetails.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
+        galleryDetails.isUserInteractionEnabled = true
         
         
     }

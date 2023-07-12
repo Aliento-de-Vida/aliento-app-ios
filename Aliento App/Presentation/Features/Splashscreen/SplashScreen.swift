@@ -32,11 +32,7 @@ class SplashScreen: UIViewController {
     }
     
     func goToNextScreen() {
-        if AppDelegate.singleton.isLoggedIn {
-            AppDelegate.singleton.goToHome()
-        } else {
-            AppDelegate.singleton.goToLogin()
-        }
+        AppDelegate.singleton.goToHome()
     }
     
 }
