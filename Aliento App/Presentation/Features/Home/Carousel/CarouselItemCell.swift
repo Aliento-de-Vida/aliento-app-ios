@@ -12,6 +12,7 @@ class CarouselItemCell: UICollectionViewCell {
     @IBOutlet var carouselImage: UIImageView!
     @IBOutlet var form: UIView!
     @IBOutlet var textLabel: UILabel!
+    @IBOutlet var rootView: UIView!
     
     var onClick: (CarouselItem) -> Void = { _ in }
     var item: CarouselItem? = nil
@@ -22,8 +23,8 @@ class CarouselItemCell: UICollectionViewCell {
         carouselImage.image = nil
         carouselImage.loadWithShimmering(url: item.imageUrl) 
         
-        carouselImage.isUserInteractionEnabled = true
-        carouselImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(carouselImageClick)))
+        rootView.isUserInteractionEnabled = true
+        rootView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(carouselImageClick)))
         form.roundRightCorners()
         
         if (item.menu != nil) {

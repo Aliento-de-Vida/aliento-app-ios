@@ -329,9 +329,10 @@ class HomeVC: UIViewController {
         UIApplication.shared.open(TwitterClick)
         // handling code
     }
+
     @objc func SpotifyClick() {
         print("Se presiono Spotify")
-        guard let SpotifyClick = URL(string: home?.socialMedia.spotifyArtistId ?? "") else { return }
+        guard let SpotifyClick = URL(string: "spotify:artist:4VYxusCiKsWxcfUveymGU5") else { return }
         UIApplication.shared.open(SpotifyClick)
         // handling code
     }
