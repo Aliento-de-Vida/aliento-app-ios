@@ -30,6 +30,7 @@
                 <outlet property="notificationView" destination="bhA-T4-DBV" id="IDn-7q-VtF"/>
                 <outlet property="notificationViewHeight" destination="GEE-PO-YVO" id="aAO-PV-vQd"/>
                 <outlet property="notificationsCollectionView" destination="hyK-if-Uog" id="8gS-zZ-ufe"/>
+                <outlet property="pageControl" destination="Ku0-pb-O0E" id="qoU-Cf-GEs"/>
                 <outlet property="quickAccesThree" destination="BII-Zv-61P" id="W2z-up-UXJ"/>
                 <outlet property="quickAccesTwo" destination="i37-FX-pT1" id="HB8-n2-eQB"/>
                 <outlet property="quickAccessOne" destination="J3n-yF-11Z" id="fgA-m8-9XU"/>
@@ -69,6 +70,12 @@
                                 </collectionView>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ku0-pb-O0E">
                                     <rect key="frame" x="0.0" y="208" width="430" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="xw6-Sy-tQq"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="myPageControlAction:" destination="-1" eventType="valueChanged" id="UKC-wS-G5C"/>
+                                    </connections>
                                 </pageControl>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze4-hf-haL">
                                     <rect key="frame" x="16" y="242" width="89" height="20.333333333333314"/>

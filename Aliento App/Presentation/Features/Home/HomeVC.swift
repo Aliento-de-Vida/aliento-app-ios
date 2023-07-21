@@ -45,6 +45,7 @@ class HomeVC: UIViewController {
     @IBOutlet var spotifyIcon: UIImageView!
     
     @IBOutlet var carouselCollectionView: CarouselCollectionView!
+    @IBOutlet var pageControl: UIPageControl!
     
     @IBOutlet var notificationView: UIView!
     @IBOutlet var notificationsCollectionView: NotificationsCollectionView!
@@ -56,7 +57,10 @@ class HomeVC: UIViewController {
     
         
     var home: HomeModel? = nil
-   
+    @IBAction func myPageControlAction(_ sender: Any) {
+        //collectionCarousel. .selectRow(pageControl, inComponent: 3, animated: true)
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,7 +89,9 @@ class HomeVC: UIViewController {
                 return
             }
         }
-
+        
+     
+        
         // getVideos
         self.videoRepository.getVideo(playlistId: playlistId, maxResults: 5) { result in
             switch result {
@@ -98,6 +104,10 @@ class HomeVC: UIViewController {
                         menu: nil
                     )
                     self.collectionCarousel.append(item)
+                    // pageControl
+                    self.pageControl.numberOfPages = self.collectionCarousel.count
+                    self.pageControl.currentPageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.8)
+                    self.pageControl.pageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.3)
                 }
                 
                 self.carouselCollectionView.collectionCarousel = self.collectionCarousel
@@ -107,6 +117,8 @@ class HomeVC: UIViewController {
                 print("Error")
             }
         }
+        
+        
         
         // getNotifications
         

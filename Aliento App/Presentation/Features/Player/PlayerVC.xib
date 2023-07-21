@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -25,46 +25,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queremos orar por ti" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-Rx-6KI" userLabel="Title">
-                    <rect key="frame" x="8" y="52" width="398" height="26.5"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queremos orar por ti" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-Rx-6KI" userLabel="Title">
+                    <rect key="frame" x="8" y="56" width="398" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor escribenos tu petición de oración" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-U4-K7i" userLabel="Subtitle">
-                    <rect key="frame" x="8" y="94.5" width="398" height="17"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor escribenos tu petición de oración" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-U4-K7i" userLabel="Subtitle">
+                    <rect key="frame" x="8" y="98.5" width="398" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-II-u77" userLabel="Name">
-                    <rect key="frame" x="16" y="127.5" width="382" height="34"/>
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-II-u77" userLabel="Name">
+                    <rect key="frame" x="16" y="131.5" width="382" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="name"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oA-Di-Rdr" userLabel="Email">
-                    <rect key="frame" x="16" y="169.5" width="382" height="34"/>
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oA-Di-Rdr" userLabel="Email">
+                    <rect key="frame" x="16" y="173.5" width="382" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="email"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whatsapp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-yf-38Z" userLabel="Whatsapp">
-                    <rect key="frame" x="16" y="211.5" width="382" height="34"/>
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whatsapp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-yf-38Z" userLabel="Whatsapp">
+                    <rect key="frame" x="16" y="215.5" width="382" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mensaje" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-qB-aN6" userLabel="Mensaje">
-                    <rect key="frame" x="16" y="253.5" width="382" height="34"/>
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mensaje" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-qB-aN6" userLabel="Mensaje">
+                    <rect key="frame" x="16" y="257.5" width="382" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asunto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-SQ-Ayp">
-                    <rect key="frame" x="16" y="303.5" width="45.5" height="17"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asunto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-SQ-Ayp">
+                    <rect key="frame" x="16" y="307.5" width="45.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtt-By-BPz">
-                    <rect key="frame" x="16" y="336.5" width="171" height="29"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtt-By-BPz">
+                    <rect key="frame" x="16" y="340.5" width="171" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <menu key="menu" id="LtX-mG-fVy">
                         <children>
@@ -76,13 +76,25 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-ZX-mf2">
-                    <rect key="frame" x="334.5" y="815" width="63.5" height="31"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-ZX-mf2">
+                    <rect key="frame" x="327.5" y="811.5" width="70.5" height="34.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Enviar">
                         <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queremos orar por ti" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-79-JNr" userLabel="Title">
+                    <rect key="frame" x="109.5" y="435" width="195.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proximamente" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0W-gp-q8O" userLabel="Title">
+                    <rect key="frame" x="0.0" y="466.5" width="414" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,6 +103,8 @@
                 <constraint firstItem="5Zh-U4-K7i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="3me-rd-jcW"/>
                 <constraint firstItem="6oA-Di-Rdr" firstAttribute="top" secondItem="f6x-II-u77" secondAttribute="bottom" constant="8" id="7CS-Yu-0by"/>
                 <constraint firstItem="gJa-SQ-Ayp" firstAttribute="top" secondItem="nn6-qB-aN6" secondAttribute="bottom" constant="16" id="Ar1-wH-pj9"/>
+                <constraint firstItem="Y0W-gp-q8O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="C7l-GP-yQs"/>
+                <constraint firstItem="CE7-79-JNr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CS3-9M-OSo"/>
                 <constraint firstItem="5Zh-U4-K7i" firstAttribute="top" secondItem="Wgs-Rx-6KI" secondAttribute="bottom" constant="16" id="Dsa-cv-cE3"/>
                 <constraint firstItem="c4I-yf-38Z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="E4f-iV-5v2"/>
                 <constraint firstItem="nn6-qB-aN6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Eeu-pE-8Im"/>
@@ -106,10 +120,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6oA-Di-Rdr" secondAttribute="trailing" constant="16" id="bJp-fp-c6L"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c4I-yf-38Z" secondAttribute="trailing" constant="16" id="cGS-D1-K3j"/>
                 <constraint firstItem="Wtt-By-BPz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fed-Fp-MAe"/>
+                <constraint firstItem="Y0W-gp-q8O" firstAttribute="top" secondItem="CE7-79-JNr" secondAttribute="bottom" constant="5" id="idG-Xt-ub0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nn6-qB-aN6" secondAttribute="trailing" constant="16" id="jra-HM-0Ab"/>
                 <constraint firstItem="nn6-qB-aN6" firstAttribute="top" secondItem="c4I-yf-38Z" secondAttribute="bottom" constant="8" id="jz6-iS-3gs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y0W-gp-q8O" secondAttribute="trailing" id="sVd-Jk-ZRl"/>
                 <constraint firstItem="Wgs-Rx-6KI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="tWC-c8-L4N"/>
                 <constraint firstItem="gJa-SQ-Ayp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uM9-8I-9xF"/>
+                <constraint firstItem="CE7-79-JNr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="x2j-jB-zBI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f6x-II-u77" secondAttribute="trailing" constant="16" id="zaF-Ou-Pyf"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
