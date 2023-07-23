@@ -57,9 +57,6 @@ class HomeVC: UIViewController {
     
         
     var home: HomeModel? = nil
-    @IBAction func myPageControlAction(_ sender: Any) {
-        //collectionCarousel. .selectRow(pageControl, inComponent: 3, animated: true)
-    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,14 +101,16 @@ class HomeVC: UIViewController {
                         menu: nil
                     )
                     self.collectionCarousel.append(item)
-                    // pageControl
-                    self.pageControl.numberOfPages = self.collectionCarousel.count
-                    self.pageControl.currentPageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.8)
-                    self.pageControl.pageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.3)
                 }
                 
                 self.carouselCollectionView.collectionCarousel = self.collectionCarousel
                 self.carouselCollectionView.reloadData()
+                
+                // pageControl
+                self.pageControl.numberOfPages = self.collectionCarousel.count
+                self.pageControl.currentPageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.8)
+                self.pageControl.pageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.3)
+                self.startTimer()
                 
             case .failure(_):
                 print("Error")
@@ -164,6 +163,9 @@ class HomeVC: UIViewController {
                 let viewController = PlayerYoutubeVC.create(videoId: item.video!.videoId)
                 self.navigationController?.pushViewController(viewController, animated: true)
             }
+        }
+        carouselCollectionView.onPageSelected = { currentPage in
+            self.pageControl.currentPage = currentPage
         }
         
         notificationsCollectionView.register(UINib(nibName: NotificationsItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: NotificationsItemCell.identifier)
@@ -358,4 +360,17 @@ class HomeVC: UIViewController {
     )
     ]
     
+    func startTimer() {
+        Timer.scheduledTimer(
+            timeInterval: 3.0,
+            target: self,
+            selector: #selector(self.scrollToNextCell),
+            userInfo: nil,
+            repeats: true
+        )
+    }
+    
+    @objc func scrollToNextCell() {
+        carouselCollectionView.scrollToNextCell()
+    }
 }
