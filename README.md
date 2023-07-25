@@ -1,6 +1,10 @@
 
 # ¡Aliento App!
 
+|      |      | 
+| :--: | :--: |
+|  <a href='https://apps.apple.com/mx/app/aliento-de-vida-app/id6451156283?l=en-GB'><img alt='Download on the App Store' src='https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg' width="280" height="125"/></a>  |  <a href='https://play.google.com/store/apps/details?id=com.alientodevida.app'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="323" height="125"/></a>  |
+
 Aliento App is an Android and IOS native app used to keep the church attendants connected with what's going on with their local church.
 
 It is an open source project built with the aim to be useful for a non profit organization and to help developers practice and learn the latest good practices and technologies.
@@ -15,10 +19,10 @@ It is an open source project built with the aim to be useful for a non profit or
 1. [Architecture](#architecture)
 2. [Repository](#repository)
 3. [Clean Architecture](#clean-architecture)
-    3.1. [Data](data)
-    3.2. [Domain](domain)
-    3.3. [Presentation](presentation)
-4. [Design System](design-system)
+    1. [Data](#data)
+    2. [Domain](#domain)
+    3. [Presentation](#presentation)
+4. [Design System](#design-system)
 5. [Contributors](#contributors)
 
 ## Architecture
@@ -27,6 +31,9 @@ It is an open source project built with the aim to be useful for a non profit or
    contains a data, domain and presentation layers.  
  - It uses [Resolver](https://github.com/hmlongco/Resolver) for Dependency Injections and MVC with UIKit as Architecture Design Pattern.  
  - The app also contains dark and light theme using the [Material Design 2](https://m3.material.io/) Colors for the Design System.
+ - [Alamofire](https://github.com/Alamofire/Alamofire) for network requests.
+ - [Firebase](https://firebase.google.com/) Analytics and Crashlytics.
+ - Swift Package Manager and Cocoapods.
 
 ### Repository
 
@@ -41,16 +48,16 @@ The app contains 3 main layers and it's divided by layer and then by feature.
 
 ![enter image description here](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*0R0r00uF1RyRFxkxo3HVDg.png)
 
-#### Data:
+#### Data
 This layer contains all dependencies and code related to obtaining the data from Youtube, Spotify and our own Backend. It also contains the repositories Implementations.
 
-#### Domain:
+#### Domain
 This layer contains the main models used in the app as well as the repositories protocols. Use cases would also be here containing business logic.
 
-#### Presentation:
+#### Presentation
 This layer contains all the views and UI things. This layer uses the repositories through the domain layer using Dependency Injection.
 
-### Design System
+### Design-System
 The app uses Material Design 2 colors as it's design system. Using a light and a dark color palette.
 
 ![enter image description here](https://lh3.googleusercontent.com/k6WO1fd7T40A9JvSVfHqs0CPLFyTEDCecsVGxEDhOaTP0wUTPYOVVkxt60hKxBprgNoMqs8OyKqtlaQ4tDBtQJs-fTcZrpZEjxhUVQ=w1064-v0)
