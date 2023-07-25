@@ -1,3 +1,4 @@
+
 # ¡Aliento App!
 
 ¡Descarga nuestra app exclusiva para iOS y mantente plenamente informado y conectado con tu congreso en todo momento! Esta aplicación es tu puerta de entrada a un flujo constante de noticias, eventos y acontecimientos relevantes que ocurren en tu comunidad. Podrás recibir actualizaciones en tiempo real, no importa dónde te encuentres, lo que te permitirá participar activamente en la vida de tu congreso sin importar la distancia.
@@ -18,31 +19,13 @@ Mantente conectado y actualizado con nuestra app. Recibe noticias y eventos en t
 
 ## Architecture
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
-
-## Rename a file
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
-## Delete a file
-
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
-
-
-
-
+This app is written following the clean architecture standard. It contains a data, domain and presentation layers. It uses Resolver for Dependency Injections and MVC with UIKit as Architecture Design Pattern. The app also contains dark and light theme using the Material Design Design System and Push notifications.
 
 ##
 
 ### Contributors Wall:
-<a href="">
-  <img src="https://avatars.githubusercontent.com/u/98441735?v=4" />
-   <img src="https://avatars.githubusercontent.com/u/16764592?v=4" />
+<a href="https://github.com/pegongorasep/aliento-app-ios/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pegongorasep/aliento-app-ios" />
 </a>
-<br>
-<br>
+
+Made with [contrib.rocks](https://contrib.rocks).
