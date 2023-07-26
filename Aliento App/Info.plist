@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>ITSAppUsesNonExemptEncryption</key>
-    <false/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CFBundleIconName</key>
 	<string>AppIcon</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -49,5 +49,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>YOUTUBE_API_KEY</key>
+	<string>$(YOUTUBE_API_KEY)</string>
+	<key>SPOTIFY_API_KEY</key>
+	<string>$(SPOTIFY_API_KEY)</string>
 </dict>
 </plist>

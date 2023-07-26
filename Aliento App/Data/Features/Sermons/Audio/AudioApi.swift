@@ -43,7 +43,7 @@ struct AudioApi {
     func getToken(
         completion: @escaping(Result<TokenModelData, ApiError>) -> Void
     ) {
-        let header = Header(name: "Authorization", value: "Basic ZTBlNDMyMWYxNTI4NGU5YzkwNzRmMDFjNjAwOTdkOGY6YTQyNjk2MzViYzMyNDkxNjlkNjRhZWYzZTgwNGM1NGM=")
+        let header = Header(name: "Authorization", value: Bundle.main.object(forInfoDictionaryKey: "SPOTIFY_API_KEY") as! String)
         let parameters = ["grant_type": "client_credentials"]
         let request = Request(
             method: .post,

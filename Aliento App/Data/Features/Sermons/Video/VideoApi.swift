@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 struct VideoApi {
-    private let YOUTUBE_DEVELOPER_KEY = "AIzaSyD3-lHPYrGTHPUEP_ZpdQEPwx2IXKfznj0"
+    private let YOUTUBE_DEVELOPER_KEY = Bundle.main.object(forInfoDictionaryKey: "YOUTUBE_API_KEY") as! String
     
     private let apiManager : APIManager
     

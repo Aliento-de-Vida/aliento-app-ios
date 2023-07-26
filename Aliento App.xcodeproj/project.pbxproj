@@ -107,6 +107,7 @@
 		BF0C54742979DA6100848A0A /* HomeImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54732979DA6100848A0A /* HomeImagesData.swift */; };
 		BF0C54762979F11F00848A0A /* HomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54752979F11F00848A0A /* HomeImages.swift */; };
 		BF0C54792979F1D800848A0A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C54782979F1D800848A0A /* String.swift */; };
+		BF39D1332A719B0C00CAF936 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF39D1322A719B0C00CAF936 /* GoogleService-Info.plist */; };
 		BF44EF34296DC27500F3D028 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF33296DC27500F3D028 /* UIView.swift */; };
 		BF44EF38296DCA3400F3D028 /* VideoSermonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44EF37296DCA3400F3D028 /* VideoSermonsVC.swift */; };
 		BF44EF3A296DCA4500F3D028 /* VideoSermonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44EF39296DCA4500F3D028 /* VideoSermonsVC.xib */; };
@@ -118,7 +119,6 @@
 		BF54F18A297702F500A1FF45 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F189297702F500A1FF45 /* HomeRepository.swift */; };
 		BF54F18D2977083700A1FF45 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F18C2977083700A1FF45 /* HomeModel.swift */; };
 		BF54F1902977099200A1FF45 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54F18F2977099200A1FF45 /* AppModule.swift */; };
-		BF6586512A5F143500369ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF6586502A5F143500369ABE /* GoogleService-Info.plist */; };
 		BF6586542A5F152E00369ABE /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BF6586532A5F152E00369ABE /* FirebaseAnalyticsSwift */; };
 		BF6586562A5F152E00369ABE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BF6586552A5F152E00369ABE /* FirebaseCrashlytics */; };
 		BF6586582A5F152E00369ABE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BF6586572A5F152E00369ABE /* FirebaseMessaging */; };
@@ -236,6 +236,8 @@
 		BF0C54732979DA6100848A0A /* HomeImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImagesData.swift; sourceTree = "<group>"; };
 		BF0C54752979F11F00848A0A /* HomeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImages.swift; sourceTree = "<group>"; };
 		BF0C54782979F1D800848A0A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		BF39D1322A719B0C00CAF936 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF39D1362A71A14000CAF936 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
 		BF44EF33296DC27500F3D028 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		BF44EF37296DCA3400F3D028 /* VideoSermonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSermonsVC.swift; sourceTree = "<group>"; };
 		BF44EF39296DCA4500F3D028 /* VideoSermonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoSermonsVC.xib; sourceTree = "<group>"; };
@@ -247,7 +249,6 @@
 		BF54F189297702F500A1FF45 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRepository.swift; path = "Aliento App/Domain/Home/HomeRepository.swift"; sourceTree = SOURCE_ROOT; };
 		BF54F18C2977083700A1FF45 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		BF54F18F2977099200A1FF45 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
-		BF6586502A5F143500369ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF723F83291C900000F2FAA4 /* AudioSermonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonsCollectionView.swift; sourceTree = "<group>"; };
 		BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSermonItemCell.xib; sourceTree = "<group>"; };
 		BF723F87291C945D00F2FAA4 /* AudioSermonItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSermonItemCell.swift; sourceTree = "<group>"; };
@@ -604,8 +605,9 @@
 		B824BD5F28CA966700B27C8C /* Aliento App */ = {
 			isa = PBXGroup;
 			children = (
+				BF39D1322A719B0C00CAF936 /* GoogleService-Info.plist */,
+				BF39D1362A71A14000CAF936 /* secrets.xcconfig */,
 				76939EEE2A5DEC900099BB47 /* Aliento App.entitlements */,
-				BF6586502A5F143500369ABE /* GoogleService-Info.plist */,
 				B824BD6E28CA966F00B27C8C /* Info.plist */,
 				B8965F4528D52A5C00B64709 /* Presentation */,
 				B8965F4328D52A5000B64709 /* Domain */,
@@ -942,7 +944,7 @@
 				76BE304D2979A1330084157E /* GalleryListVC.xib in Resources */,
 				765E45A7298197BA004FA458 /* CampusItemCell.xib in Resources */,
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
-				BF6586512A5F143500369ABE /* GoogleService-Info.plist in Resources */,
+				BF39D1332A719B0C00CAF936 /* GoogleService-Info.plist in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */,
 				76EF47172982FA0700178BE5 /* DonationsVC.xib in Resources */,
 				765E45B42981BD1C004FA458 /* GalleryItemCell.xib in Resources */,
@@ -1119,6 +1121,7 @@
 /* Begin XCBuildConfiguration section */
 		B824BD6F28CA966F00B27C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF39D1362A71A14000CAF936 /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1180,6 +1183,7 @@
 		};
 		B824BD7028CA966F00B27C8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF39D1362A71A14000CAF936 /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
