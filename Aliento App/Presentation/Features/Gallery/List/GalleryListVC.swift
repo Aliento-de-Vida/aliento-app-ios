@@ -12,10 +12,13 @@ class GalleryListVC : UIViewController {
     @IBOutlet var gallerylistCollectionView: GalleryListCollectionView!
     @Injected var galleryRepository : GalleryRepository
     var onClick: (String) -> Void = { item in  }
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        gallerylistCollectionView.refreshControl = UIRefreshControl()
+        gallerylistCollectionView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
         gallerylistCollectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         gallerylistCollectionView.register(UINib(nibName: GalleryItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: GalleryItemCell.identifier)
         gallerylistCollectionView.dataSource = gallerylistCollectionView
@@ -37,11 +40,12 @@ class GalleryListVC : UIViewController {
                 self.gallerylistCollectionView.reloadData()
                 
                 
-            case .failure(let error):
+            case .failure(_):
                 print("Error")
             }
         }
         
+        callPullToRefresh()
         gallerylistCollectionView.isUserInteractionEnabled = true
         gallerylistCollectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToGalleryDetails)))
     }
@@ -63,6 +67,25 @@ class GalleryListVC : UIViewController {
         print("Se presiono card one")
         // handling code
         
+    }
+    
+    @objc func callPullToRefresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.galleryRepository.getGallery { result in
+                switch result {
+                case.success(let gallery):
+                    let galleryPresentation = gallery.map { value in value.toPresentation() }
+                    self.gallerylistCollectionView.collectionGallery = galleryPresentation
+                    self.gallerylistCollectionView.reloadData()
+                    
+                case .failure(_):
+                    print("Error")
+                }
+                
+                self.gallerylistCollectionView.reloadData()
+                self.gallerylistCollectionView.refreshControl?.endRefreshing()
+            }
+        }
     }
     
 }

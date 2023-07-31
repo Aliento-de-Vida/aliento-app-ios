@@ -26,9 +26,9 @@ class DetailCampusVC : UIViewController {
         guard let item = item else { return }
         
         titleDetailsCampus.text = item.name
-        label1.text = item.description
-        label2.text = item.shortDescription
-        label3.text = item.contact
+        label1.text = item.name
+        label2.text = item.description
+        //label3.text = item.shortDescription
         campusImage.image = nil
         campusImage.loadWithShimmering(url: item.imageUrl)
         campusImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))

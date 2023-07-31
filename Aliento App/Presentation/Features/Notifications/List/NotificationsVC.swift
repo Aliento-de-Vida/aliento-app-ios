@@ -19,6 +19,8 @@ class NotificationsVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        notificationsCollectionView.refreshControl = UIRefreshControl()
+        notificationsCollectionView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
         notificationsCollectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         notificationsCollectionView.register(UINib(nibName: NotificationsItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: NotificationsItemCell.identifier)
         notificationsCollectionView.dataSource = notificationsCollectionView
@@ -41,7 +43,8 @@ class NotificationsVC : UIViewController {
                 print("Error")
             }
         }
-    
+   
+        callPullToRefresh()
     }
     
     @objc func goToDetails() {
@@ -63,6 +66,25 @@ class NotificationsVC : UIViewController {
         let viewController = NotificationsVC()
         viewController.labelText = labelText
         return viewController
+    }
+    
+    @objc func callPullToRefresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.notificationRepository.getNotification { result in
+                switch result {
+                case.success(let notification):
+                    let notificationPresentation = notification.map { value in value.toPresentation() }
+                    self.notificationsCollectionView.collectionNotification = notificationPresentation
+                    self.notificationsCollectionView.reloadData()
+                    
+                case .failure(_):
+                    print("Error")
+                }
+                
+                self.notificationsCollectionView.reloadData()
+                self.notificationsCollectionView.refreshControl?.endRefreshing()
+            }
+        }
     }
     
 }
