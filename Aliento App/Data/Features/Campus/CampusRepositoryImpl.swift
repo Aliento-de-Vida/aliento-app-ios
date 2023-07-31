@@ -15,15 +15,14 @@ class CampusRepositoryImpl : CampusRepository {
     }
     
     func getCampus(completion: @escaping (Result<[CampusModel], ApiError>) -> Void) {
-        campusApi.getCampus { result in
-            switch result {
+                campusApi.getCampus { result in
+                switch result {
                 case.success(let response):
-                completion(.success(response.map { value in value.toDomain() }))
+                    completion(.success(response.map { value in value.toDomain() }))
                 case .failure(let error):
-                completion(.failure(error))
+                    completion(.failure(error))
+                }
             }
-        }
-
     }
     
 }

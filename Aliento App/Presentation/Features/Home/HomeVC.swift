@@ -10,7 +10,7 @@ import Resolver
 
 class HomeVC: UIViewController {
     var item : NotificationPresentation? = nil
-        
+    
     @IBOutlet weak var cardOneShadow: UIView!
     @IBOutlet weak var cardOneImage: UIImageView!
     @IBOutlet weak var cardOne: UIView!
@@ -51,110 +51,29 @@ class HomeVC: UIViewController {
     @IBOutlet var notificationsCollectionView: NotificationsCollectionView!
     @IBOutlet var notificationViewHeight: NSLayoutConstraint!
     
+    @IBOutlet var scrollHome: UIScrollView!
     @Injected var homeRepository: HomeRepository
     @Injected var videoRepository: VideoRepository
     @Injected var notificationsRepository: NotificationRepository
     
-        
     var home: HomeModel? = nil
-  
+    var refreshControl = UIRefreshControl()
+    var timer: Timer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Task {
-            cardOneImage.startShimmering()
-            cardTwoImage.startShimmering()
-            cardThreeImage.startShimmering()
-            quickAccessOne.startShimmering()
-            quickAccesTwo.startShimmering()
-            quickAccesThree.startShimmering()
-            
-            do {
-                home = try await homeRepository.getHome()
-                let homeImages = try await homeRepository.getHomeImages()
-                
-                cardOneImage.stopShimmering()
-                cardTwoImage.stopShimmering()
-                cardThreeImage.stopShimmering()
-                quickAccessOne.stopShimmering()
-                quickAccesTwo.stopShimmering()
-                quickAccesThree.stopShimmering()
-
-                loadData(home: home!, homeImages: homeImages)
-            } catch {
-                //show(error)
-                return
-            }
-        }
+        scrollHome.refreshControl = refreshControl
+        scrollHome.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
         
-     
+        loadContent()
         
-        // getVideos
-        self.videoRepository.getVideo(playlistId: playlistId, maxResults: 5) { result in
-            switch result {
-            case.success(let videos):
-                videos.prefix(3)
-                    .forEach { video in
-                    let item = CarouselItem(
-                        imageUrl: video.thumbnulsUrl ?? "",
-                        video: CarouselVideo(videoId: video.id),
-                        menu: nil
-                    )
-                    self.collectionCarousel.append(item)
-                }
-                
-                self.carouselCollectionView.collectionCarousel = self.collectionCarousel
-                self.carouselCollectionView.reloadData()
-                
-                // pageControl
-                self.pageControl.numberOfPages = self.collectionCarousel.count
-                self.pageControl.currentPageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.8)
-                self.pageControl.pageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.3)
-                self.startTimer()
-                
-            case .failure(_):
-                print("Error")
-            }
-        }
-        
-        
-        
-        // getNotifications
-        
-        notificationsRepository.getNotification { [self] result in
-            switch result {
-            case .success(let notifications):
-                switch notifications.count{
-                case 0 :
-                    notificationViewHeight.constant = 0
-                    notificationView.isHidden = true
-                case 1 :
-                    notificationViewHeight.constant = 45 + 216 //45 static, 216 one item
-                    notificationView.isHidden = false
-                default:
-                    notificationViewHeight.constant = 45 + (2 * 216) //45 static, 216 * 2 two items
-                    notificationView.isHidden = false
-                }
-                let notificationsPresentation = notifications.prefix(2).map { value in value.toPresentation() }
-                self.notificationsCollectionView.collectionNotification = notificationsPresentation
-                self.notificationsCollectionView.onClick = { [self] item in
-                    let goToDetailsNotification = NotificationDetailVC.create(item: item)
-                    goToDetailsNotification.modalPresentationStyle = .popover
-                    self.present(goToDetailsNotification, animated: true, completion: nil)
-                }
-                self.notificationsCollectionView.reloadData()
-                
-            case .failure(_):
-                print("Error")
-            }
-        }
         
         // add 3 Carousel Items with real videos
-       
         carouselCollectionView.register(UINib(nibName: CarouselItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarouselItemCell.identifier)
         carouselCollectionView.dataSource = carouselCollectionView
         carouselCollectionView.delegate = carouselCollectionView
-        carouselCollectionView.collectionCarousel = collectionCarousel
+        carouselCollectionView.collectionCarousel = [initialCarouselitem]
         carouselCollectionView.reloadData()
         carouselCollectionView.onClick = { item in
             if item.menu != nil {
@@ -168,15 +87,18 @@ class HomeVC: UIViewController {
             self.pageControl.currentPage = currentPage
         }
         
+        pageControl.currentPageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.8)
+        pageControl.pageIndicatorTintColor = UIColor(named: "on_background")?.withAlphaComponent(0.3)
+        
         notificationsCollectionView.register(UINib(nibName: NotificationsItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: NotificationsItemCell.identifier)
         notificationsCollectionView.dataSource = notificationsCollectionView
         notificationsCollectionView.delegate = notificationsCollectionView
-                    
+        
         cardOne.isUserInteractionEnabled = true
         cardOne.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardOneClick)))
         cardOneShadow.addShadow()
         cardOne.roundCorners()
-
+        
         cardTwoImage.isUserInteractionEnabled = true
         cardTwoImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cardTwoClick)))
         cardTwoShadow.addShadow()
@@ -197,7 +119,7 @@ class HomeVC: UIViewController {
         quickAccesTwo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessTwoClick)))
         shadowQuickAccessTwo.addShadow()
         cardQuickAccessTwo.roundCorners()
-
+        
         quickAccesThree.isUserInteractionEnabled = true
         quickAccesThree.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(quickAccessThreeClick)))
         shadowQuickAccessThree.addShadow()
@@ -227,11 +149,117 @@ class HomeVC: UIViewController {
         spotifyIcon.image = UIImage(named: "ic_spotify")?.withTintColor(UIColor(named: "on_background")!)
         spotifyIcon.isUserInteractionEnabled = true
         spotifyIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SpotifyClick)))
-                
+        
         setupNavBar()
     }
     
-    func loadData(home: HomeModel, homeImages: HomeImages) {
+    func loadContent() {
+        
+        setImagesState(homeImages: nilImages)
+        Task {
+            cardOneImage.startShimmering()
+            cardTwoImage.startShimmering()
+            cardThreeImage.startShimmering()
+            quickAccessOne.startShimmering()
+            quickAccesTwo.startShimmering()
+            quickAccesThree.startShimmering()
+            
+            do {
+                home = try await homeRepository.getHome()
+                let homeImages = try await homeRepository.getHomeImages()
+                
+                cardOneImage.stopShimmering()
+                cardTwoImage.stopShimmering()
+                cardThreeImage.stopShimmering()
+                quickAccessOne.stopShimmering()
+                quickAccesTwo.stopShimmering()
+                quickAccesThree.stopShimmering()
+                
+                setImagesState(homeImages: homeImages)
+            } catch {
+                cardOneImage.stopShimmering()
+                cardTwoImage.stopShimmering()
+                cardThreeImage.stopShimmering()
+                quickAccessOne.stopShimmering()
+                quickAccesTwo.stopShimmering()
+                quickAccesThree.stopShimmering()
+
+                //show(error)
+                return
+            }
+        }
+        
+        // getVideos
+        setCarouselState(array: [initialCarouselitem])
+        self.videoRepository.getVideo(playlistId: playlistId, maxResults: 5) { result in
+            switch result {
+            case.success(let videos):
+                var carouselCollection = [self.initialCarouselitem]
+                videos.prefix(3)
+                    .forEach { video in
+                        let item = CarouselItem(
+                            imageUrl: video.thumbnulsUrl ?? "",
+                            video: CarouselVideo(videoId: video.id),
+                            menu: nil
+                        )
+                        carouselCollection.append(item)
+                    }
+                
+                self.setCarouselState(array: carouselCollection)
+                
+            case .failure(_):
+                print("Error")
+            }
+        }
+        
+        // getNotifications
+        
+        
+        notificationsRepository.getNotification { [self] result in
+            refreshControl.endRefreshing()
+            
+            switch result {
+            case .success(let notifications):
+                switch notifications.count{
+                case 0 :
+                    notificationViewHeight.constant = 0
+                    notificationView.isHidden = true
+                case 1 :
+                    notificationViewHeight.constant = 45 + 216 //45 static, 216 one item
+                    notificationView.isHidden = false
+                default:
+                    notificationViewHeight.constant = 45 + (2 * 216) //45 static, 216 * 2 two items
+                    notificationView.isHidden = false
+                }
+                let notificationsPresentation = notifications.prefix(2).map { value in value.toPresentation() }
+                self.notificationsCollectionView.collectionNotification = notificationsPresentation
+                self.notificationsCollectionView.onClick = { [self] item in
+                    let goToDetailsNotification = NotificationDetailVC.create(item: item)
+                    goToDetailsNotification.modalPresentationStyle = .popover
+                    self.present(goToDetailsNotification, animated: true, completion: nil)
+                }
+                self.notificationsCollectionView.reloadData()
+                
+            case .failure(_):
+                print("Error")
+            }
+        }
+        
+    }
+    
+    func setCarouselState(array: [CarouselItem]) {
+        pageControl.numberOfPages = array.count
+        
+        timer?.invalidate()
+        if (array.count > 1) { startTimer() }
+
+        carouselCollectionView.collectionCarousel = array
+        carouselCollectionView.reloadData()
+    }
+    
+    func setNotificationState(array: [Notifi ])
+    
+    func setImagesState(homeImages: HomeImages) {
         cardOneImage.loadWithShimmering(url: homeImages.churchImage)
         cardTwoImage.loadWithShimmering(url: homeImages.campusImage)
         cardThreeImage.loadWithShimmering(url: homeImages.galleriesImage)
@@ -244,7 +272,7 @@ class HomeVC: UIViewController {
     
     func setupNavBar() {
         self.navigationController?.navigationBar.tintColor = UIColor(named: "on_background")!
-
+        
         setNavBarLogo()
         setupNavBarLefItem()
         setupNavBarRightItem()
@@ -272,6 +300,7 @@ class HomeVC: UIViewController {
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
+    
     @objc func goToSettings() {
         navigationController?.pushViewController(SettingsVC(), animated: true)
         
@@ -280,7 +309,7 @@ class HomeVC: UIViewController {
     @objc func goToNotifications() {
         navigationController?.pushViewController(NotificationsVC(), animated: true)
         print("Se presiono Go to Notifications")
-      
+        
     }
     
     @objc func cardOneClick() {
@@ -321,7 +350,7 @@ class HomeVC: UIViewController {
     @objc func InstagramClick() {
         guard let instagramClick = URL(string: home?.socialMedia.instagramUrl ?? "") else { return }
         UIApplication.shared.open(instagramClick)
-
+        
         print("Se presiono instagram")
         // handling code
     }
@@ -343,25 +372,32 @@ class HomeVC: UIViewController {
         UIApplication.shared.open(TwitterClick)
         // handling code
     }
-
+    
     @objc func SpotifyClick() {
         print("Se presiono Spotify")
         guard let SpotifyClick = URL(string: "spotify:artist:4VYxusCiKsWxcfUveymGU5") else { return }
         UIApplication.shared.open(SpotifyClick)
         // handling code
     }
-   
-    var collectionCarousel = [
-    CarouselItem(
-        // Case: Se muestra imagen y frase "Ver predicas"
+    
+    private let initialCarouselitem = CarouselItem(
         imageUrl: "https://img.freepik.com/foto-gratis/personas-alto-angulo-leyendo-juntas_23-2150062128.jpg?w=2000&t=st=1678305507~exp=1678306107~hmac=04e34c84934c945198053ae391bd4885dee49e0681b37aef0a7a81ae980bd358",
         video: nil,
         menu: CarouselMenu(menuName: "Ver prédicas")
     )
-    ]
+    
+    private let nilImages = HomeImages(
+        sermonsImage: nil,
+        churchImage: nil,
+        campusImage: nil,
+        galleriesImage: nil,
+        donationsImage: nil,
+        prayerImage: nil,
+        ebookImage: nil
+    )
     
     func startTimer() {
-        Timer.scheduledTimer(
+        timer = Timer.scheduledTimer(
             timeInterval: 3.0,
             target: self,
             selector: #selector(self.scrollToNextCell),
@@ -372,5 +408,10 @@ class HomeVC: UIViewController {
     
     @objc func scrollToNextCell() {
         carouselCollectionView.scrollToNextCell()
+    }
+    
+    @objc func callPullToRefresh() {
+        refreshControl.beginRefreshing()
+        self.loadContent()
     }
 }

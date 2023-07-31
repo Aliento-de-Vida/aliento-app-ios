@@ -35,6 +35,9 @@ extension UIImageView {
             self.sd_setImage (with: URL(string:url), placeholderImage: nil, options: [], completed: { (theImage, error, cache, url) in
                 completion()
             })
+        } else {
+            self.image = nil
+            completion()
         }
     }
 }

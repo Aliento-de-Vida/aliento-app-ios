@@ -34,6 +34,7 @@
                 <outlet property="quickAccesThree" destination="BII-Zv-61P" id="W2z-up-UXJ"/>
                 <outlet property="quickAccesTwo" destination="i37-FX-pT1" id="HB8-n2-eQB"/>
                 <outlet property="quickAccessOne" destination="J3n-yF-11Z" id="fgA-m8-9XU"/>
+                <outlet property="scrollHome" destination="kYX-rm-MsO" id="dUc-D6-61F"/>
                 <outlet property="shadowQuickAccessOne" destination="bFv-v1-tQ3" id="55H-2Q-F9D"/>
                 <outlet property="shadowQuickAccessThree" destination="iIM-1S-ima" id="fgf-zb-9k5"/>
                 <outlet property="shadowQuickAccessTwo" destination="7xy-1T-lxt" id="pOa-cy-UeZ"/>
