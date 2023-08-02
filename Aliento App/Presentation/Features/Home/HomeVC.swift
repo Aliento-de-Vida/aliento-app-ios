@@ -213,38 +213,38 @@ class HomeVC: UIViewController {
         }
         
         // getNotifications
-        
-        
         notificationsRepository.getNotification { [self] result in
             refreshControl.endRefreshing()
             
             switch result {
             case .success(let notifications):
-                switch notifications.count{
-                case 0 :
-                    notificationViewHeight.constant = 0
-                    notificationView.isHidden = true
-                case 1 :
-                    notificationViewHeight.constant = 45 + 216 //45 static, 216 one item
-                    notificationView.isHidden = false
-                default:
-                    notificationViewHeight.constant = 45 + (2 * 216) //45 static, 216 * 2 two items
-                    notificationView.isHidden = false
-                }
-                let notificationsPresentation = notifications.prefix(2).map { value in value.toPresentation() }
-                self.notificationsCollectionView.collectionNotification = notificationsPresentation
-                self.notificationsCollectionView.onClick = { [self] item in
-                    let goToDetailsNotification = NotificationDetailVC.create(item: item)
-                    goToDetailsNotification.modalPresentationStyle = .popover
-                    self.present(goToDetailsNotification, animated: true, completion: nil)
-                }
-                self.notificationsCollectionView.reloadData()
-                
+                setNotificationsState(notifications: notifications)
             case .failure(_):
-                print("Error")
+                setNotificationsState(notifications: [])
             }
         }
-        
+    }
+    
+    func setNotificationsState(notifications: [NotificationModel]) {
+        switch notifications.count {
+        case 0 :
+            notificationViewHeight.constant = 0
+            notificationView.isHidden = true
+        case 1 :
+            notificationViewHeight.constant = 45 + 216 //45 static, 216 one item
+            notificationView.isHidden = false
+        default:
+            notificationViewHeight.constant = 45 + (2 * 216) //45 static, 216 * 2 two items
+            notificationView.isHidden = false
+        }
+        let notificationsPresentation = notifications.prefix(2).map { value in value.toPresentation() }
+        self.notificationsCollectionView.collectionNotification = notificationsPresentation
+        self.notificationsCollectionView.onClick = { [self] item in
+            let goToDetailsNotification = NotificationDetailVC.create(item: item)
+            goToDetailsNotification.modalPresentationStyle = .popover
+            self.present(goToDetailsNotification, animated: true, completion: nil)
+        }
+        self.notificationsCollectionView.reloadData()
     }
     
     func setCarouselState(array: [CarouselItem]) {
@@ -257,7 +257,20 @@ class HomeVC: UIViewController {
         carouselCollectionView.reloadData()
     }
     
-    func setNotificationState(array: [Notifi ])
+    func setNotificationState() -> NotificationPresentation {
+        return NotificationPresentation(
+            imageUrl: "",
+            title: "",
+            phrase: "",
+            date: ""
+        )
+    }
+    
+    func setNotificationState() {
+        notificationsRepository.getNotification { [] result in
+            
+        }
+    }
     
     func setImagesState(homeImages: HomeImages) {
         cardOneImage.loadWithShimmering(url: homeImages.churchImage)
@@ -395,6 +408,8 @@ class HomeVC: UIViewController {
         prayerImage: nil,
         ebookImage: nil
     )
+    
+    
     
     func startTimer() {
         timer = Timer.scheduledTimer(
