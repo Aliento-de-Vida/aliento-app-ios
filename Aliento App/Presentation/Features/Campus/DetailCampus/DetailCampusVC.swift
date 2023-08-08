@@ -11,10 +11,10 @@ import Resolver
 class DetailCampusVC : UIViewController {
     var item: CampusPresentation? = nil
     
-    @IBOutlet var titleDetailsCampus: UILabel!
-    @IBOutlet var label1: UILabel!
-    @IBOutlet var label2: UILabel!
-    @IBOutlet var label3: UILabel!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var shortDescription: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var contact: UILabel!
     @IBOutlet var galleryDetails: UIButton!
     @IBOutlet var campusMaps: UIButton!
     @IBOutlet var campusImage: UIImageView!
@@ -25,10 +25,10 @@ class DetailCampusVC : UIViewController {
         super.viewDidLoad()
         guard let item = item else { return }
         
-        titleDetailsCampus.text = item.name
-        label1.text = item.name
-        label2.text = item.description
-        //label3.text = item.shortDescription
+        name.text = item.name
+        shortDescription.text = item.shortDescription
+        descriptionLabel.text = item.description
+        contact.text = item.contact
         campusImage.image = nil
         campusImage.loadWithShimmering(url: item.imageUrl)
         campusImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
