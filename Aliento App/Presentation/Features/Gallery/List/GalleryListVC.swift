@@ -10,15 +10,32 @@ import Resolver
 
 class GalleryListVC : UIViewController {
     @IBOutlet var gallerylistCollectionView: GalleryListCollectionView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var contentGallery: UIView!
+    @IBOutlet var emptyStateScroll: UIScrollView!
+    @IBOutlet var emptyState: UIView!
+    @IBOutlet var emptyStateImage: UIImageView!
+    @IBOutlet var emptyStateMessage: UILabel!
+    
+    
+    
     @Injected var galleryRepository : GalleryRepository
     var onClick: (String) -> Void = { item in  }
     var refreshControl = UIRefreshControl()
     
+    var galleryRefreshControl = UIRefreshControl()
+    var emptyStateRefreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gallerylistCollectionView.refreshControl = UIRefreshControl()
-        gallerylistCollectionView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
+        emptyStateScroll.isHidden = true
+        contentGallery.isHidden = true
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        updateGallery()
+        
         gallerylistCollectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         gallerylistCollectionView.register(UINib(nibName: GalleryItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: GalleryItemCell.identifier)
         gallerylistCollectionView.dataSource = gallerylistCollectionView
@@ -27,10 +44,14 @@ class GalleryListVC : UIViewController {
             let goToGalleryDetails = GalleryDetailVC.create(item: item)
             goToGalleryDetails.modalPresentationStyle = .popover
             self.present(goToGalleryDetails, animated: true, completion: nil)
-            //self.navigationController?.pushViewController(GalleryDetailVC(), animated: true)
+        
         }
-       
+        
+        configureRefreshControl()
         setNavBarLogo()
+        
+        
+        
         galleryRepository.getGallery { result in
             switch result {
             case .success(let gallery):
@@ -45,7 +66,7 @@ class GalleryListVC : UIViewController {
             }
         }
         
-        callPullToRefresh()
+        
         gallerylistCollectionView.isUserInteractionEnabled = true
         gallerylistCollectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToGalleryDetails)))
     }
@@ -69,23 +90,66 @@ class GalleryListVC : UIViewController {
         
     }
     
-    @objc func callPullToRefresh() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.galleryRepository.getGallery { result in
+    private func setCollectionViewState(gallery : [GalleryPresentation]) {
+        contentGallery.isHidden = false
+        emptyStateScroll.isHidden = true
+        
+        self.gallerylistCollectionView.collectionGallery = gallery
+        self.gallerylistCollectionView.reloadData()
+    }
+    
+    private func setEmptyState(imageName: String, errorDescription: String ) {
+        contentGallery.isHidden = true
+        emptyStateScroll.isHidden = false
+        
+        emptyStateImage.image = UIImage(named: imageName)
+        emptyStateMessage.text = errorDescription
+    }
+    
+    func configureRefreshControl() {
+        gallerylistCollectionView.refreshControl = galleryRefreshControl
+        gallerylistCollectionView.refreshControl?.addTarget(self, action: #selector(refreshGallery), for: .valueChanged)
+        emptyStateScroll.refreshControl = emptyStateRefreshControl
+        emptyStateScroll.refreshControl?.addTarget(self, action: #selector(refreshGallery), for: .valueChanged)
+    }
+    
+    @objc func refreshGallery() {
+        self.galleryRefreshControl.beginRefreshing()
+        self.emptyStateRefreshControl.beginRefreshing()
+        
+        updateGallery()
+    }
+    
+    @objc func updateGallery() {
+            galleryRepository.getGallery { result in
+                self.hideIndicators()
+                
                 switch result {
                 case.success(let gallery):
                     let galleryPresentation = gallery.map { value in value.toPresentation() }
-                    self.gallerylistCollectionView.collectionGallery = galleryPresentation
-                    self.gallerylistCollectionView.reloadData()
                     
+                    
+                    if (galleryPresentation.isEmpty) {
+                        self.setEmptyState(imageName: "Empty State", errorDescription: "No hay fotos en este momento")
+                    } else {
+                        self.setCollectionViewState(gallery: galleryPresentation)
+                    }
+                
                 case .failure(_):
+                    self.setEmptyState(imageName: "Empty State", errorDescription: "Algo salio mal, vuelve a intentarlo mas tarde")
                     print("Error")
                 }
                 
-                self.gallerylistCollectionView.reloadData()
-                self.gallerylistCollectionView.refreshControl?.endRefreshing()
             }
-        }
+        
+    }
+    
+    func hideIndicators() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        galleryRefreshControl.endRefreshing()
+        emptyStateRefreshControl.endRefreshing()
+        
     }
     
 }

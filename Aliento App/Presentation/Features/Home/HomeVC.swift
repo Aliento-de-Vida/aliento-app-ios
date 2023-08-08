@@ -153,7 +153,7 @@ class HomeVC: UIViewController {
         setupNavBar()
     }
     
-    func loadContent() {
+    @objc func loadContent() {
         
         setImagesState(homeImages: nilImages)
         Task {

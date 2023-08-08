@@ -11,16 +11,32 @@ import Resolver
 class NotificationsVC : UIViewController {
     
     @IBOutlet weak var notificationsCollectionView: NotificationsCollectionView!
+    
+    @IBOutlet var emptyState: UIView!
+    @IBOutlet var emptyStateMessage: UILabel!
+    @IBOutlet var emptyStateImage: UIImageView!
+    @IBOutlet var contentNotifications: UIView!
+    @IBOutlet var emptyStateScroll: UIScrollView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     @Injected var notificationRepository: NotificationRepository
     var onClick: (NotificationPresentation) -> Void = { item in }
     
     var labelText : String? = nil
     
+    var notificationsRefreshControl = UIRefreshControl()
+    var emptyStateRefreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        notificationsCollectionView.refreshControl = UIRefreshControl()
-        notificationsCollectionView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
+        emptyStateScroll.isHidden = true
+        contentNotifications.isHidden = true
+
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        updateNotifications()
+
         notificationsCollectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         notificationsCollectionView.register(UINib(nibName: NotificationsItemCell.identifier, bundle: nil), forCellWithReuseIdentifier: NotificationsItemCell.identifier)
         notificationsCollectionView.dataSource = notificationsCollectionView
@@ -31,7 +47,7 @@ class NotificationsVC : UIViewController {
             self.present(goToDetailsNotification, animated: true, completion: nil)
         }
         
-        setNavBarLogo()
+       
         notificationRepository.getNotification { [self] result in
             switch result {
             case .success(let notifications):
@@ -39,12 +55,13 @@ class NotificationsVC : UIViewController {
                 self.notificationsCollectionView.collectionNotification = notificationsPresentation
                 self.notificationsCollectionView.reloadData()
                 
-            case .failure(let error):
+            case .failure(_):
                 print("Error")
             }
         }
    
-        callPullToRefresh()
+        configureRefreshControl()
+        setNavBarLogo()
     }
     
     @objc func goToDetails() {
@@ -68,23 +85,63 @@ class NotificationsVC : UIViewController {
         return viewController
     }
     
-    @objc func callPullToRefresh() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+    private func setCollectionViewState(notifications: [NotificationPresentation]) {
+        contentNotifications.isHidden = false
+        emptyStateScroll.isHidden = true
+        
+        self.notificationsCollectionView.collectionNotification = notifications
+        self.notificationsCollectionView.reloadData()
+    }
+    
+   private func setEmptyState(imageName: String , errorDescription: String ) {
+        contentNotifications.isHidden = true
+        emptyStateScroll.isHidden = false
+        
+        emptyStateImage.image = UIImage(named: imageName)
+        emptyStateMessage.text = errorDescription
+    }
+    
+    func configureRefreshControl() {
+        notificationsCollectionView.refreshControl = notificationsRefreshControl
+        notificationsCollectionView.refreshControl?.addTarget(self, action: #selector(refreshNotifications), for: .valueChanged)
+        emptyStateScroll.refreshControl = emptyStateRefreshControl
+        emptyStateScroll.refreshControl?.addTarget(self, action: #selector(refreshNotifications), for: .valueChanged)
+    }
+   
+    @objc func refreshNotifications() {
+        self.notificationsRefreshControl.beginRefreshing()
+        self.emptyStateRefreshControl.beginRefreshing()
+
+        updateNotifications()
+    }
+    
+    func updateNotifications() {
             self.notificationRepository.getNotification { result in
+                self.hideIndicators()
+               
                 switch result {
                 case.success(let notification):
                     let notificationPresentation = notification.map { value in value.toPresentation() }
-                    self.notificationsCollectionView.collectionNotification = notificationPresentation
-                    self.notificationsCollectionView.reloadData()
                     
+                    if (notificationPresentation.isEmpty) {
+                        self.setEmptyState(imageName: "Empty State", errorDescription: "No hay notificaciones en este momento")
+                    } else {
+                        self.setCollectionViewState(notifications : notificationPresentation)
+                    }
+    
                 case .failure(_):
+                    self.setEmptyState(imageName: "Empty State", errorDescription: "Algo salio mal, vuelve a intertarlo mas tarde")
                     print("Error")
                 }
-                
-                self.notificationsCollectionView.reloadData()
-                self.notificationsCollectionView.refreshControl?.endRefreshing()
             }
-        }
+        
+    }
+    
+    func hideIndicators() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        notificationsRefreshControl.endRefreshing()
+        emptyStateRefreshControl.endRefreshing()
     }
     
 }
