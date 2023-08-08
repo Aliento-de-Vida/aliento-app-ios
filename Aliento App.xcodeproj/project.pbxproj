@@ -42,6 +42,7 @@
 		7679B41429B653E600C3F5CD /* TracksModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41329B653E600C3F5CD /* TracksModelData.swift */; };
 		7679B41629B6712E00C3F5CD /* TokenModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41529B6712D00C3F5CD /* TokenModelData.swift */; };
 		7679B41829B7BC2000C3F5CD /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7679B41729B7BC2000C3F5CD /* Int.swift */; };
+		76939EF02A7C1EAC0099BB47 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76939EEF2A7C1EAC0099BB47 /* Colors.xcassets */; };
 		769A1EFA2A5DCC6600A31A37 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A1EF92A5DCC6600A31A37 /* PlayerViewModel.swift */; };
 		76A914F72A462502005589C0 /* NotificationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A914F62A462502005589C0 /* NotificationDetailVC.swift */; };
 		76A914F92A462514005589C0 /* NotificationDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A914F82A462514005589C0 /* NotificationDetailVC.xib */; };
@@ -168,6 +169,7 @@
 		7679B41529B6712D00C3F5CD /* TokenModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModelData.swift; sourceTree = "<group>"; };
 		7679B41729B7BC2000C3F5CD /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		76939EEE2A5DEC900099BB47 /* Aliento App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Aliento App.entitlements"; sourceTree = "<group>"; };
+		76939EEF2A7C1EAC0099BB47 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		769A1EF92A5DCC6600A31A37 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		76A914F62A462502005589C0 /* NotificationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailVC.swift; sourceTree = "<group>"; };
 		76A914F82A462514005589C0 /* NotificationDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationDetailVC.xib; sourceTree = "<group>"; };
@@ -705,6 +707,7 @@
 			children = (
 				B824BD6928CA966F00B27C8C /* Assets.xcassets */,
 				B824BD6B28CA966F00B27C8C /* LaunchScreen.storyboard */,
+				76939EEF2A7C1EAC0099BB47 /* Colors.xcassets */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -946,6 +949,7 @@
 				B824BD6D28CA966F00B27C8C /* LaunchScreen.storyboard in Resources */,
 				BF39D1332A719B0C00CAF936 /* GoogleService-Info.plist in Resources */,
 				BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */,
+				76939EF02A7C1EAC0099BB47 /* Colors.xcassets in Resources */,
 				76EF47172982FA0700178BE5 /* DonationsVC.xib in Resources */,
 				765E45B42981BD1C004FA458 /* GalleryItemCell.xib in Resources */,
 				76EF471C2982FE2700178BE5 /* PlayerVC.xib in Resources */,

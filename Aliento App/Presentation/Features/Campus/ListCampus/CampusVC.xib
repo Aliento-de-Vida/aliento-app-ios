@@ -68,14 +68,14 @@
                         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKG-NQ-RiF" userLabel="Empty State">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error" translatesAutoresizingMaskIntoConstraints="NO" id="TEP-Ym-ZBl">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty State" translatesAutoresizingMaskIntoConstraints="NO" id="TEP-Ym-ZBl">
                                     <rect key="frame" x="64" y="257" width="286" height="286"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="TEP-Ym-ZBl" secondAttribute="height" multiplier="1:1" id="nOq-d6-Izg"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revisa tu conexión de Red " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-84-cDC">
-                                    <rect key="frame" x="0.0" y="551" width="414" height="21"/>
+                                    <rect key="frame" x="0.0" y="559" width="414" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="TEP-Ym-ZBl" firstAttribute="leading" secondItem="lKG-NQ-RiF" secondAttribute="leading" constant="64" id="1ZL-Ad-0a2"/>
-                                <constraint firstItem="Kh4-84-cDC" firstAttribute="top" secondItem="TEP-Ym-ZBl" secondAttribute="bottom" constant="8" id="8c6-FM-enX"/>
+                                <constraint firstItem="Kh4-84-cDC" firstAttribute="top" secondItem="TEP-Ym-ZBl" secondAttribute="bottom" constant="16" id="8c6-FM-enX"/>
                                 <constraint firstAttribute="trailing" secondItem="Kh4-84-cDC" secondAttribute="trailing" id="9BL-Lb-mGP"/>
                                 <constraint firstAttribute="trailing" secondItem="TEP-Ym-ZBl" secondAttribute="trailing" constant="64" id="Hsv-7M-JJy"/>
                                 <constraint firstItem="TEP-Ym-ZBl" firstAttribute="centerY" secondItem="lKG-NQ-RiF" secondAttribute="centerY" id="JI5-s4-DOB"/>
@@ -121,7 +121,7 @@
         </view>
     </objects>
     <resources>
-        <image name="error" width="781" height="320"/>
+        <image name="Empty State" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -100,13 +100,13 @@ class CampusVC : UIViewController {
                 let campuses = campus.map { value in value.toPresentation() }
                 
                 if (campuses.isEmpty) {
-                    self.setEmptyState(imageName: "error", errorDescription: "No hay campus en este momento")
+                    self.setEmptyState(imageName: "Empty State", errorDescription: "No hay campus en este momento")
                 } else {
                     self.setCollectionViewState(campuses: campuses)
                 }
                 
             case .failure(_):
-                self.setEmptyState(imageName: "error", errorDescription: "Algo salio mal, vuelve a interlo mas tarde")
+                self.setEmptyState(imageName: "Empty State", errorDescription: "Algo salio mal, vuelve a intentarlo mas tarde")
             }
         }
     }
