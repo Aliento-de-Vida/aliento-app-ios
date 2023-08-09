@@ -26,7 +26,7 @@ extension CampusModel {
             id: self.id,
             name: self.name,
             description: self.description,
-            shortDescription: self.description,
+            shortDescription: self.shortDescription,
             imageUrl: self.imageUrl.toImageUrl(),
             videoUrl: self.videoUrl,
             location: self.location,

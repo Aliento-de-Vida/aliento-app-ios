@@ -28,7 +28,7 @@ class CampusItemCell: UICollectionViewCell {
         imageUrl.loadWithShimmering(url: item.imageUrl)
         
         campusTitle.text = "\(item.name)"
-        campusPhrase.text = "\(item.description)"
+        campusPhrase.text = "\(item.shortDescription)"
       
         shadowCampus.addShadow()
         cardCampus.roundCorners()
