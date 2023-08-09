@@ -86,7 +86,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="623" height="283"/>
             <connections>
-                <outlet property="campusPhrase" destination="wn6-sE-iCD" id="oaZ-6Z-1Uq"/>
+                <outlet property="campusPhrase" destination="wn6-sE-iCD" id="BaO-xt-pIE"/>
                 <outlet property="campusTitle" destination="7DX-8t-NrD" id="Mr9-gd-2xD"/>
                 <outlet property="cardCampus" destination="lIC-Hw-bno" id="gn0-HN-EXl"/>
                 <outlet property="imageUrl" destination="sx2-3h-QG7" id="xTu-7Z-fEJ"/>
