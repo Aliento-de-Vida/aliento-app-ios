@@ -8,6 +8,7 @@
 import UIKit
 
 class GalleryDetailCollectionView : UICollectionView {
+    let ITEM_HEIGHT = 200.0
     var galleryDetailCollectionView: [String] = []
     var onClick: (String) -> Void = { gallery in }
 }
@@ -19,7 +20,7 @@ extension GalleryDetailCollectionView: UICollectionViewDelegateFlowLayout {
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.layer.bounds.width/3
-        return CGSize(width: width , height: 200)
+        return CGSize(width: width , height: ITEM_HEIGHT)
     }
         
 }

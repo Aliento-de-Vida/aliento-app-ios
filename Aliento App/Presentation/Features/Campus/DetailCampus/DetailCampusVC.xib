@@ -13,12 +13,12 @@
             <connections>
                 <outlet property="campusImage" destination="a3B-hx-ISm" id="gr5-B8-vI7"/>
                 <outlet property="campusMaps" destination="03T-2B-zXK" id="aQc-U2-uBs"/>
-                <outlet property="contact" destination="AFx-Wj-HfT" id="La8-eQ-zfc"/>
-                <outlet property="descriptionLabel" destination="WVz-CR-9ME" id="8dL-NJ-DnK"/>
+                <outlet property="constraint_WebViewHeight" destination="G7E-Tz-Zpd" id="S7l-I7-VER"/>
                 <outlet property="galleryDetails" destination="bTh-IR-ea2" id="J9m-xx-IBd"/>
                 <outlet property="name" destination="b43-BS-HXm" id="eYg-wD-W7F"/>
                 <outlet property="shortDescription" destination="mXW-JF-s7u" id="HqX-mE-JFW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="fYc-82-339"/>
+                <outlet property="webView" destination="dvL-nS-8qc" id="9SP-Xl-mrU"/>
             </connections>
         </placeholder>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="716.66666666666663"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-oW-IE5">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="462.33333333333331"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="613.66666666666663"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b43-BS-HXm" userLabel="Name">
                                     <rect key="frame" x="30" y="7.9999999999999982" width="333" height="20.333333333333329"/>
@@ -49,37 +49,33 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-CR-9ME" userLabel="Description">
-                                    <rect key="frame" x="30" y="405.66666666666669" width="333" height="20.333333333333314"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="contact" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-Wj-HfT" userLabel="Contact">
-                                    <rect key="frame" x="30" y="434" width="333" height="20.333333333333314"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvL-nS-8qc">
+                                    <rect key="frame" x="30" y="405.66666666666669" width="333" height="200.00000000000006"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="G7E-Tz-Zpd"/>
+                                    </constraints>
+                                    <wkWebViewConfiguration key="configuration">
+                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                        <wkPreferences key="preferences"/>
+                                    </wkWebViewConfiguration>
+                                </wkWebView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="WVz-CR-9ME" secondAttribute="trailing" constant="30" id="1AP-Sc-FSs"/>
                                 <constraint firstAttribute="trailing" secondItem="a3B-hx-ISm" secondAttribute="trailing" constant="30" id="9hn-Bg-hcW"/>
+                                <constraint firstAttribute="bottom" secondItem="dvL-nS-8qc" secondAttribute="bottom" constant="8" id="BJp-6r-GFU"/>
                                 <constraint firstItem="b43-BS-HXm" firstAttribute="leading" secondItem="2Ir-oW-IE5" secondAttribute="leading" constant="30" id="Gcg-VV-c9O"/>
+                                <constraint firstItem="dvL-nS-8qc" firstAttribute="leading" secondItem="2Ir-oW-IE5" secondAttribute="leading" constant="30" id="HGj-0r-Duc"/>
                                 <constraint firstItem="mXW-JF-s7u" firstAttribute="leading" secondItem="2Ir-oW-IE5" secondAttribute="leading" constant="30" id="Ie5-7n-Ckh"/>
-                                <constraint firstItem="WVz-CR-9ME" firstAttribute="leading" secondItem="2Ir-oW-IE5" secondAttribute="leading" constant="30" id="MrM-OS-pMo"/>
                                 <constraint firstAttribute="trailing" secondItem="mXW-JF-s7u" secondAttribute="trailing" constant="30" id="PjE-dq-F1e"/>
                                 <constraint firstItem="a3B-hx-ISm" firstAttribute="leading" secondItem="2Ir-oW-IE5" secondAttribute="leading" constant="30" id="S3f-wj-7Ln"/>
                                 <constraint firstAttribute="trailing" secondItem="b43-BS-HXm" secondAttribute="trailing" constant="30" id="U3B-1D-OA9"/>
-                                <constraint firstItem="AFx-Wj-HfT" firstAttribute="leading" secondItem="2Ir-oW-IE5" secondAttribute="leading" constant="30" id="Uab-YD-pJb"/>
-                                <constraint firstAttribute="trailing" secondItem="AFx-Wj-HfT" secondAttribute="trailing" constant="30" id="fqo-FB-D59"/>
-                                <constraint firstItem="WVz-CR-9ME" firstAttribute="top" secondItem="mXW-JF-s7u" secondAttribute="bottom" constant="8" id="o0f-AV-FVa"/>
+                                <constraint firstAttribute="trailing" secondItem="dvL-nS-8qc" secondAttribute="trailing" constant="30" id="fJL-dq-JL8"/>
                                 <constraint firstItem="mXW-JF-s7u" firstAttribute="top" secondItem="a3B-hx-ISm" secondAttribute="bottom" constant="8" id="pA7-MA-5fA"/>
                                 <constraint firstItem="a3B-hx-ISm" firstAttribute="top" secondItem="b43-BS-HXm" secondAttribute="bottom" constant="8" id="rhx-Z9-vHA"/>
-                                <constraint firstAttribute="bottom" secondItem="AFx-Wj-HfT" secondAttribute="bottom" constant="8" id="tWc-3T-4Gf"/>
                                 <constraint firstItem="b43-BS-HXm" firstAttribute="top" secondItem="2Ir-oW-IE5" secondAttribute="top" constant="8" id="vXv-MG-Gro"/>
-                                <constraint firstItem="AFx-Wj-HfT" firstAttribute="top" secondItem="WVz-CR-9ME" secondAttribute="bottom" constant="8" id="xZs-Ax-xaV"/>
+                                <constraint firstItem="dvL-nS-8qc" firstAttribute="top" secondItem="mXW-JF-s7u" secondAttribute="bottom" constant="8" id="yLt-l8-WM5"/>
                             </constraints>
                         </view>
                     </subviews>

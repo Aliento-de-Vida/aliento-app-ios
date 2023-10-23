@@ -7,6 +7,7 @@
 
 import UIKit
 import Resolver
+import WebKit
 
 class GalleryDetailVC : UIViewController {
     var item : GalleryPresentation? = nil
@@ -14,7 +15,10 @@ class GalleryDetailVC : UIViewController {
     @IBOutlet var galleryDetailCollectionView: GalleryDetailCollectionView!
     @IBOutlet var titleDetailLabel: UILabel!
     
+    @IBOutlet var WebViewGallery: WKWebView!
+    @IBOutlet var heightWebView: NSLayoutConstraint!
     
+    @IBOutlet var collectionViewHeight: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +36,11 @@ class GalleryDetailVC : UIViewController {
         }
         galleryDetailCollectionView.galleryDetailCollectionView = item.images
         galleryDetailCollectionView.reloadData()
+        
+        let integersToCompleteNumber = 3 - (item.images.count % 3)
+        collectionViewHeight.constant = Double(((item.images.count + integersToCompleteNumber) / 3)) * galleryDetailCollectionView.ITEM_HEIGHT
+        
+        webViewCampus()
     }
     
     @objc func goToGalleryDetails() {
@@ -39,6 +48,14 @@ class GalleryDetailVC : UIViewController {
         galleryDetails.modalPresentationStyle = .popover
         self.present(galleryDetails, animated: true, completion: nil)
     }
+    
+    func webViewCampus() {
+        let webViewGallery = WebViewGallery
+        webViewGallery?.navigationDelegate = self
+        webViewGallery?.scrollView.isScrollEnabled = false
+        webViewGallery!.loadHTMLString(html, baseURL: nil)
+    }
+    
     
     static func create(item : GalleryPresentation) -> GalleryDetailVC {
         let viewController = GalleryDetailVC()
@@ -52,3 +69,37 @@ class GalleryDetailVC : UIViewController {
       
     }
 }
+
+extension GalleryDetailVC: WKNavigationDelegate {
+    func webView(_ webViewGallery: WKWebView, didFinish navigation: WKNavigation! ) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.heightWebView.constant = webViewGallery.scrollView.contentSize.height
+        }
+    }
+}
+
+private let html = """
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+</head>
+<body>
+    <style>
+    </style>
+    <div>
+        <h1>Online HTML Editor</h1>
+        <img src="https://images.unsplash.com/photo-1691719603180-51fb706dcc62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80" style="max-width:100%;height:auto;" />
+    
+        <div>
+            <h3>This is real time online HTML Edito</h3>
+            <p>This is real time online HTML Edito</p>
+        </div>
+    </div>
+</body>
+</html>
+"""

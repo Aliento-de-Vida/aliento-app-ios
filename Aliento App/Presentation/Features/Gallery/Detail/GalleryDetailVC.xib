@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryDetailVC">
             <connections>
+                <outlet property="WebViewGallery" destination="kck-fM-waf" id="Wrr-iG-RhH"/>
+                <outlet property="collectionViewHeight" destination="Kwd-nH-M7S" id="gSn-SX-YNO"/>
                 <outlet property="galleryDetailCollectionView" destination="o5U-9a-v0d" id="lSd-io-tRi"/>
+                <outlet property="heightWebView" destination="h68-Pz-hJh" id="T5N-qU-CUl"/>
                 <outlet property="titleDetailLabel" destination="fCk-cu-CrL" id="pN6-6B-ELd"/>
                 <outlet property="view" destination="b5d-Nc-XQP" id="yYl-fU-Abf"/>
             </connections>
@@ -21,33 +24,76 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="o5U-9a-v0d" customClass="GalleryDetailCollectionView" customModule="Aliento_App" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="96" width="393" height="722"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1bG-1Y-MFM">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCk-cu-CrL" userLabel="Title">
-                    <rect key="frame" x="0.0" y="67" width="393" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-Eb-QA5">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-Nr-SdO">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCk-cu-CrL" userLabel="Title">
+                                    <rect key="frame" x="0.0" y="67" width="393" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kck-fM-waf">
+                                    <rect key="frame" x="0.0" y="95.333333333333329" width="393" height="0.0"/>
+                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="h68-Pz-hJh"/>
+                                    </constraints>
+                                    <wkWebViewConfiguration key="configuration">
+                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                        <wkPreferences key="preferences"/>
+                                    </wkWebViewConfiguration>
+                                </wkWebView>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="o5U-9a-v0d" customClass="GalleryDetailCollectionView" customModule="Aliento_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="103.33333333333331" width="393" height="748.66666666666674"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="748.66999999999996" id="Kwd-nH-M7S"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1bG-1Y-MFM">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="EMh-QW-2TQ"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="fCk-cu-CrL" secondAttribute="trailing" id="4sN-zz-9sR"/>
+                                <constraint firstItem="kck-fM-waf" firstAttribute="leading" secondItem="EMh-QW-2TQ" secondAttribute="leading" id="Bce-7J-UV6"/>
+                                <constraint firstAttribute="bottom" secondItem="o5U-9a-v0d" secondAttribute="bottom" id="T4j-Ru-Hhw"/>
+                                <constraint firstItem="fCk-cu-CrL" firstAttribute="top" secondItem="EMh-QW-2TQ" secondAttribute="top" constant="8" id="VaL-3a-wrA"/>
+                                <constraint firstAttribute="trailing" secondItem="o5U-9a-v0d" secondAttribute="trailing" id="jf4-Mb-w5b"/>
+                                <constraint firstItem="kck-fM-waf" firstAttribute="top" secondItem="fCk-cu-CrL" secondAttribute="bottom" constant="8" id="nIk-eY-wVe"/>
+                                <constraint firstItem="kck-fM-waf" firstAttribute="trailing" secondItem="EMh-QW-2TQ" secondAttribute="trailing" id="qpq-Xt-h0K"/>
+                                <constraint firstItem="o5U-9a-v0d" firstAttribute="top" secondItem="kck-fM-waf" secondAttribute="bottom" constant="8" id="rX0-eK-nnB"/>
+                                <constraint firstItem="o5U-9a-v0d" firstAttribute="leading" secondItem="gOo-Nr-SdO" secondAttribute="leading" id="vPI-9s-ZIk"/>
+                                <constraint firstItem="fCk-cu-CrL" firstAttribute="leading" secondItem="gOo-Nr-SdO" secondAttribute="leading" id="zwy-Kf-Jhw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gOo-Nr-SdO" firstAttribute="top" secondItem="15a-JM-T3g" secondAttribute="top" id="1Tm-nY-67M"/>
+                        <constraint firstItem="gOo-Nr-SdO" firstAttribute="trailing" secondItem="15a-JM-T3g" secondAttribute="trailing" id="8JH-EJ-RMm"/>
+                        <constraint firstItem="gOo-Nr-SdO" firstAttribute="width" secondItem="xNJ-5q-m8y" secondAttribute="width" id="EHG-m8-mnX"/>
+                        <constraint firstItem="gOo-Nr-SdO" firstAttribute="bottom" secondItem="15a-JM-T3g" secondAttribute="bottom" id="JXT-XR-Dkp"/>
+                        <constraint firstItem="gOo-Nr-SdO" firstAttribute="leading" secondItem="15a-JM-T3g" secondAttribute="leading" id="Z3V-OE-r1M"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="15a-JM-T3g"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="xNJ-5q-m8y"/>
+                </scrollView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="OCC-FH-cnl"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="o5U-9a-v0d" firstAttribute="top" secondItem="fCk-cu-CrL" secondAttribute="bottom" constant="8" id="3oy-Rh-vyV"/>
-                <constraint firstItem="o5U-9a-v0d" firstAttribute="leading" secondItem="OCC-FH-cnl" secondAttribute="leading" id="HSW-4Q-V9X"/>
-                <constraint firstItem="fCk-cu-CrL" firstAttribute="leading" secondItem="OCC-FH-cnl" secondAttribute="leading" id="KHh-5N-l4Y"/>
-                <constraint firstItem="OCC-FH-cnl" firstAttribute="trailing" secondItem="fCk-cu-CrL" secondAttribute="trailing" id="Q79-u0-ey8"/>
-                <constraint firstItem="fCk-cu-CrL" firstAttribute="top" secondItem="OCC-FH-cnl" secondAttribute="top" constant="8" id="Rzu-EB-cG3"/>
-                <constraint firstItem="OCC-FH-cnl" firstAttribute="trailing" secondItem="o5U-9a-v0d" secondAttribute="trailing" id="XL2-gO-Tba"/>
-                <constraint firstItem="OCC-FH-cnl" firstAttribute="bottom" secondItem="o5U-9a-v0d" secondAttribute="bottom" id="vJ5-90-HV4"/>
+                <constraint firstAttribute="bottom" secondItem="Emq-Eb-QA5" secondAttribute="bottom" id="N1n-UF-Zqg"/>
+                <constraint firstItem="Emq-Eb-QA5" firstAttribute="leading" secondItem="b5d-Nc-XQP" secondAttribute="leading" id="TFc-YU-Mkd"/>
+                <constraint firstAttribute="trailing" secondItem="Emq-Eb-QA5" secondAttribute="trailing" id="j0h-JI-PcJ"/>
+                <constraint firstItem="Emq-Eb-QA5" firstAttribute="top" secondItem="b5d-Nc-XQP" secondAttribute="top" id="w3s-oB-5ax"/>
             </constraints>
             <point key="canvasLocation" x="-19.083969465648853" y="-47.183098591549296"/>
         </view>
