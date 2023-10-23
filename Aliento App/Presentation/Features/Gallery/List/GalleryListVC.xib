@@ -31,7 +31,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AA-be-ceZ" userLabel="Content">
-                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="848"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galeria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdK-Fc-UKf">
                             <rect key="frame" x="16" y="16" width="55" height="20.5"/>
@@ -40,7 +40,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rWR-oy-nIG" customClass="GalleryListCollectionView" customModule="Aliento_App" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="52.5" width="414" height="761.5"/>
+                            <rect key="frame" x="0.0" y="52.5" width="414" height="795.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o9d-ia-99l">
                                 <size key="itemSize" width="128" height="128"/>
@@ -114,7 +114,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5ev-wJ-Pw7" secondAttribute="bottom" id="OUt-5u-PzS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9AA-be-ceZ" secondAttribute="trailing" id="PyK-cy-hgp"/>
                 <constraint firstItem="9AA-be-ceZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tzw-wV-pPX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9AA-be-ceZ" secondAttribute="bottom" id="d7m-6D-bfB"/>
+                <constraint firstAttribute="bottom" secondItem="9AA-be-ceZ" secondAttribute="bottom" id="d7m-6D-bfB"/>
                 <constraint firstItem="5ev-wJ-Pw7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="olw-1i-GnK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5ev-wJ-Pw7" secondAttribute="trailing" id="tPX-Ft-qpH"/>
             </constraints>

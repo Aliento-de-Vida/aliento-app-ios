@@ -368,7 +368,7 @@
                                     <rect key="frame" x="0.0" y="456.66666666666674" width="430" height="160"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fEe-4r-7ix">
-                                            <rect key="frame" x="0.0" y="0.0" width="504" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="752" height="160"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-PZ-Oa1" userLabel="spacer">
                                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="160"/>
@@ -436,8 +436,8 @@
                                                         <constraint firstItem="3hm-ti-FZ8" firstAttribute="leading" secondItem="bFv-v1-tQ3" secondAttribute="leading" id="d94-pE-raa"/>
                                                     </constraints>
                                                 </view>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-1T-lxt" userLabel="shadow_quick_access2">
-                                                    <rect key="frame" x="252" y="0.0" width="240" height="160"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-1T-lxt" userLabel="shadow_quick_access2">
+                                                    <rect key="frame" x="256" y="0.0" width="240" height="160"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsn-Mf-g49" userLabel="card_quick_access2">
                                                             <rect key="frame" x="0.0" y="0.0" width="240" height="160"/>
@@ -496,7 +496,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIM-1S-ima" userLabel="shadow_quick_access3">
-                                                    <rect key="frame" x="256" y="0.0" width="240" height="160"/>
+                                                    <rect key="frame" x="504" y="0.0" width="240" height="160"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaK-eu-aad" userLabel="card_quick_access3">
                                                             <rect key="frame" x="0.0" y="0.0" width="240" height="160"/>
@@ -555,7 +555,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-s6-slL" userLabel="spacer">
-                                                    <rect key="frame" x="504" y="0.0" width="0.0" height="160"/>
+                                                    <rect key="frame" x="752" y="0.0" width="0.0" height="160"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" id="bxt-6w-uf7"/>

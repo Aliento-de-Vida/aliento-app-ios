@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E05B8D5038061E6FB2B8BC /* libPods-Aliento App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6784A94D5FD699C923AC19EF /* libPods-Aliento App.a */; };
 		761AB30F2A4C891500D1EDCF /* GalleryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AB30E2A4C891500D1EDCF /* GalleryDetailVC.swift */; };
 		761AB3112A4C892A00D1EDCF /* GalleryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761AB3102A4C892A00D1EDCF /* GalleryDetailVC.xib */; };
 		761AB3142A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AB3132A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift */; };
@@ -54,6 +55,9 @@
 		76BE3048297870BC0084157E /* CampusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE3047297870BC0084157E /* CampusVC.xib */; };
 		76BE304B2979A0980084157E /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BE304A2979A0980084157E /* GalleryListVC.swift */; };
 		76BE304D2979A1330084157E /* GalleryListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BE304C2979A1330084157E /* GalleryListVC.xib */; };
+		76C3D8202AD72C6D00E1241E /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 76C3D81F2AD72C6D00E1241E /* Resolver */; };
+		76C3D8232AD8601200E1241E /* PlayerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3D8222AD8601200E1241E /* PlayerRepository.swift */; };
+		76C3D8252AD8602300E1241E /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3D8242AD8602300E1241E /* PlayerModel.swift */; };
 		76D3F97E2979AF2600831312 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F97D2979AF2600831312 /* SettingsVC.swift */; };
 		76D3F9802979AF5F00831312 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D3F97F2979AF5F00831312 /* SettingsVC.xib */; };
 		76D3F9832979AF8A00831312 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3F9822979AF8A00831312 /* NotificationsVC.swift */; };
@@ -130,10 +134,11 @@
 		BF723F8E291C9AF500F2FAA4 /* AudioSermonItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF723F85291C936800F2FAA4 /* AudioSermonItemCell.xib */; };
 		BF9C22A52924830E0082C0C5 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C22A42924830E0082C0C5 /* UIImage.swift */; };
 		BFE27B2729A9C305000D2B3B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE27B2629A9C305000D2B3B /* Request.swift */; };
-		DAA5BC0554963CBFAB25DF98 /* libPods-Aliento App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EA5BE1F18E26DD72018C909 /* Pods-Aliento App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.release.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.release.xcconfig"; sourceTree = "<group>"; };
+		6784A94D5FD699C923AC19EF /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761AB30E2A4C891500D1EDCF /* GalleryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailVC.swift; sourceTree = "<group>"; };
 		761AB3102A4C892A00D1EDCF /* GalleryDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryDetailVC.xib; sourceTree = "<group>"; };
 		761AB3132A4C8B1100D1EDCF /* GalleryDetailCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailCollectionView.swift; sourceTree = "<group>"; };
@@ -181,6 +186,8 @@
 		76BE3047297870BC0084157E /* CampusVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampusVC.xib; sourceTree = "<group>"; };
 		76BE304A2979A0980084157E /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
 		76BE304C2979A1330084157E /* GalleryListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryListVC.xib; sourceTree = "<group>"; };
+		76C3D8222AD8601200E1241E /* PlayerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepository.swift; sourceTree = "<group>"; };
+		76C3D8242AD8602300E1241E /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		76D3F97D2979AF2600831312 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		76D3F97F2979AF5F00831312 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		76D3F9822979AF8A00831312 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
@@ -213,8 +220,6 @@
 		76F04A4A29AE6478006CFE64 /* CampusRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusRepositoryImpl.swift; sourceTree = "<group>"; };
 		76F04A4C29AE70D4006CFE64 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		76F04A4E29AE9AC3006CFE64 /* CampusPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusPresentation.swift; sourceTree = "<group>"; };
-		A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
-		B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aliento App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD5D28CA966700B27C8C /* Aliento App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aliento App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B824BD6028CA966700B27C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B824BD6928CA966F00B27C8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -257,8 +262,8 @@
 		BF723F8A291C96F800F2FAA4 /* AudioModelPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModelPresentation.swift; sourceTree = "<group>"; };
 		BF723F8C291C972600F2FAA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF9C22A42924830E0082C0C5 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		BFADCF8977C40630EE77FC8A /* Pods-Aliento App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.release.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.release.xcconfig"; sourceTree = "<group>"; };
 		BFE27B2629A9C305000D2B3B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		DE8ECC5B700E3FA58D7A76E9 /* Pods-Aliento App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aliento App.debug.xcconfig"; path = "Target Support Files/Pods-Aliento App/Pods-Aliento App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,10 +273,11 @@
 			files = (
 				BF6586582A5F152E00369ABE /* FirebaseMessaging in Frameworks */,
 				BF6586542A5F152E00369ABE /* FirebaseAnalyticsSwift in Frameworks */,
-				DAA5BC0554963CBFAB25DF98 /* libPods-Aliento App.a in Frameworks */,
 				BF6586562A5F152E00369ABE /* FirebaseCrashlytics in Frameworks */,
 				76F04A2E29A7FA5B006CFE64 /* Alamofire in Frameworks */,
+				76C3D8202AD72C6D00E1241E /* Resolver in Frameworks */,
 				76501C9F2A3B99B5006C0970 /* YouTubeiOSPlayerHelper in Frameworks */,
+				09E05B8D5038061E6FB2B8BC /* libPods-Aliento App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,18 +287,10 @@
 		0BBD9B8A4D8461FD5FFD78CC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */,
-				BFADCF8977C40630EE77FC8A /* Pods-Aliento App.release.xcconfig */,
+				DE8ECC5B700E3FA58D7A76E9 /* Pods-Aliento App.debug.xcconfig */,
+				1EA5BE1F18E26DD72018C909 /* Pods-Aliento App.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		1ADF4654E1E48F2CA7C98C37 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B2FFE1DACD888734A5E8BAA7 /* libPods-Aliento App.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		761AB30C2A4C882700D1EDCF /* List */ = {
@@ -480,6 +478,15 @@
 			path = Gallery;
 			sourceTree = "<group>";
 		};
+		76C3D8212AD85FE900E1241E /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				76C3D8222AD8601200E1241E /* PlayerRepository.swift */,
+				76C3D8242AD8602300E1241E /* PlayerModel.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		76D3F97C2979AF0300831312 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,13 +593,21 @@
 			path = Campus;
 			sourceTree = "<group>";
 		};
+		87B0DD95255F1C30297DF85C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6784A94D5FD699C923AC19EF /* libPods-Aliento App.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B824BD5428CA966700B27C8C = {
 			isa = PBXGroup;
 			children = (
 				B824BD5F28CA966700B27C8C /* Aliento App */,
 				B824BD5E28CA966700B27C8C /* Products */,
 				0BBD9B8A4D8461FD5FFD78CC /* Pods */,
-				1ADF4654E1E48F2CA7C98C37 /* Frameworks */,
+				87B0DD95255F1C30297DF85C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -669,6 +684,7 @@
 		B8965F4328D52A5000B64709 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				76C3D8212AD85FE900E1241E /* Player */,
 				7679B3FF29B1110900C3F5CD /* Sermons */,
 				7679B3F329AFE0FE00C3F5CD /* Gallery */,
 				76F04A4029AE639E006CFE64 /* Campus */,
@@ -872,11 +888,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B824BD7128CA966F00B27C8C /* Build configuration list for PBXNativeTarget "Aliento App" */;
 			buildPhases = (
-				F45F10F57D0DBFD026FCC927 /* [CP] Check Pods Manifest.lock */,
+				B99F2FA79E2A655804AEEDC9 /* [CP] Check Pods Manifest.lock */,
 				B824BD5928CA966700B27C8C /* Sources */,
 				B824BD5A28CA966700B27C8C /* Frameworks */,
 				B824BD5B28CA966700B27C8C /* Resources */,
-				9C34C1C4318EA60E2EF34D7F /* [CP] Copy Pods Resources */,
+				E377A77657B2542CC4274EC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -889,6 +905,7 @@
 				BF6586532A5F152E00369ABE /* FirebaseAnalyticsSwift */,
 				BF6586552A5F152E00369ABE /* FirebaseCrashlytics */,
 				BF6586572A5F152E00369ABE /* FirebaseMessaging */,
+				76C3D81F2AD72C6D00E1241E /* Resolver */,
 			);
 			productName = "Aliento App";
 			productReference = B824BD5D28CA966700B27C8C /* Aliento App.app */;
@@ -921,6 +938,7 @@
 				76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 				BF6586522A5F152E00369ABE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				76C3D81E2AD72C6D00E1241E /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = B824BD5E28CA966700B27C8C /* Products */;
 			projectDirPath = "";
@@ -970,24 +988,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9C34C1C4318EA60E2EF34D7F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F45F10F57D0DBFD026FCC927 /* [CP] Check Pods Manifest.lock */ = {
+		B99F2FA79E2A655804AEEDC9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1007,6 +1008,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E377A77657B2542CC4274EC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aliento App/Pods-Aliento App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1050,6 +1068,7 @@
 				BF0C54762979F11F00848A0A /* HomeImages.swift in Sources */,
 				761AB3162A4C8B3500D1EDCF /* GalleryDetailItemCell.swift in Sources */,
 				BF44EF44296DE97400F3D028 /* TabBarController.swift in Sources */,
+				76C3D8252AD8602300E1241E /* PlayerModel.swift in Sources */,
 				B8965F6328D5347C00B64709 /* HomeModelData.swift in Sources */,
 				765E45A329819750004FA458 /* CampusCollectionView.swift in Sources */,
 				BF44EF4729708E9B00F3D028 /* Gradient.swift in Sources */,
@@ -1091,6 +1110,7 @@
 				BF0C54792979F1D800848A0A /* String.swift in Sources */,
 				76F04A4929AE6466006CFE64 /* CampusModelData.swift in Sources */,
 				7679B3FE29B110CB00C3F5CD /* VideoRepositoryImpl.swift in Sources */,
+				76C3D8232AD8601200E1241E /* PlayerRepository.swift in Sources */,
 				BF54F18D2977083700A1FF45 /* HomeModel.swift in Sources */,
 				7679B41829B7BC2000C3F5CD /* Int.swift in Sources */,
 				7679B41029B27B4F00C3F5CD /* AudioModel.swift in Sources */,
@@ -1243,7 +1263,7 @@
 		};
 		B824BD7228CA966F00B27C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5B7B508B36C2AA986FD512F /* Pods-Aliento App.debug.xcconfig */;
+			baseConfigurationReference = DE8ECC5B700E3FA58D7A76E9 /* Pods-Aliento App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1274,7 +1294,7 @@
 		};
 		B824BD7328CA966F00B27C8C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFADCF8977C40630EE77FC8A /* Pods-Aliento App.release.xcconfig */;
+			baseConfigurationReference = 1EA5BE1F18E26DD72018C909 /* Pods-Aliento App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1335,6 +1355,14 @@
 				version = 1.0.4;
 			};
 		};
+		76C3D81E2AD72C6D00E1241E /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		76F04A2C29A7FA5A006CFE64 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1358,6 +1386,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 76501C9D2A3B99B5006C0970 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		76C3D81F2AD72C6D00E1241E /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76C3D81E2AD72C6D00E1241E /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 		76F04A2D29A7FA5B006CFE64 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
