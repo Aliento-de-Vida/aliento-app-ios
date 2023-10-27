@@ -37,8 +37,10 @@ class CampusVC : UIViewController {
         campusCollectionView.delegate = campusCollectionView
         campusCollectionView.onClick = { [self] item in
             let goToDetailsCampus = DetailCampusVC.create(item: item)
-            goToDetailsCampus.modalPresentationStyle = .popover
-            self.present(goToDetailsCampus, animated: true, completion: nil)
+            navigationController?.pushViewController(goToDetailsCampus, animated: true)
+            
+            //goToDetailsCampus.modalPresentationStyle = .popover
+            //self.present(goToDetailsCampus, animated: true, completion: nil)
         }
         
         configureRefreshControl()
@@ -110,8 +112,5 @@ class CampusVC : UIViewController {
             }
         }
     }
-    
-    
-    
 }
 

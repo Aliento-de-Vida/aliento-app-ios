@@ -8,8 +8,9 @@
 import UIKit
 import Resolver
 import WebKit
+import GoogleMaps
 
-class DetailCampusVC : UIViewController {
+class DetailCampusVC : UIViewController, GMSMapViewDelegate {
     var item: CampusPresentation? = nil
     
     @IBOutlet var name: UILabel!
@@ -21,12 +22,17 @@ class DetailCampusVC : UIViewController {
     @IBOutlet var campusImage: UIImageView!
     @IBOutlet var webView: WKWebView!
     @IBOutlet var constraint_WebViewHeight: NSLayoutConstraint!
+    @IBOutlet var mapContainer: GMSMapView!
     
     @Injected var detailCampusRepository : CampusRepository
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let item = item else { return }
+        
+        if let latitude = Double(item.location.latitude), let longitude = Double(item.location.longitude) {
+            setGoogleMap(latitude: latitude, longitude: longitude)
+        }
         
         name.text = item.name
         shortDescription.text = item.shortDescription
@@ -40,6 +46,8 @@ class DetailCampusVC : UIViewController {
         galleryDetails.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
         galleryDetails.isUserInteractionEnabled = true
         webViewCampus()
+        setNavBarLogo()
+        currentlyLocation()
         
     }
    
@@ -54,6 +62,39 @@ class DetailCampusVC : UIViewController {
         webViewCampus?.navigationDelegate = self
         webViewCampus?.scrollView.isScrollEnabled = false
         webViewCampus!.loadHTMLString(html, baseURL: nil)
+    }
+    
+    func setGoogleMap(latitude: Double, longitude : Double) {
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 12.0)
+        mapContainer.camera = camera
+        mapContainer.settings.myLocationButton = true
+        mapContainer.isMyLocationEnabled = true
+
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        marker.title = "Aliento de Vida"
+        marker.snippet = "Cholul"
+        marker.map = mapContainer
+        self.mapContainer.animate(toLocation: marker.position)
+    }
+    
+    func currentlyLocation() {
+        var locationManager: CLLocationManager!
+        
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.delegate = self
+        locationManager.requestLocation()
+    }
+    
+    func setNavBarLogo() {
+        let image = UIImage(named: "logo_blanco")!.withTintColor(UIColor(named: "on_background")!, renderingMode: .alwaysOriginal)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
+        
+        self.navigationItem.titleView = imageView
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -71,6 +112,62 @@ class DetailCampusVC : UIViewController {
         }
     }
     
+}
+
+extension DetailCampusVC: CLLocationManagerDelegate {
+    func locationManager(_ locationManager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var preciseLocationZoomLevel: Float = 15.0
+        var approximateLocationZoomLevel: Float = 10.0
+
+        let location: CLLocation = locations.last!
+        print("Location: \(location)")
+        
+        let zoomLevel = locationManager.accuracyAuthorization == CLAccuracyAuthorization.fullAccuracy ? preciseLocationZoomLevel : approximateLocationZoomLevel
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                                  longitude: location.coordinate.longitude,
+                                                  zoom: zoomLevel)
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        marker.title = "Me"
+        marker.map = mapContainer
+
+        mapContainer.animate(to: camera)
+    }
+    
+    // Handle authorization for the location manager.
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        // Check accuracy authorization
+        let accuracy = manager.accuracyAuthorization
+        switch accuracy {
+        case .fullAccuracy:
+            print("Location accuracy is precise.")
+        case .reducedAccuracy:
+            print("Location accuracy is not precise.")
+        @unknown default:
+            fatalError()
+        }
+        
+        switch status {
+           case .restricted:
+             print("Location access was restricted.")
+           case .denied:
+             print("User denied access to location.")
+             // Display the map using the default location.
+           case .notDetermined:
+             print("Location status not determined.")
+           case .authorizedAlways: fallthrough
+           case .authorizedWhenInUse:
+             print("Location status is OK.")
+           @unknown default:
+             fatalError()
+        }
+    }
+    
+    // Handle location manager errors.
+      func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error: \(error)")
+      }
 }
 
 extension DetailCampusVC: WKNavigationDelegate {
@@ -122,12 +219,12 @@ private let html = """
     <p>&iexcl;Te esperamos en el campus Cholul de Aliento de Vida!</p>
     <p></p>
     <p></p>
-    <p><img src="https://scontent-mty2-1.xx.fbcdn.net/v/t39.30808-6/362288403_584157387255202_7804635306691895596_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=5614bc&amp;_nc_eui2=AeEEDRS3EO9lfI2NP9uA09Df0sOxxLrFPabSw7HEusU9pijlRqIc87iwXXzZEMJdLSzfOmGF0lbFVehtsttJxx_H&amp;_nc_ohc=-6Xl1N8FGjEAX_mkUl2&amp;_nc_ht=scontent-mty2-1.xx&amp;oh=00_AfCrX7kUPSKFYTwSrwNHFXIXs1DPocDc5zFOFzMxH_k3UQ&amp;oe=64FEB8BD" alt="" width="429" height="286" style="display: block; margin-left: auto; margin-right: auto;" /></p>
-    <p></p>
-    <p></p>
-    <p></p>
     <p>&nbsp;</p>
     <p></p>
 </body>
 </html>
 """
+
+
+/*<p><img src="https://www.portumatrimonio.org/wp-content/uploads/2017/10/portu-happy-family-on-meadow-at-summer-sunset_bk66n7pho-1800x1100-768x469.jpgocDc5zFOFzMxH_k3UQ&amp;oe=64FEB8BD" alt="" width="429" height="286" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+*/

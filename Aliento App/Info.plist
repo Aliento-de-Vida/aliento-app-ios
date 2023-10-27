@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Show your location on a map.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Show your location on a map.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Show your location on a map</string>
 	<key>SPOTIFY_API_KEY</key>
 	<string>$(SPOTIFY_API_KEY)</string>
 	<key>YOUTUBE_API_KEY</key>

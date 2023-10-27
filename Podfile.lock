@@ -1,5 +1,26 @@
 PODS:
   - Cache (6.0.0)
+  - Google-Maps-iOS-Utils (3.4.0):
+    - Google-Maps-iOS-Utils/Clustering (= 3.4.0)
+    - Google-Maps-iOS-Utils/Geometry (= 3.4.0)
+    - Google-Maps-iOS-Utils/Heatmap (= 3.4.0)
+    - Google-Maps-iOS-Utils/QuadTree (= 3.4.0)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (3.4.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (3.4.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (3.4.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (3.4.0):
+    - GoogleMaps
+  - GoogleMaps (6.1.0):
+    - GoogleMaps/Maps (= 6.1.0)
+  - GoogleMaps/Base (6.1.0)
+  - GoogleMaps/Maps (6.1.0):
+    - GoogleMaps/Base
   - Imaginary (5.0.0):
     - Cache (~> 6.0.0)
   - Lightbox (2.5.0):
@@ -9,22 +30,28 @@ PODS:
   - SDWebImage/Core (5.14.2)
 
 DEPENDENCIES:
+  - Google-Maps-iOS-Utils (= 3.4.0)
+  - GoogleMaps (= 6.1.0)
   - Lightbox
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - Cache
+    - Google-Maps-iOS-Utils
+    - GoogleMaps
     - Imaginary
     - Lightbox
     - SDWebImage
 
 SPEC CHECKSUMS:
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  Google-Maps-iOS-Utils: 2b4971019b7e9b3c92b4635d218552d9e093df4b
+  GoogleMaps: cffc5d24ce920063aaeebe6ac4dbaaca1dd7f377
   Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
   Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
 
-PODFILE CHECKSUM: c3919ebf662472c346b3f34ccc2029529e872731
+PODFILE CHECKSUM: b98ec68f112c28eedb0d0da00001719a027e7644
 
 COCOAPODS: 1.12.0

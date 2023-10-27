@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseMessaging
+import GoogleMaps
 
 let NOTIFICATIONS_SUBSCRIPTION_KEY = "push_notifications_subscription"
 
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        GMSServices.provideAPIKey("AIzaSyBfI_Vw5RUs0hE50JSZdtCgkO7bIiO--Lk")
         
         FirebaseApp.configure()
         
